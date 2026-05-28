@@ -95,13 +95,25 @@ QDII 基金与普通基金的关键差异，本 skill 已针对性处理：
 | **持仓** | 海外股票代码非纯数字（如 00700.HK） | 港股代码特殊处理，不跳过 |
 | **费率** | C 类综合费率差异大（0.9%~1.5%） | 三费拆分 + 合计校验 |
 
+## 常用基金参考列表
+
+当用户查询特定类别基金时，优先使用 `references/` 下的预审列表作为候选代码来源（无需再调用搜索接口）：
+
+| 基金类别 | 参考列表 | 说明 |
+|---------|---------|------|
+| 纳斯达克被动QDII C类 | `#[[file:references/nasdaq_passive_qdii_c_funds.json]]` | 17 只主流跟踪纳指100的C类份额 |
+
+用法：Agent 读取对应 JSON 文件，取出 `code` 列表，调用 `fetch_batch()` 批量拉取数据，再按需排序、格式化、推送。
+
 ## ⚠ 四条铁律
 
 ### 铁律 1 · 禁止硬编码基金代码列表
 
-当用户要求"抓取所有 XXX"时，**禁止**在脚本里写死候选基金代码数组。
+当用户要求"抓取所有 XXX"时，**禁止**在 Python 脚本或配置里写死候选基金代码数组。
 
 **正确做法**：必须先调用 `http://fund.eastmoney.com/js/fundcode_search.js` 拿到全市场基金清单，再用代码/名称/类型字段做筛选。
+
+**例外**：`references/` 目录下的 `.json` 文件是预审通过的常用基金参考列表，如 `nasdaq_passive_qdii_c_funds.json`。Agent 可以直接读取此列表作为候选基金代码来源，但仍需校验数据准确性并注明来源。
 
 如果用户明确给了代码列表（如通过 config.json），**必须注明来源**。
 
@@ -455,6 +467,7 @@ Profile 决定必填字段集：
 - 校验规则完整列表：`#[[file:references/validation-rules.md]]`
 - 合规指南 + 免责声明：`#[[file:references/compliance.md]]`
 - 配置文件示例：`#[[file:references/config.example.json]]`
+- 纳斯达克被动QDII C类基金参考列表：`#[[file:references/nasdaq_passive_qdii_c_funds.json]]`
 
 ## Out of scope
 
