@@ -22,14 +22,14 @@ class FeishuAdapter(BaseAdapter):
             print("[feishu] webhook_url 未配置")
             return False
         if fmt == "card":
-            payload = self._build_card(data)
+            payload = self._build_card(data, **kwargs)
         elif fmt == "text":
             payload = self._build_text(data)
         elif fmt == "image":
             print("[feishu] image 格式暂不支持")
             return False
         else:
-            payload = self._build_card(data)
+            payload = self._build_card(data, **kwargs)
         try:
             resp = requests.post(self.webhook_url, json=payload, timeout=10)
             result = resp.json()
@@ -61,7 +61,8 @@ class FeishuAdapter(BaseAdapter):
             print(f"[feishu] 连接测试失败: {e}")
             return False
 
-    def _build_card(self, data: FundDataResult) -> dict[str, Any]:
+    def _build_card(self, data: FundDataResult, **kwargs) -> dict[str, Any]:
+        title = kwargs.get("title", "QDII 基金数据")
         elements: list[dict] = []
 
         elements.append({
@@ -134,7 +135,7 @@ class FeishuAdapter(BaseAdapter):
             "msg_type": "interactive",
             "card": {
                 "header": {
-                    "title": {"tag": "plain_text", "content": "QDII 基金数据"},
+                    "title": {"tag": "plain_text", "content": title},
                     "template": "indigo",
                 },
                 "elements": elements,

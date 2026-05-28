@@ -22,14 +22,14 @@ class WechatAdapter(BaseAdapter):
             print("[wechat] webhook_url 未配置")
             return False
         if fmt == "markdown" or fmt == "card":
-            payload = self._build_markdown(data)
+            payload = self._build_markdown(data, **kwargs)
         elif fmt == "text":
-            payload = self._build_text(data)
+            payload = self._build_text(data, **kwargs)
         elif fmt == "image":
             print("[wechat] image 格式暂不支持")
             return False
         else:
-            payload = self._build_markdown(data)
+            payload = self._build_markdown(data, **kwargs)
         try:
             resp = requests.post(self.webhook_url, json=payload, timeout=10)
             result = resp.json()
@@ -53,9 +53,10 @@ class WechatAdapter(BaseAdapter):
             print(f"[wechat] 连接测试失败: {e}")
             return False
 
-    def _build_markdown(self, data: FundDataResult) -> dict[str, Any]:
+    def _build_markdown(self, data: FundDataResult, **kwargs) -> dict[str, Any]:
+        title = kwargs.get("title", "QDII 基金数据")
         lines = []
-        lines.append(f"### QDII 基金数据")
+        lines.append(f"### {title}")
         lines.append(f"> {data.update_date}  ·  共 {data.count} 只基金")
         lines.append("")
 
@@ -104,8 +105,9 @@ class WechatAdapter(BaseAdapter):
             "markdown": {"content": "\n".join(lines)},
         }
 
-    def _build_text(self, data: FundDataResult) -> dict[str, Any]:
-        lines = [f"QDII 基金数据 {data.update_date}  ·  共 {data.count} 只基金", ""]
+    def _build_text(self, data: FundDataResult, **kwargs) -> dict[str, Any]:
+        title = kwargs.get("title", "QDII 基金数据")
+        lines = [f"{title} {data.update_date}  ·  共 {data.count} 只基金", ""]
         sorted_funds = sorted(
             data.funds,
             key=lambda f: WechatAdapter._to_float(f.return_1y) or float("-inf"),

@@ -101,7 +101,7 @@ RANGE_RULES = {
 }
 
 CODE_PATTERN = re.compile(r"^\d{6}$")
-DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+DATE_PATTERN = re.compile(r"^\d{2}-\d{2}$|^\d{4}-\d{2}-\d{2}$")
 PURCHASE_STATUS_VALUES = {"开放", "限大额", "限小额", "暂停", "未知", "暂停(限大额)", "暂停(限小额)"}
 
 
