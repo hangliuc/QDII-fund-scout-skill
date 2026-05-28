@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated output files
+scripts/*_detail.json
+scripts/*_detail.md
+scripts/compare_*.json
+scripts/compare_*.md
+scripts/search_*.json
+scripts/search_*.md
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log

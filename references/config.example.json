@@ -1,0 +1,20 @@
+{
+  "my_funds": [
+    {"code": "012870", "name": "易方达纳指100C", "main_code": "012869"},
+    {"code": "006479", "name": "广发纳指100C", "main_code": "006479"},
+    {"code": "008971", "name": "大成纳指100C", "main_code": "008970"},
+    {"code": "017437", "name": "华宝纳指精选C", "main_code": "017436"},
+    {"code": "014976", "name": "天弘纳指100C", "main_code": "014975"}
+  ],
+  "push": {
+    "feishu_webhook": "",
+    "wechat_webhook": ""
+  },
+  "defaults": {
+    "format": "md",
+    "style": "table",
+    "profile": "qdii",
+    "include_holdings": true,
+    "include_csrc": true
+  }
+}
