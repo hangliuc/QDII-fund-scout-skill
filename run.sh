@@ -86,9 +86,9 @@ show_menu() {
     echo ""
     echo "    1) 查看我的基金（使用配置文件）"
     echo "    2) 手动输入基金代码查询"
-    echo "    3) 查询后推送到飞书"
-    echo "    4) 查询后推送到企业微信"
-    echo "    5) 查询后同时推送飞书 + 企业微信"
+    echo "    3) 查询我的基金并推送到飞书"
+    echo "    4) 查询我的基金并推送到企业微信"
+    echo "    5) 查询我的基金并同时推送飞书 + 企业微信"
     echo "    6) 编辑我的基金列表"
     echo "    7) 配置推送渠道（飞书/企业微信）"
     echo "    8) 打开可视化界面（浏览器配置）"
@@ -106,7 +106,7 @@ run_compare() {
     local push_target="$2"
 
     cd "$SCRIPT_DIR/scripts"
-    CMD="python3 cli.py compare"
+    CMD="python3 cli.py compare --format md --style card"
 
     if [ -n "$codes" ]; then
         CMD="$CMD $codes"

@@ -32,3 +32,8 @@ def get_adapter(name: str) -> type:
 
 def list_adapters() -> list[str]:
     return sorted(ADAPTER_REGISTRY.keys())
+
+
+# 导入适配器模块以触发 register() 调用
+from . import feishu  # noqa: E402
+from . import wechat  # noqa: E402

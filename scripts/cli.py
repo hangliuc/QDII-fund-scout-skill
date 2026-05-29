@@ -162,10 +162,10 @@ def _write_output(content: str, output_dir: str, filename: str) -> str:
     return path
 
 
-def _push(content: str, adapter_name: str) -> None:
+def _push(result: FundDataResult, adapter_name: str) -> None:
     cls = get_adapter(adapter_name)
     adapter = cls()
-    adapter.send(content)
+    adapter.send(result)
 
 
 def _build_result(funds: list[FundInfo]) -> FundDataResult:
@@ -196,7 +196,7 @@ def cmd_detail(args: argparse.Namespace) -> None:
     print(f"\n已保存: {path}")
 
     if args.push:
-        _push(content, args.push)
+        _push(result, args.push)
 
 
 def cmd_compare(args: argparse.Namespace) -> None:
@@ -239,13 +239,15 @@ def cmd_compare(args: argparse.Namespace) -> None:
     push_targets = []
     if args.push:
         push_targets = [p.strip() for p in args.push.split(",")]
-    elif config.get("push", {}).get("feishu_webhook"):
-        push_targets.append("feishu")
-    elif config.get("push", {}).get("wechat_webhook"):
-        push_targets.append("wechat")
+    else:
+        push_cfg = config.get("push", {})
+        if push_cfg.get("feishu_webhook"):
+            push_targets.append("feishu")
+        if push_cfg.get("wechat_webhook"):
+            push_targets.append("wechat")
 
     for target in push_targets:
-        _push(content, target)
+        _push(result, target)
 
 
 def cmd_search(args: argparse.Namespace) -> None:
@@ -320,8 +322,10 @@ def build_parser() -> argparse.ArgumentParser:
     p_compare = sub.add_parser("compare", help="批量对比")
     p_compare.add_argument("codes", nargs="?", default="", help="逗号分隔的基金代码")
     p_compare.add_argument("--config", default="", help="配置文件路径（默认 ~/.fund-scout/config.json）")
-    p_compare.add_argument("--style", choices=["table", "card", "summary"], default="table", help="md 格式专用")
-    _add_common_args(p_compare)
+    p_compare.add_argument("--style", choices=["table", "card", "summary"], default="card", help="md 格式专用")
+    p_compare.add_argument("--format", choices=["json", "csv", "md"], default="md")
+    p_compare.add_argument("--push", default="", help="推送目标 (feishu/wechat/feishu,wechat)")
+    p_compare.add_argument("--output", default=".")
     p_compare.set_defaults(func=cmd_compare)
 
     p_search = sub.add_parser("search", help="关键词搜索")
