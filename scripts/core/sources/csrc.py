@@ -2,12 +2,17 @@ from __future__ import annotations
 
 import io
 import json
+import logging
 import random
 import re
 import time
 
 import pdfplumber
 import requests
+
+from core.sources.base import SourceError
+
+logger = logging.getLogger(__name__)
 
 CSRC_HEADERS = {
     "User-Agent": (
@@ -90,13 +95,19 @@ class CSRCSource:
                 timeout=20,
             )
             if resp.status_code != 200:
+                logger.warning("csrc 搜索返回 HTTP %d (code=%s name=%s)", resp.status_code, fund_code, fund_short_name)
                 return None
             data = resp.json()
-        except Exception:
+        except requests.RequestException as e:
+            logger.warning("csrc 搜索请求失败 (code=%s): %s", fund_code, e)
+            return None
+        except (json.JSONDecodeError, ValueError) as e:
+            logger.warning("csrc 搜索响应解析失败 (code=%s): %s", fund_code, e)
             return None
 
         records = data.get("aaData", [])
         if not records:
+            logger.info("csrc 搜索无结果 (code=%s name=%s)", fund_code, fund_short_name)
             return None
 
         for item in records:
@@ -120,11 +131,14 @@ class CSRCSource:
         try:
             resp = requests.get(url, headers=CSRC_HEADERS, timeout=45)
             if resp.status_code != 200:
+                logger.warning("csrc PDF 下载返回 HTTP %d (iid=%s)", resp.status_code, instance_id)
                 return None
             if not resp.content.startswith(b"%PDF"):
+                logger.warning("csrc PDF 内容非 PDF 格式 (iid=%s, size=%d)", instance_id, len(resp.content))
                 return None
             return resp.content
-        except Exception:
+        except requests.RequestException as e:
+            logger.warning("csrc PDF 下载失败 (iid=%s): %s", instance_id, e)
             return None
 
     def _parse_pdf_market_dist(self, pdf_bytes: bytes) -> dict:
@@ -158,7 +172,8 @@ class CSRCSource:
                             result[country] = max(result[country], pct)
                         else:
                             result[country] = pct
-        except Exception:
+        except Exception as e:
+            logger.warning("csrc 市场分布 PDF 解析失败: %s", e)
             return {}
         return result
 
@@ -193,7 +208,8 @@ class CSRCSource:
                             result[industry] = max(result[industry], pct)
                         else:
                             result[industry] = pct
-        except Exception:
+        except Exception as e:
+            logger.warning("csrc 行业分布 PDF 解析失败: %s", e)
             return {}
         return result
 

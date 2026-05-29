@@ -44,6 +44,10 @@ class FundInfo:
     company: str = ""
     found_date: str = ""
     tracking_error: float | None = None
+    data_source: str = ""
+    data_unavailable: bool = False
+    _cross_validation: list[dict] = field(default_factory=list)
+    _cross_resolved: list[dict] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

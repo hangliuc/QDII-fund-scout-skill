@@ -1,0 +1,432 @@
+#!/bin/bash
+# ============================================================
+# QDII-fund-scout 一键运行脚本
+# 交互式菜单，无需记忆任何命令
+# ============================================================
+
+set -e
+
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+BLUE='\033[0;34m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+
+info()  { echo -e "${GREEN}[✓]${NC} $1"; }
+warn()  { echo -e "${YELLOW}[!]${NC} $1"; }
+error() { echo -e "${RED}[✗]${NC} $1"; }
+title() { echo -e "\n${BLUE}━━━ $1 ━━━${NC}"; }
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+CONFIG_FILE="$HOME/.fund-scout/config.json"
+
+# ── 检查依赖 ──────────────────────────
+check_deps() {
+    if ! python3 -c "import requests" 2>/dev/null; then
+        warn "缺少依赖，正在安装..."
+        python3 -m pip install requests pdfplumber -q
+        info "依赖安装完成"
+    fi
+}
+
+# ── 读取配置中的基金列表 ──────────────────────────
+read_my_funds() {
+    if [ -f "$CONFIG_FILE" ]; then
+        python3 -c "
+import json
+with open('$CONFIG_FILE') as f:
+    cfg = json.load(f)
+funds = cfg.get('my_funds', [])
+for f in funds:
+    print(f.get('code','') + '|' + f.get('name','') + '|' + f.get('main_code',''))
+" 2>/dev/null || true
+    fi
+}
+
+# ── 读取配置中的推送渠道 ──────────────────────────
+read_push_urls() {
+    if [ -f "$CONFIG_FILE" ]; then
+        python3 -c "
+import json
+with open('$CONFIG_FILE') as f:
+    cfg = json.load(f)
+push = cfg.get('push', {})
+print(push.get('feishu_webhook', ''))
+print(push.get('wechat_webhook', ''))
+" 2>/dev/null || echo -e "\n\n"
+    fi
+}
+
+# ── 主菜单 ──────────────────────────
+show_menu() {
+    clear
+    echo ""
+    echo "============================================"
+    echo "   QDII-fund-scout"
+    echo "   QDII 基金申购限额查询工具"
+    echo "============================================"
+    echo ""
+    echo "  当前日期：$(date '+%Y-%m-%d')"
+    echo ""
+
+    # 显示预设基金
+    FUNDS_JSON=$(read_my_funds)
+    FUND_COUNT=$(echo "$FUNDS_JSON" | grep -c '|' 2>/dev/null || echo "0")
+    if [ "$FUND_COUNT" -gt 0 ]; then
+        echo "  📋 已配置基金：$FUND_COUNT 只"
+        echo "$FUNDS_JSON" | while IFS='|' read -r code name main; do
+            [ -n "$code" ] && echo "     $code  $name"
+        done
+    else
+        echo "  📋 暂未配置基金（稍后可手动输入）"
+    fi
+    echo ""
+    echo "  请选择操作："
+    echo ""
+    echo "    1) 查看我的基金（使用配置文件）"
+    echo "    2) 手动输入基金代码查询"
+    echo "    3) 查询后推送到飞书"
+    echo "    4) 查询后推送到企业微信"
+    echo "    5) 查询后同时推送飞书 + 企业微信"
+    echo "    6) 编辑我的基金列表"
+    echo "    7) 配置推送渠道（飞书/企业微信）"
+    echo "    8) 打开可视化界面（浏览器配置）"
+    echo "    0) 退出"
+    echo ""
+    read -p "  请输入数字 (0-8): " CHOICE
+    echo ""
+}
+
+# ── 运行对比查询 ──────────────────────────
+run_compare() {
+    local codes="$1"
+    local push_target="$2"
+
+    cd "$SCRIPT_DIR/scripts"
+    CMD="python3 cli.py compare"
+
+    if [ -n "$codes" ]; then
+        CMD="$CMD $codes"
+    else
+        CMD="$CMD --config $CONFIG_FILE"
+    fi
+
+    if [ -n "$push_target" ]; then
+        CMD="$CMD --push $push_target"
+    fi
+
+    echo ""
+    info "正在查询，请耐心等待（每只基金约需 5-10 秒）..."
+    echo ""
+    eval "$CMD"
+    local EXIT_CODE=$?
+
+    echo ""
+    if [ $EXIT_CODE -eq 0 ]; then
+        info "查询完成！"
+    else
+        warn "查询过程中出现部分错误，请检查网络后重试"
+    fi
+
+    echo ""
+    read -p "按回车键返回主菜单..."
+}
+
+# ── 配置基金列表 ──────────────────────────
+edit_funds() {
+    clear
+    title "编辑我的基金列表"
+
+    echo "  每行输入一只基金，格式：基金代码 基金名称"
+    echo "  示例：012870 易方达纳指100C"
+    echo "  输入完毕后输入空行结束"
+    echo ""
+    echo "  (国内常见 QDII 基金代码参考)"
+    echo "  012870 易方达纳指100C     006479 广发纳指100C"
+    echo "  008971 大成纳指100C       012044 华安纳指100C"
+    echo "  000834 国富纳指100C       006075 博时标普500C"
+    echo "  008631 招商中证白酒C      050025 博时黄金C"
+    echo ""
+
+    FUNDS_LIST=""
+    while true; do
+        read -p "  " LINE
+        if [ -z "$LINE" ]; then
+            break
+        fi
+        CODE=$(echo "$LINE" | awk '{print $1}')
+        NAME=$(echo "$LINE" | cut -d' ' -f2-)
+        if [ -n "$CODE" ] && [ -n "$NAME" ]; then
+            FUNDS_LIST="${FUNDS_LIST}{\"code\": \"$CODE\", \"name\": \"$NAME\"},"
+        else
+            warn "格式错误，请重新输入"
+        fi
+    done
+
+    if [ -n "$FUNDS_LIST" ]; then
+        FUNDS_LIST="${FUNDS_LIST%,}"
+        mkdir -p "$HOME/.fund-scout"
+
+        # 合并推送配置
+        FEISHU=""
+        WECHAT=""
+        if [ -f "$CONFIG_FILE" ]; then
+            FEISHU=$(python3 -c "import json; f=open('$CONFIG_FILE'); d=json.load(f); print(d.get('push',{}).get('feishu_webhook','')); f.close()" 2>/dev/null || true)
+            WECHAT=$(python3 -c "import json; f=open('$CONFIG_FILE'); d=json.load(f); print(d.get('push',{}).get('wechat_webhook','')); f.close()" 2>/dev/null || true)
+        fi
+
+        cat > "$CONFIG_FILE" <<CONFEOF
+{
+  "my_funds": [$FUNDS_LIST],
+  "push": {
+    "feishu_webhook": "${FEISHU}",
+    "wechat_webhook": "${WECHAT}"
+  },
+  "defaults": {
+    "format": "md",
+    "style": "card",
+    "profile": "compare"
+  }
+}
+CONFEOF
+        info "已保存 $CONFIG_FILE"
+    else
+        warn "未输入任何基金"
+    fi
+
+    echo ""
+    read -p "按回车键返回主菜单..."
+}
+
+# ── 配置推送渠道 ──────────────────────────
+edit_push() {
+    clear
+    title "配置推送渠道"
+
+    echo "  ⚠ 推送地址包含你的机器人密钥，不要泄露给他人"
+    echo ""
+
+    FEISHU_URL=""
+    WECHAT_URL=""
+
+    # 读取已有的
+    if [ -f "$CONFIG_FILE" ]; then
+        FEISHU_URL=$(python3 -c "
+import json
+with open('$CONFIG_FILE') as f:
+    d = json.load(f)
+print(d.get('push', {}).get('feishu_webhook', ''))
+" 2>/dev/null || true)
+        WECHAT_URL=$(python3 -c "
+import json
+with open('$CONFIG_FILE') as f:
+    d = json.load(f)
+print(d.get('push', {}).get('wechat_webhook', ''))
+" 2>/dev/null || true)
+    fi
+
+    echo "  ── 飞书机器人 ──"
+    echo "  获取方式：飞书群 → 设置 → 群机器人 → 添加 Webhook 机器人"
+    if [ -n "$FEISHU_URL" ]; then
+        echo "  当前已配置：${FEISHU_URL:0:40}..."
+    fi
+    read -p "  请输入飞书 Webhook 地址（直接回车跳过）: " NEW_FEISHU
+    [ -n "$NEW_FEISHU" ] && FEISHU_URL="$NEW_FEISHU"
+    echo ""
+
+    echo "  ── 企业微信机器人 ──"
+    echo "  获取方式：企业微信群 → 群机器人 → 添加机器人 → 复制 Webhook 地址"
+    if [ -n "$WECHAT_URL" ]; then
+        echo "  当前已配置：${WECHAT_URL:0:40}..."
+    fi
+    read -p "  请输入企业微信 Webhook 地址（直接回车跳过）: " NEW_WECHAT
+    [ -n "$NEW_WECHAT" ] && WECHAT_URL="$NEW_WECHAT"
+    echo ""
+
+    # 保存
+    mkdir -p "$HOME/.fund-scout"
+    MY_FUNDS="[]"
+    if [ -f "$CONFIG_FILE" ]; then
+        MY_FUNDS=$(python3 -c "
+import json
+with open('$CONFIG_FILE') as f:
+    d = json.load(f)
+print(json.dumps(d.get('my_funds', []), ensure_ascii=False))
+" 2>/dev/null || echo '[]')
+    fi
+
+    cat > "$CONFIG_FILE" <<CONFEOF
+{
+  "my_funds": $MY_FUNDS,
+  "push": {
+    "feishu_webhook": "${FEISHU_URL}",
+    "wechat_webhook": "${WECHAT_URL}"
+  },
+  "defaults": {
+    "format": "md",
+    "style": "card",
+    "profile": "compare"
+  }
+}
+CONFEOF
+
+    if [ -n "$FEISHU_URL" ]; then
+        # 发送测试消息
+        cd "$SCRIPT_DIR/scripts"
+        python3 -c "
+import sys; sys.path.insert(0, '.')
+from adapters.feishu import FeishuAdapter
+from core.models import FundDataResult
+a = FeishuAdapter(webhook_url='$FEISHU_URL')
+ok = a.test_connection()
+print('飞书测试:', '成功' if ok else '失败')
+" 2>/dev/null || true
+    fi
+    if [ -n "$WECHAT_URL" ]; then
+        cd "$SCRIPT_DIR/scripts"
+        python3 -c "
+import sys; sys.path.insert(0, '.')
+from adapters.wechat import WechatAdapter
+a = WechatAdapter(webhook_url='$WECHAT_URL')
+ok = a.test_connection()
+print('企业微信测试:', '成功' if ok else '失败')
+" 2>/dev/null || true
+    fi
+    echo ""
+
+    info "推送配置已保存"
+    read -p "按回车键返回主菜单..."
+}
+
+# ── 启动 Web UI ──────────────────────────
+start_ui() {
+    clear
+    title "启动可视化配置界面"
+
+    cd "$SCRIPT_DIR/ui"
+
+    echo "  正在启动本地 Web 服务..."
+    echo ""
+
+    python3 server.py &
+    local PID=$!
+    sleep 1
+
+    # 自动打开浏览器
+    if command -v open &>/dev/null; then
+        open "http://localhost:8765" 2>/dev/null || true
+    elif command -v xdg-open &>/dev/null; then
+        xdg-open "http://localhost:8765" 2>/dev/null || true
+    fi
+
+    echo "  在浏览器中打开 http://localhost:8765"
+    echo "  在可视化界面中可以："
+    echo "    添加/删除基金"
+    echo "    配置飞书/企业微信推送"
+    echo "    点击按钮查询基金数据"
+    echo ""
+    echo "  按回车键停止界面并返回..."
+    read -r
+    kill $PID 2>/dev/null || true
+}
+
+# ── 主循环 ──────────────────────────
+main() {
+    check_deps
+
+    while true; do
+        show_menu
+
+        case "$CHOICE" in
+            1)
+                if [ -f "$CONFIG_FILE" ]; then
+                    run_compare "" ""
+                else
+                    warn "尚未配置基金列表，请先选择 6) 编辑我的基金列表"
+                    sleep 2
+                fi
+                ;;
+            2)
+                clear
+                title "手动输入基金代码"
+                echo "  输入基金代码，多只基金用逗号分隔"
+                echo "  示例：012870,006479,008971"
+                echo ""
+                read -p "  基金代码: " CODES
+                if [ -n "$CODES" ]; then
+                    run_compare "$CODES" ""
+                fi
+                ;;
+            3)
+                clear
+                title "查询并推送飞书"
+                FEISHU_URL=$(read_push_urls | head -1)
+                if [ -z "$FEISHU_URL" ]; then
+                    warn "未配置飞书 Webhook，请先选择 7) 配置推送渠道"
+                    sleep 2
+                else
+                    if [ -f "$CONFIG_FILE" ]; then
+                        run_compare "" "feishu"
+                    else
+                        read -p "  输入基金代码: " CODES
+                        run_compare "$CODES" "feishu"
+                    fi
+                fi
+                ;;
+            4)
+                clear
+                title "查询并推送企业微信"
+                WECHAT_URL=$(read_push_urls | tail -1)
+                if [ -z "$WECHAT_URL" ]; then
+                    warn "未配置企业微信 Webhook，请先选择 7) 配置推送渠道"
+                    sleep 2
+                else
+                    if [ -f "$CONFIG_FILE" ]; then
+                        run_compare "" "wechat"
+                    else
+                        read -p "  输入基金代码: " CODES
+                        run_compare "$CODES" "wechat"
+                    fi
+                fi
+                ;;
+            5)
+                clear
+                title "查询并同时推送飞书 + 企业微信"
+                FEISHU_URL=$(read_push_urls | head -1)
+                WECHAT_URL=$(read_push_urls | tail -1)
+                if [ -z "$FEISHU_URL" ] && [ -z "$WECHAT_URL" ]; then
+                    warn "未配置任何推送渠道，请先选择 7) 配置推送渠道"
+                    sleep 2
+                else
+                    if [ -f "$CONFIG_FILE" ]; then
+                        run_compare "" "feishu,wechat"
+                    else
+                        read -p "  输入基金代码: " CODES
+                        run_compare "$CODES" "feishu,wechat"
+                    fi
+                fi
+                ;;
+            6)
+                edit_funds
+                ;;
+            7)
+                edit_push
+                ;;
+            8)
+                start_ui
+                ;;
+            0)
+                echo ""
+                info "再见！"
+                exit 0
+                ;;
+            *)
+                warn "无效选择，请输入 0-8"
+                sleep 1
+                ;;
+        esac
+    done
+}
+
+main

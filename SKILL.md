@@ -145,6 +145,22 @@ QDII 基金与普通基金的关键差异，本 skill 已针对性处理：
 - 禁止并发请求
 - 每次请求随机 sleep 0.5~2.0s
 
+### 铁律 5 · 数据源降级与不可用处理
+
+主数据源（天天基金 eastmoney）获取失败时，自动切换到备用数据源（好买基金 howbuy）。
+两个数据源都失败时，`FundInfo.data_unavailable` 被标记为 `True`，`data_source` 为 `"unavailable"`。
+
+**Agent 必须检查 `data_unavailable` 字段：**
+- 如果 `data_unavailable == True`，**禁止**向用户展示该基金数据
+- 在推送结果中应提示："数据暂不可用，请稍后重试"
+- 批量场景下，在 `_warnings` 中汇总不可用数量
+
+**所有解析阶段的异常统一处理方式：**
+- 使用 Python `logging` 模块输出详细错误（不静默吞异常）
+- 单个字段解析失败不影响其他字段
+- 单个页面（如经理页、费率页）获取失败不影响主页核心数据
+- CSRC 数据源失败返回含 `"_note": "not_found"` 标记的空结果
+
 ## 申购状态四态校验（QDII 核心功能）
 
 QDII 基金限购频繁变动，是用户最关心的数据之一。
@@ -156,7 +172,7 @@ QDII 基金限购频繁变动，是用户最关心的数据之一。
 | `限大额(单日累计购买上限 X 元)` | `"限小额"` | `"X 元"` | **实际接近暂停申购** |
 | `暂停申购` | `"暂停"` | `"0"` | 完全不能买 |
 
-当限额是**元**而非**万元**，且金额 ≤ 1000 元时，附加 `"effectively_closed": true`。**禁止**把这种基金宣传为「可申购」。
+当申购状态为 `"暂停"` 时，附加 `"effectively_closed": true`，表示该基金实质暂停申购。**禁止**把这种基金宣传为「可申购」。
 
 ## 用户自定义配置
 
@@ -451,7 +467,9 @@ Profile 决定必填字段集：
 - 请求调度器：`#[[file:scripts/core/fetcher.py]]`
 - 数据模型：`#[[file:scripts/core/models.py]]`
 - 校验机制：`#[[file:scripts/core/validate.py]]`
-- 天天基金数据源：`#[[file:scripts/core/sources/eastmoney.py]]`
+- 天天基金数据源（主）：`#[[file:scripts/core/sources/eastmoney.py]]`
+- 好买基金数据源（备用）：`#[[file:scripts/core/sources/howbuy.py]]`
+- 数据源基类：`#[[file:scripts/core/sources/base.py]]`
 - 证监会数据源：`#[[file:scripts/core/sources/csrc.py]]`
 - JSON 格式化：`#[[file:scripts/formatters/json_fmt.py]]`
 - CSV 格式化：`#[[file:scripts/formatters/csv_fmt.py]]`

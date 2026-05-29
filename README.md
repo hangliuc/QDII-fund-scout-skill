@@ -1,108 +1,180 @@
 # QDII-fund-scout
 
-QDII 基金数据获取工具。从天天基金、证监会基金披露网站等公开渠道抓取 QDII 基金的核心数据：**申购限额、收益率、回撤、费率、季度持仓、市场投资分布**。
+QDII 基金数据查询工具。一键查看你持有的 QDII 基金的**申购限额、收益率、费率、回撤**等关键数据，支持推送到飞书或企业微信群。
 
-## Features
+> **目标用户**：持有 QDII 基金但不想每天挨个打开 App 查限额的投资者。
+>
+> **解决的问题**：QDII 基金限购频繁变动，今天还能买明天可能就暂停了。这个工具帮你一键查清所有持仓基金的状态。
 
-- **QDII 专项**：申购状态四态校验（开放 / 限大额 / 限小额 / 暂停），自动标记实质暂停（限额 ≤ 1000 元/天）
-- **多源数据**：天天基金（主页 + 档案 + 经理 + NAV 历史）+ 证监会季报 PDF（市场/行业分布）
-- **收益率排行**：按近 1 年收益率从高到低排列
-- **一站式推送**：支持飞书卡片（Grid 布局 + 红涨绿跌）、企业微信 Markdown
-- **多格式输出**：JSON / CSV / Markdown
-- **数据校验**：4 层校验（Schema → 范围 → 一致性 → 跨源），QDII 专项 profile
-- **零硬编码**：基金代码通过搜索或 config.json 传入，遵守 robots.txt
-- **可集成**：Python API + CLI + 配置文件，配合 SOLO Schedule / GitHub Actions 实现定时自动化
+---
 
-## Quick Start
+## 快速开始（零基础友好）
+
+### 第一步：安装
+
+打开终端（Mac 的"终端"App 或 Windows 的 PowerShell），运行：
 
 ```bash
-git clone https://github.com/hangliuc/lh-xiaohongshu.git
-cd lh-xiaohongshu/QDII-fund-scout/scripts
+# 下载工具
+git clone git@github.com:hangliuc/QDII-fund-scout-skill.git
+cd QDII-fund-scout-skill
 
-# 单只基金详情
+# 一键安装（自动装依赖、生成配置文件）
+bash setup.sh
+```
+
+安装过程中会：
+- 自动检测 Python 环境
+- 自动安装依赖包
+- 询问是否配置飞书/企业微信推送（可选，直接回车可跳过）
+- 验证安装是否成功
+
+> **如果 git clone 报错**：可以直接从 GitHub 页面下载 ZIP 压缩包，解压后进入文件夹运行 `bash setup.sh`
+
+### 第二步：运行
+
+安装完成后，每次想查询基金数据时：
+
+```bash
+bash run.sh
+```
+
+然后会看到一个菜单界面，用数字键选择操作即可：
+
+```
+  1) 查看我的基金（使用配置文件）
+  2) 手动输入基金代码查询
+  3) 查询后推送到飞书
+  4) 查询后推送到企业微信
+  ...
+  8) 打开可视化界面（浏览器配置）
+  0) 退出
+```
+
+> **首次使用**：先选 **6) 编辑我的基金列表**，输入你持有的基金代码和名称，保存后再选 **1) 查看我的基金**。
+
+或者选 **8) 打开可视化界面**，浏览器中会打开一个图形化页面，直接点击按钮操作，无需记忆任何命令。
+
+---
+
+## 常见 QDII 基金代码参考
+
+| 代码 | 基金名称 |
+|------|---------|
+| 017437 | 华宝纳斯达克精选 |
+| 014002 | 浦银安盛全球智能科技 |
+| 021277 | 广发全球精选 |
+| 017731 | 嘉实全球产业升级 |
+| 000043 | 嘉实美国成长 |
+| 161128 | 易方达标普信息科技 |
+| 012922 | 易方达全球成长精选 |
+| 021842 | 国富全球科技 |
+| 539002 | 建信新兴市场混合 |
+| 015202 | 汇添富全球移动互联 |
+| 024239 | 华夏全球科技先锋 |
+| 016702 | 银华海外数字经济 |
+| 018036 | 长城全球新能源车 |
+| 017145 | 华宝海外新能源汽车 |
+| 017204 | 华宝海外科技 |
+| 008254 | 华宝致远混合 |
+| 017093 | 景顺长城纳斯达克科技 |
+| 016665 | 天弘全球高端制造 |
+| 002891 | 华夏移动互联 |
+
+---
+
+## 配置推送渠道（飞书 / 企业微信）
+
+推送功能让你在手机端也能看到数据，无需打开电脑。**非必需，不配置也能用。**
+
+### 飞书配置
+
+1. 打开飞书 App → 进入任意一个群聊
+2. 点击群设置（右上角 ...）→ **群机器人** → **添加机器人**
+3. 搜索 **Webhook 机器人** → 添加
+4. 复制 Webhook 地址（以 `https://open.feishu.cn/open-apis/bot/v2/hook/` 开头）
+5. 运行 `bash run.sh` → 选 **7) 配置推送渠道** → 粘贴地址
+
+### 企业微信配置
+
+1. 打开企业微信 App → 进入任意一个群聊
+2. 点击群设置 → **群机器人** → **添加机器人**
+3. 创建一个新机器人 → 复制 Webhook 地址（以 `https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=` 开头）
+4. 运行 `bash run.sh` → 选 **7) 配置推送渠道** → 粘贴地址
+
+---
+
+## 数据说明
+
+### 查询结果中的字段含义
+
+| 字段 | 说明 | 示例 |
+|------|------|------|
+| 基金名称 + 代码 | 基金唯一标识 | 易方达纳指100C 012870 |
+| 近 1 年收益率 | 过去一年的收益表现，**红色 = 涨，绿色 = 跌** | +29.61% |
+| 申购状态 | 当前能否买入 | 开放 / 限大额 / 限小额 / **暂停** |
+| 限额 | 每日最多能买多少钱 | 1000元 / 10万元 / 无限制 |
+| 总费率 | 管理费 + 托管费 + 销售服务费 | 0.80% |
+
+### 申购状态说明
+
+QDII 基金额度有限，经常会出现限购或暂停申购，这是正常现象：
+
+| 状态 | 含义 | 能否买入 |
+|------|------|---------|
+| 开放申购 | 正常买入，无限制 | 可以 |
+| 限大额 | 单日购买有上限（通常几万到百万） | 小额可买 |
+| 限小额 | 单日限购金额很小（几百到几千元） | 可买但额度极少 |
+| 暂停申购 | 完全不能买入 | 不可买 |
+
+### 自动数据校验
+
+工具从天天基金（主）和好买基金（备用）两个来源获取数据，自动对比：
+
+- 两源数据一致 → 无标记，直接展示
+- 申购状态不一致 → 自动取**更严格**的状态（保护用户不会误以为能买）
+- 数值字段小差异 → 自动信任主源数据
+- 仅重大异常 → 标记 ⚠ 提示
+
+---
+
+## 高级用法（命令行）
+
+对于熟悉命令行的用户，可以直接使用 CLI 命令：
+
+```bash
+cd QDII-fund-scout-skill/scripts
+
+# 查看单只基金详情
 python3 cli.py detail 012870
 
-# 批量对比（限额 + 收益率）
+# 批量对比多只基金
 python3 cli.py compare 012870,006479,008971
-
-# 搜索纳斯达克 100 基金
-python3 cli.py search "纳斯达克100" --type 指数型 --class C
 
 # 推送到飞书
 python3 cli.py compare 012870,006479 --push feishu
 
-# JSON 格式输出
+# 推送到企业微信
+python3 cli.py compare 012870,006479 --push wechat
+
+# 同时推送到飞书和微信
+python3 cli.py compare 012870,006479 --push feishu,wechat
+
+# JSON 格式输出（方便程序处理）
 python3 cli.py compare 012870,006479 --format json
+
+# CSV 格式输出（可用 Excel 打开）
+python3 cli.py compare 012870,006479 --format csv
 ```
 
-## Requirements
-
-Python 3.9+，依赖：
-
-```
-requests
-pdfplumber（证监会季报 PDF 解析）
-```
+### 使用配置文件
 
 ```bash
-pip install requests pdfplumber
-```
-
-## Data Sources
-
-| 数据 | 来源 | 方式 |
-|------|------|------|
-| 净值 / 收益 / 规模 / 类型 | 天天基金主页 | HTML 解析 |
-| 费率 / 跟踪标的 | 天天基金档案页 | HTML 解析 |
-| 申购限额 / 状态 | 天天基金主页 | HTML 解析（正则） |
-| NAV 历史 / 回撤 | 天天基金 API | JSONP → JSON |
-| 基金经理 | 天天基金经理页 | HTML 解析 |
-| 前十大持仓 | 天天基金持仓页 | HTML 解析 |
-| 市场 / 行业分布 | 证监会季报 PDF | pdfplumber |
-
-## Configuration
-
-配置文件 `~/.fund-scout/config.json`：
-
-```json
-{
-  "my_funds": [
-    {"code": "012870", "name": "易方达纳指100C"}
-  ],
-  "push": {
-    "feishu_webhook": "",
-    "wechat_webhook": ""
-  }
-}
-```
-
-使用配置文件：
-
-```bash
+# 用配置文件中的基金列表
 python3 cli.py compare --config ~/.fund-scout/config.json
 ```
 
-## Push to Feishu / WeChat
-
-```bash
-# 飞书
-python3 cli.py compare 012870,006479 --push feishu
-
-# 企业微信
-python3 cli.py compare 012870,006479 --push wechat
-
-# 同时推送
-python3 cli.py compare 012870,006479 --push feishu,wechat
-```
-
-环境变量方式（不写死在代码里）：
-
-```bash
-export FEISHU_WEBHOOK_URL="https://open.feishu.cn/open-apis/bot/v2/hook/xxx"
-export WECHAT_WEBHOOK_URL="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxx"
-```
-
-## Python API
+### Python API 调用
 
 ```python
 import sys
@@ -111,16 +183,43 @@ sys.path.insert(0, "QDII-fund-scout/scripts")
 from core.fetcher import FundFetcher
 from adapters.feishu import FeishuAdapter
 
-fetcher = FundFetcher()
+fetcher = FundFetcher(rate_limit=0.5)
 result = fetcher.compare(["012870", "006479"])
 
 adapter = FeishuAdapter(webhook_url="https://open.feishu.cn/...")
 adapter.send(result)
+
+# 查看仲裁详情
+for fund in result.funds:
+    if fund._cross_validation:
+        print(f"⚠ {fund.name}: {fund._cross_validation}")
+    if fund._cross_resolved:
+        print(f"ℹ️ {fund.name}: 已自动仲裁 {fund._cross_resolved}")
 ```
 
-## Automation
+---
 
-配合 GitHub Actions 定时推送：
+## 数据来源
+
+| 数据 | 来源 | 方式 |
+|------|------|------|
+| 净值 / 收益 / 规模 / 类型 | 天天基金（主） / 好买基金（备） | HTML 解析 |
+| 费率 / 跟踪标的 | 天天基金档案页 | HTML 解析 |
+| 申购限额 / 状态 | 天天基金（主） / 好买基金（备） | HTML 解析（正则） |
+| NAV 历史 / 回撤 | 天天基金 API | JSONP → JSON |
+| 基金经理 | 天天基金经理页 | HTML 解析 |
+| 前十大持仓 | 天天基金持仓页 | HTML 解析 |
+| 市场 / 行业分布 | 证监会季报 PDF | pdfplumber |
+
+> **主备切换**：天天基金不可用时自动切换到好买基金，两者都失败返回"数据暂不可用"，不会崩溃。
+>
+> **自动仲裁**：两源数据差异时，申购状态取更严格值（暂停 > 限小额 > 限大额 > 开放），数值字段信任主源，仅有重大异常时才标记 ⚠。
+
+---
+
+## 定时自动化
+
+配合 SOLO Schedule 或 GitHub Actions 可以每天早上自动查询并推送到群里：
 
 ```yaml
 # .github/workflows/qdii-daily.yml
@@ -133,33 +232,70 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pip install requests pdfplumber
-      - run: python3 QDII-fund-scout/scripts/cli.py compare --push feishu
+      - run: python3 scripts/cli.py compare --push feishu
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
 ```
 
-## Project Structure
+---
+
+## 常见问题
+
+### Q: 运行报 `command not found: python3`？
+
+A: 需要安装 Python 3。下载地址：[python.org](https://www.python.org/downloads/)，安装后重新运行即可。
+
+### Q: 查询结果中有基金显示"数据暂不可用"？
+
+A: 说明天天基金和好买基金都无法获取该基金的数据，可能是网络问题或该基金代码有误，请稍后重试。
+
+### Q: 如何删除已配置的基金？
+
+A: 运行 `bash run.sh` → 选 **6) 编辑我的基金列表** → 直接输入新的列表覆盖
+
+### Q: 查询需要多久？
+
+A: 每只基金约需 5-10 秒（含请求间隔），5 只基金大约 30-60 秒。这是为了防止被网站封禁，故意设置的慢速请求。
+
+### Q: 推送消息中出现 ℹ️ 和 ⚠ 标记？
+
+A: ℹ️ 表示数据来自两个来源且已自动仲裁，数据可信。⚠ 表示发现重大数据异常，建议核实。
+
+---
+
+## 项目结构
 
 ```
 QDII-fund-scout/
-├── SKILL.md                  # Agent 入口（aegnt skills spec）
+├── setup.sh                 # 一键安装脚本（从这里开始）
+├── run.sh                   # 一键运行脚本（交互菜单 + 可视化界面）
+├── SKILL.md                 # Agent 入口（TRAE / SOLO 用）
+├── ui/
+│   ├── server.py            # 可视化界面后端服务
+│   └── index.html           # 可视化界面前端页面
 ├── scripts/
-│   ├── cli.py                # CLI 入口
+│   ├── cli.py               # 命令行入口
 │   ├── core/
-│   │   ├── fetcher.py        # 请求调度器
-│   │   ├── models.py         # 数据模型
-│   │   ├── validate.py       # 4 层校验
+│   │   ├── fetcher.py       # 请求调度器（主备切换 + 自动仲裁）
+│   │   ├── models.py        # 数据模型
+│   │   ├── validate.py      # 4 层校验
 │   │   └── sources/
-│   │       ├── eastmoney.py  # 天天基金数据源
-│   │       └── csrc.py       # 证监会数据源
-│   ├── formatters/           # JSON / CSV / Markdown
-│   └── adapters/             # 飞书 / 微信推送
+│   │       ├── base.py       # 数据源基类
+│   │       ├── eastmoney.py # 天天基金数据源（主）
+│   │       ├── howbuy.py    # 好买基金数据源（备）
+│   │       └── csrc.py      # 证监会数据源
+│   ├── formatters/          # JSON / CSV / Markdown 输出
+│   └── adapters/            # 飞书 / 微信推送
 └── references/
-    ├── data-sources.md       # 数据源 URL 速查
-    ├── field-glossary.md     # 字段语义与陷阱
-    ├── validation-rules.md   # 校验规则
-    └── compliance.md         # 合规指南
+    ├── nasdaq_passive_qdii_c_funds.json  # 纳斯达克被动 C 类基金参考列表
+    ├── config.example.json  # 配置示例
+    ├── data-sources.md      # 数据源 URL 速查
+    ├── field-glossary.md    # 字段语义与陷阱
+    ├── validation-rules.md  # 校验规则
+    └── compliance.md        # 合规指南
 ```
+
+---
 
 ## License
 

@@ -72,6 +72,14 @@ class WechatAdapter(BaseAdapter):
             name = fund.short_name or fund.name or "-"
             code = fund.code
 
+            cross_mark = ""
+            if fund._cross_validation:
+                cv_fields = ", ".join(d["field"] for d in fund._cross_validation)
+                cross_mark = f' ⚠({cv_fields}数据存疑)'
+            elif fund._cross_resolved:
+                cv_fields = ", ".join(d["field"] for d in fund._cross_resolved)
+                cross_mark = f' ℹ️({cv_fields}已校验)'
+
             r1y_val = WechatAdapter._to_float(fund.return_1y)
             if r1y_val is not None:
                 r1y_color = "warning" if r1y_val > 0 else "info"
@@ -91,7 +99,7 @@ class WechatAdapter(BaseAdapter):
                 limit_line = f'<font color="info">限额: {limit_val}</font>'
 
             fund_blocks.append(
-                f"**{idx + 1}. {name}** {code}\n"
+                f"**{idx + 1}. {name}** {code}{cross_mark}\n"
                 f"{r1y_line}  |  {status_line}  |  {limit_line}"
             )
 

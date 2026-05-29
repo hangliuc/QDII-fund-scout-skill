@@ -13,7 +13,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from core.models import FundInfo, FundDataResult
 from core.sources.eastmoney import EastMoneySource
+from core.sources.howbuy import HowbuySource
 from core.sources.csrc import CSRCSource
+from core.sources.base import SourceError
 from core.validate import validate_data, print_report
 from adapters import get_adapter, list_adapters
 
@@ -37,17 +39,35 @@ def _ensure_config_dir() -> None:
 class FundFetcher:
     def __init__(self):
         self.em = EastMoneySource()
+        self.howbuy = HowbuySource()
         self.csrc = CSRCSource()
 
     def fetch_detail(self, code: str, holdings: bool = False, csrc: bool = False) -> FundInfo:
-        info = self.em.fetch_detail(code)
+        try:
+            info = self.em.fetch_detail(code)
+        except (SourceError, Exception) as e:
+            print(f"  ! 主源(eastmoney)获取 {code} 失败: {e}，尝试备用源(howbuy)")
+            try:
+                info = self.howbuy.fetch_detail(code)
+            except (SourceError, Exception) as e2:
+                print(f"  ! 备用源(howbuy)也失败: {e2}")
+                return FundInfo(code=code, data_source="unavailable", data_unavailable=True)
+
         if holdings:
             year = time.localtime().tm_year
-            info.top10_holdings = self.em._fetch_holdings(code, year)
+            try:
+                quarters = self.em._fetch_holdings(code, year)
+                if quarters:
+                    info.top10_holdings = quarters[0].get("stocks", [])
+            except Exception as e:
+                print(f"  ! 获取持仓失败: {e}")
         if csrc:
-            info.market_distribution = self.csrc.fetch_market_distribution(
-                code, info.short_name or info.name
-            )
+            try:
+                info.market_distribution = self.csrc.fetch_market_distribution(
+                    code, info.short_name or info.name
+                )
+            except Exception as e:
+                print(f"  ! 获取CSRC数据失败: {e}")
         return info
 
     def fetch_batch(self, codes: list[str]) -> list[FundInfo]:

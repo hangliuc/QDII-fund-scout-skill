@@ -83,6 +83,14 @@ class FeishuAdapter(BaseAdapter):
             name = fund.short_name or fund.name or "-"
             code = fund.code
 
+            cross_mark = ""
+            if fund._cross_validation:
+                cv_fields = ", ".join(d["field"] for d in fund._cross_validation)
+                cross_mark = f' ⚠<font color="grey">({cv_fields}数据存疑)</font>'
+            elif fund._cross_resolved:
+                cv_fields = ", ".join(d["field"] for d in fund._cross_resolved)
+                cross_mark = f' ℹ️<font color="grey">({cv_fields}已校验)</font>'
+
             r1y_val = self._to_float(fund.return_1y)
             if r1y_val is not None:
                 r1y_color = "red" if r1y_val > 0 else "green"
@@ -108,7 +116,7 @@ class FeishuAdapter(BaseAdapter):
                 "text": {
                     "tag": "lark_md",
                     "content": (
-                        f"**{idx + 1}. {name}** {code}\n"
+                        f"**{idx + 1}. {name}** {code}{cross_mark}\n"
                         f"近1年: {r1y_display}  |  申购: {status_display}  |  限额: {limit_display}"
                     ),
                 },

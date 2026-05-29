@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QDII-fund-scout</title>
+<style>/* html-ppt :: shared webfonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&display=swap');
+</style>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+
+/* ===== LIGHT THEME (default) ===== */
+body{
+  --bg:#f5f5f7;
+  --bg-card:#ffffff;
+  --border:rgba(0,0,0,.10);
+  --border-focus:rgba(0,113,227,.5);
+  --ink:#1d1d1f;
+  --ink2:#86868b;
+  --ink3:#aeaeb3;
+  --accent:#0071e3;
+  --accent-hover:#0077ed;
+  --green:#1aaf6c;
+  --red:#d32f2f;
+  --amber:#e68a00;
+  --cyan:#0077b6;
+  --surface-input:#ffffff;
+  --radius:12px;
+  --radius-sm:8px;
+  --scan-opacity:0;
+  --grid-opacity:0;
+  --vignette-opacity:0;
+  --card-line:var(--accent);
+  --btn-bg:rgba(0,113,227,.08);
+  --btn-border:rgba(0,113,227,.25);
+  --btn-hover:rgba(0,113,227,.18);
+  --chrome-period:var(--ink3);
+  --warn-bg:rgba(255,186,74,.12);
+  --warn-border:rgba(255,186,74,.3);
+  --row-hover:rgba(0,0,0,.02);
+  --status-pause:var(--red);
+  --status-small:var(--amber);
+  --status-big:#e65100;
+  --status-open:var(--green);
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+
+/* ===== DARK CYBER TERMINAL THEME ===== */
+body.dark{
+  --bg:#0a0c10;
+  --bg-card:#12141a;
+  --border:rgba(126,211,164,.18);
+  --border-focus:rgba(126,211,164,.5);
+  --ink:#e4e2d8;
+  --ink2:#8a8892;
+  --ink3:#5a6068;
+  --accent:#7ed3a4;
+  --accent-hover:#90e0b8;
+  --green:#7ed3a4;
+  --red:#ff6b6b;
+  --amber:#e9c58a;
+  --cyan:#64dfdf;
+  --surface-input:#0c0d12;
+  --radius:10px;
+  --radius-sm:6px;
+  --scan-opacity:1;
+  --grid-opacity:.25;
+  --vignette-opacity:1;
+  --card-line:var(--accent);
+  --btn-bg:rgba(126,211,164,.12);
+  --btn-border:rgba(126,211,164,.3);
+  --btn-hover:rgba(126,211,164,.22);
+  --chrome-period:#2a2d33;
+  --warn-bg:rgba(233,197,138,.06);
+  --warn-border:rgba(233,197,138,.18);
+  --row-hover:rgba(126,211,164,.03);
+  --status-pause:var(--red);
+  --status-small:var(--amber);
+  --status-big:#f57c00;
+  --status-open:var(--green);
+  font-family:'JetBrains Mono','IBM Plex Mono','Inter','Noto Sans SC',monospace;
+  scrollbar-color:rgba(126,211,164,.2) transparent;
+}
+
+/* ===== THEME OVERLAYS ===== */
+.scanlines{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:var(--scan-opacity);transition:opacity .5s;
+  background:repeating-linear-gradient(180deg,transparent 0,transparent 3px,rgba(126,211,164,.025) 3px,rgba(126,211,164,.025) 4px);mix-blend-mode:screen}
+.grid-overlay{position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:var(--grid-opacity);transition:opacity .5s;
+  background-image:linear-gradient(rgba(126,211,164,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(126,211,164,.08) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 50%,black 30%,transparent 80%)}
+.vignette{position:fixed;inset:0;pointer-events:none;z-index:9997;opacity:var(--vignette-opacity);transition:opacity .5s;
+  background:radial-gradient(ellipse at 50% 50%,transparent 50%,rgba(0,0,0,.6) 100%)}
+
+.container{max-width:960px;margin:0 auto;padding:24px 16px 64px;position:relative;z-index:1}
+
+/* ===== CHROME BAR ===== */
+.chrome{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;font-size:12px;color:var(--ink2);letter-spacing:.12em;text-transform:uppercase}
+.chrome .left{display:flex;align-items:center;gap:12px}
+.chrome .dots{display:flex;gap:7px}
+.chrome .dots span{width:11px;height:11px;border-radius:50%;background:var(--chrome-period);transition:background .3s}
+.chrome .dots span:nth-child(1){background:#ff5f57}
+.chrome .dots span:nth-child(2){background:#febc2e}
+.chrome .dots span:nth-child(3){background:var(--green)}
+.chrome .right{display:flex;align-items:center;gap:10px}
+.theme-toggle{background:none;border:1px solid var(--border);border-radius:6px;color:var(--ink2);font-size:14px;cursor:pointer;padding:5px 10px;transition:all .2s;line-height:1}
+.theme-toggle:hover{border-color:var(--ink2);color:var(--ink)}
+
+/* ===== HEADER ===== */
+.head{text-align:center;padding:16px 0 12px}
+.head .prompt{font-size:14px;color:var(--accent);font-family:'JetBrains Mono',monospace}
+.head .prompt::before{content:'$ ';color:var(--cyan)}
+.head h1{font-size:36px;font-weight:700;letter-spacing:-.02em;color:var(--ink);margin:6px 0 4px;line-height:1.15}
+body.dark .head h1{color:var(--accent);text-shadow:0 0 20px rgba(126,211,164,.25)}
+.head .sub{font-size:14px;color:var(--ink2);margin-top:2px}
+.cursor{display:inline-block;width:9px;height:1.1em;background:var(--accent);vertical-align:middle;margin-left:4px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* ===== CARDS ===== */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin-bottom:16px;position:relative;transition:background .3s,border-color .3s}
+.card::before{content:'';position:absolute;top:-1px;left:14px;right:14px;height:2px;background:linear-gradient(90deg,transparent,var(--card-line),transparent);transition:background .3s}
+.card h3{font-size:14px;font-weight:600;margin:0 0 14px;letter-spacing:.06em;color:var(--ink)}
+
+/* ===== FORM ELEMENTS ===== */
+.fund-row{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.fund-row select,.fund-row input{background:var(--surface-input);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--ink);padding:10px 12px;font-size:15px;font-family:'Inter','Noto Sans SC',sans-serif;outline:none;transition:border-color .2s}
+body.dark .fund-row select,body.dark .fund-row input{font-family:'JetBrains Mono','IBM Plex Mono','Inter','Noto Sans SC',monospace;font-size:14px}
+.fund-row select:focus,.fund-row input:focus{border-color:var(--border-focus);box-shadow:0 0 0 2px color-mix(in srgb,var(--border-focus) 20%,transparent)}
+.fund-row select option{background:var(--bg-card);color:var(--ink)}
+.fund-row input::placeholder{color:var(--ink3);opacity:.6}
+.fund-row input[type="text"]{flex:1;min-width:0}
+
+/* ===== BUTTONS ===== */
+.btn{display:inline-block;padding:9px 20px;border:none;border-radius:var(--radius-sm);font-size:14px;font-weight:500;font-family:inherit;cursor:pointer;transition:all .2s;white-space:nowrap;letter-spacing:0}
+body.dark .btn{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+.btn-primary{background:var(--btn-bg);color:var(--accent);border:1px solid var(--btn-border)}
+.btn-primary:hover{background:var(--btn-hover)}
+.btn-success{background:rgba(26,175,108,.08);color:var(--green);border:1px solid rgba(26,175,108,.25)}
+body.dark .btn-success{background:rgba(100,223,223,.1);color:var(--cyan);border:1px solid rgba(100,223,223,.25)}
+.btn-success:hover{background:rgba(26,175,108,.18)}
+body.dark .btn-success:hover{background:rgba(100,223,223,.2)}
+.btn-secondary{background:rgba(0,0,0,.04);color:var(--ink2);border:1px solid var(--border)}
+body.dark .btn-secondary{background:rgba(138,136,146,.08);border-color:rgba(138,136,146,.2)}
+.btn-secondary:hover{background:rgba(0,0,0,.08);color:var(--ink)}
+body.dark .btn-secondary:hover{background:rgba(138,136,146,.16)}
+.btn-sm{padding:5px 12px;font-size:12px}
+.btn-small{padding:7px 14px;font-size:13px}
+
+/* ===== FUND LIST ===== */
+.fund-list{margin-top:12px}
+.fund-item{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border)}
+.fund-item:last-child{border-bottom:none}
+.fund-item .code{font-weight:600;font-size:15px;color:var(--accent);font-family:'JetBrains Mono',monospace}
+.fund-item .name{font-size:14px;color:var(--ink2);margin-left:14px}
+.fund-item .remove-btn{background:none;border:none;color:var(--red);cursor:pointer;font-size:20px;padding:4px;line-height:1;opacity:.6;transition:opacity .2s}
+.fund-item .remove-btn:hover{opacity:1}
+
+/* ===== PUSH CONFIG ===== */
+.push-row{display:flex;gap:10px;margin-bottom:12px;align-items:center;flex-wrap:wrap}
+.push-row label{font-size:13px;color:var(--ink2);min-width:80px;font-weight:500}
+body.dark .push-row label{text-transform:uppercase;letter-spacing:.1em;font-size:11px}
+.push-row input[type="text"]{flex:1;min-width:180px;background:var(--surface-input);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--ink);padding:10px 12px;font-size:14px;font-family:'Inter','Noto Sans SC',sans-serif;outline:none;transition:border-color .2s}
+body.dark .push-row input[type="text"]{font-family:'JetBrains Mono',monospace;font-size:13px;background:#0c0d12}
+.push-row input[type="text"]:focus{border-color:var(--border-focus);box-shadow:0 0 0 2px color-mix(in srgb,var(--border-focus) 20%,transparent)}
+.push-hint{font-size:12px;color:var(--ink3);margin:-6px 0 12px 88px;opacity:.7}
+body.dark .push-hint{font-size:10px}
+.save-hint{text-align:right;margin-top:8px}
+
+/* ===== ACTION BAR ===== */
+.action-bar{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+.action-bar .btn{padding:12px 28px;font-size:15px;font-weight:600}
+
+/* ===== LOADING ===== */
+.loading{display:none;text-align:center;padding:32px;color:var(--ink2)}
+.loading.active{display:block}
+.spinner{display:inline-block;width:24px;height:24px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin-bottom:12px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading div{font-size:15px}
+
+/* ===== WARNINGS ===== */
+.warnings{background:var(--warn-bg);border:1px solid var(--warn-border);border-radius:8px;padding:12px 16px;margin-bottom:14px;font-size:14px;display:none}
+.warnings.show{display:block}
+.warning-item{padding:4px 0;color:var(--amber)}
+
+/* ===== RESULT TABLE ===== */
+.table-wrap{overflow-x:auto;margin-bottom:12px;border-radius:var(--radius-sm);border:1px solid var(--border)}
+.result-table{width:100%;border-collapse:collapse;font-size:14px;display:none}
+.result-table.show{display:table}
+.result-table th{padding:10px 12px;text-align:left;font-weight:600;font-size:13px;color:var(--ink2);border-bottom:1px solid var(--border);white-space:nowrap;background:var(--bg)}
+body.dark .result-table th{text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:500}
+.result-table td{padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap;font-size:14px}
+.result-table tr:last-child td{border-bottom:none}
+.result-table tr:hover td{background:var(--row-hover)}
+.result-table .num{text-align:right;font-variant-numeric:tabular-nums;font-family:'JetBrains Mono',monospace;font-size:13px}
+.result-table .red{color:var(--red);font-weight:500}
+.result-table .green{color:var(--green);font-weight:500}
+.result-table .status-pause{color:var(--status-pause);font-weight:600}
+.result-table .status-limit-small{color:var(--status-small)}
+.result-table .status-limit-big{color:var(--status-big)}
+.result-table .status-open{color:var(--status-open);font-weight:500}
+.result-table .cross-info{font-size:11px;color:var(--ink3);opacity:.7}
+.result-table .cross-warn{font-size:11px;color:var(--amber)}
+
+/* ===== EMPTY ===== */
+.empty-state{text-align:center;padding:28px;color:var(--ink3);font-size:14px}
+
+/* ===== TOAST ===== */
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--bg-card);color:var(--ink);padding:12px 24px;border-radius:10px;font-size:14px;border:1px solid var(--border);box-shadow:0 4px 16px rgba(0,0,0,.08);opacity:0;transition:opacity .3s;z-index:99999;pointer-events:none}
+body.dark .toast{box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.toast.show{opacity:1}
+
+/* ===== FOOTER ===== */
+.footer{text-align:center;padding:16px 0;font-size:12px;color:var(--ink3);letter-spacing:.12em;text-transform:uppercase;border-top:1px solid var(--border);margin-top:24px}
+body.dark .footer{letter-spacing:.18em}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:600px){
+  .fund-row{flex-direction:column}
+  .fund-row input[type="text"]{max-width:100%!important}
+  .push-row{flex-direction:column;align-items:stretch}
+  .push-row label{min-width:auto}
+  .push-hint{margin-left:0}
+  .action-bar .btn{flex:1;text-align:center}
+  .chrome .right .path{display:none}
+  .result-table{font-size:13px}
+  .result-table th,.result-table td{padding:7px 8px}
+}
+</style>
+</head>
+<body>
+
+<div class="scanlines"></div>
+<div class="grid-overlay"></div>
+<div class="vignette"></div>
+
+<div class="container">
+
+<div class="chrome">
+  <div class="left">
+    <div class="dots"><span></span><span></span><span></span></div>
+    <span class="path">~/fund-scout</span>
+  </div>
+  <div class="right">
+    <button class="theme-toggle" onclick="toggleTheme()">暗色</button>
+  </div>
+</div>
+
+<div class="head">
+  <div class="prompt">./qdii-fund-scout --ui</div>
+  <h1>QDII FUND SCOUT<span class="cursor"></span></h1>
+  <div class="sub">QDII 基金申购限额查询工具</div>
+</div>
+
+<div class="card">
+  <h3>我的基金列表</h3>
+  <div class="fund-row">
+    <select id="presetFund" onchange="onPresetChange()" style="flex:2;min-width:180px">
+      <option value="">从常见基金中选择...</option>
+      <option value="017437|华宝纳斯达克精选">017437 华宝纳斯达克精选</option>
+      <option value="014002|浦银安盛全球智能科技">014002 浦银安盛全球智能科技</option>
+      <option value="021277|广发全球精选">021277 广发全球精选</option>
+      <option value="017731|嘉实全球产业升级">017731 嘉实全球产业升级</option>
+      <option value="000043|嘉实美国成长">000043 嘉实美国成长</option>
+      <option value="161128|易方达标普信息科技">161128 易方达标普信息科技</option>
+      <option value="012922|易方达全球成长精选">012922 易方达全球成长精选</option>
+      <option value="021842|国富全球科技">021842 国富全球科技</option>
+      <option value="539002|建信新兴市场混合">539002 建信新兴市场混合</option>
+      <option value="015202|汇添富全球移动互联">015202 汇添富全球移动互联</option>
+      <option value="024239|华夏全球科技先锋">024239 华夏全球科技先锋</option>
+      <option value="016702|银华海外数字经济">016702 银华海外数字经济</option>
+      <option value="018036|长城全球新能源车">018036 长城全球新能源车</option>
+      <option value="017145|华宝海外新能源汽车">017145 华宝海外新能源汽车</option>
+      <option value="017204|华宝海外科技">017204 华宝海外科技</option>
+      <option value="008254|华宝致远混合">008254 华宝致远混合</option>
+      <option value="017093|景顺长城纳斯达克科技">017093 景顺长城纳斯达克科技</option>
+      <option value="016665|天弘全球高端制造">016665 天弘全球高端制造</option>
+      <option value="002891|华夏移动互联">002891 华夏移动互联</option>
+    </select>
+    <input type="text" id="manualCode" placeholder="代码" style="max-width:120px">
+    <input type="text" id="manualName" placeholder="名称" style="max-width:150px">
+    <button class="btn btn-primary btn-small" onclick="addFund()">添加</button>
+  </div>
+  <div id="fundList" class="fund-list">
+    <div class="empty-state">还未添加基金，从上方下拉选择后点击添加</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>推送配置</h3>
+  <div class="push-row">
+    <label>飞书</label>
+    <input type="text" id="feishuUrl" placeholder="https://open.feishu.cn/open-apis/bot/v2/hook/...">
+    <button class="btn btn-secondary btn-sm" onclick="testWebhook('feishu')">测试</button>
+  </div>
+  <div class="push-hint">飞书群设置 → 群机器人 → Webhook 机器人</div>
+  <div class="push-row">
+    <label>企业微信</label>
+    <input type="text" id="wechatUrl" placeholder="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=...">
+    <button class="btn btn-secondary btn-sm" onclick="testWebhook('wechat')">测试</button>
+  </div>
+  <div class="push-hint">企业微信群 → 群机器人 → 添加机器人</div>
+  <div class="save-hint">
+    <button class="btn btn-primary btn-sm" onclick="saveConfig()">保存配置</button>
+  </div>
+</div>
+
+<div class="action-bar">
+  <button class="btn btn-primary" onclick="runQuery(false)">查询基金数据</button>
+  <button class="btn btn-success" onclick="runQuery('feishu')">查询 + 推飞书</button>
+  <button class="btn btn-success" onclick="runQuery('wechat')">查询 + 推微信</button>
+</div>
+
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  <div>查询中，每只基金约需 5-10 秒...</div>
+</div>
+
+<div class="warnings" id="warnings"></div>
+
+<div class="table-wrap">
+  <table class="result-table" id="resultTable">
+    <thead>
+      <tr>
+        <th>基金名称</th>
+        <th>代码</th>
+        <th>净值</th>
+        <th>近1年</th>
+        <th>近3年</th>
+        <th>申购状态</th>
+        <th>限额</th>
+        <th>总费率</th>
+        <th>规模</th>
+        <th>回撤</th>
+      </tr>
+    </thead>
+    <tbody id="resultBody"></tbody>
+  </table>
+</div>
+
+<div id="emptyResult" class="empty-state" style="display:none">查询完成，无数据返回</div>
+
+<div class="footer"><span>data from eastmoney / howbuy / csrc</span><span>QDII-fund-scout</span></div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let currentFunds = [];
+let queryCodes = [];
+let queryPushTarget = '';
+
+function toggleTheme() {
+  const body = document.body;
+  body.classList.toggle('dark');
+  const btn = document.querySelector('.theme-toggle');
+  btn.textContent = body.classList.contains('dark') ? '浅色' : '暗色';
+}
+
+async function api(path, body) {
+  const res = await fetch(path, {
+    method: body ? 'POST' : 'GET',
+    headers: body ? {'Content-Type': 'application/json'} : {},
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  return res.json();
+}
+
+function toast(msg, duration) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(el._timer);
+  el._timer = setTimeout(() => el.classList.remove('show'), duration || 2200);
+}
+
+function onPresetChange() {
+  const sel = document.getElementById('presetFund');
+  if (!sel.value) return;
+  const parts = sel.value.split('|');
+  document.getElementById('manualCode').value = parts[0];
+  document.getElementById('manualName').value = parts[1];
+}
+
+async function addFund() {
+  const code = document.getElementById('manualCode').value.trim();
+  const name = document.getElementById('manualName').value.trim();
+  const sel = document.getElementById('presetFund');
+  if (!code) { toast('请输入基金代码'); return; }
+  if (currentFunds.some(f => f.code === code)) { toast('该基金已在列表中'); return; }
+  currentFunds.push({code, name: name || code});
+  document.getElementById('manualCode').value = '';
+  document.getElementById('manualName').value = '';
+  sel.value = '';
+  renderFunds();
+  await saveFunds();
+}
+
+async function removeFund(index) {
+  currentFunds.splice(index, 1);
+  renderFunds();
+  await saveFunds();
+}
+
+function renderFunds() {
+  const container = document.getElementById('fundList');
+  if (currentFunds.length === 0) {
+    container.innerHTML = '<div class="empty-state">还未添加基金，从上方下拉选择后点击添加</div>';
+    return;
+  }
+  container.innerHTML = currentFunds.map((f, i) =>
+    `<div class="fund-item">
+      <div>
+        <span class="code">${f.code}</span>
+        <span class="name">${f.name}</span>
+      </div>
+      <button class="remove-btn" onclick="removeFund(${i})">&times;</button>
+    </div>`
+  ).join('');
+}
+
+async function saveFunds() {
+  await api('/api/config', {my_funds: currentFunds});
+}
+
+async function loadConfig() {
+  const data = await api('/api/config');
+  currentFunds = data.my_funds || [];
+  renderFunds();
+  const push = data.push || {};
+  document.getElementById('feishuUrl').value = push.feishu_webhook || '';
+  document.getElementById('wechatUrl').value = push.wechat_webhook || '';
+}
+
+async function saveConfig() {
+  const feishuUrl = document.getElementById('feishuUrl').value.trim();
+  const wechatUrl = document.getElementById('wechatUrl').value.trim();
+  await api('/api/config', {
+    my_funds: currentFunds,
+    push: { feishu_webhook: feishuUrl, wechat_webhook: wechatUrl }
+  });
+  toast('配置已保存');
+}
+
+async function testWebhook(type) {
+  const url = document.getElementById(type === 'feishu' ? 'feishuUrl' : 'wechatUrl').value.trim();
+  if (!url) { toast('请先输入 Webhook 地址'); return; }
+  const btn = event.target;
+  btn.textContent = '...';
+  btn.disabled = true;
+  const result = await api('/api/test-webhook', {type, url});
+  btn.textContent = '测试';
+  btn.disabled = false;
+  toast(result.ok ? (type === 'feishu' ? '飞书连接成功' : '企业微信连接成功') : (result.error || '连接失败'));
+}
+
+async function runQuery(pushTarget) {
+  const codes = currentFunds.map(f => f.code);
+  if (codes.length === 0) { toast('请先添加基金'); return; }
+  document.getElementById('loading').classList.add('active');
+  document.getElementById('resultTable').classList.remove('show');
+  document.getElementById('emptyResult').style.display = 'none';
+  document.getElementById('warnings').classList.remove('show');
+  document.getElementById('warnings').innerHTML = '';
+  queryCodes = codes;
+  queryPushTarget = pushTarget || '';
+  if (pushTarget) await saveConfig();
+  try {
+    const data = await api('/api/query', {codes});
+    renderResult(data);
+  } catch (e) {
+    toast('查询失败: ' + e.message);
+    document.getElementById('loading').classList.remove('active');
+  }
+}
+
+function fmtReturn(val) {
+  if (val === null || val === undefined || val === '') return '-';
+  const v = typeof val === 'string' ? parseFloat(val.replace('%','')) : val;
+  if (isNaN(v)) return '-';
+  const sign = v > 0 ? '+' : '';
+  return `<span class="${v > 0 ? 'red' : (v < 0 ? 'green' : '')}">${sign}${v.toFixed(2)}%</span>`;
+}
+
+function fmtFee(val) {
+  if (val === null || val === undefined || val === '') return '-';
+  const v = typeof val === 'string' ? parseFloat(val) : val;
+  if (isNaN(v)) return '-';
+  return v.toFixed(2) + '%';
+}
+
+function fmtStatus(status) {
+  if (status === '暂停') return '<span class="status-pause">暂停</span>';
+  if (status === '限小额') return '<span class="status-limit-small">限小额</span>';
+  if (status === '限大额') return '<span class="status-limit-big">限大额</span>';
+  if (status === '开放') return '<span class="status-open">开放</span>';
+  return status || '-';
+}
+
+function renderResult(data) {
+  document.getElementById('loading').classList.remove('active');
+  if (data.warnings && data.warnings.length > 0) {
+    const el = document.getElementById('warnings');
+    el.innerHTML = data.warnings.map(w => `<div class="warning-item">${w}</div>`).join('');
+    el.classList.add('show');
+  }
+  const funds = data.funds || [];
+  if (funds.length === 0) {
+    document.getElementById('emptyResult').style.display = 'block';
+    return;
+  }
+  const tbody = document.getElementById('resultBody');
+  tbody.innerHTML = funds.map(f => {
+    const crossHtml = f.cross_info ? `<div class="${f.cross_info.includes('\u26a0') ? 'cross-warn' : 'cross-info'}">${f.cross_info}</div>` : '';
+    return `<tr>
+      <td><strong>${f.name}</strong>${crossHtml}</td>
+      <td style="color:var(--accent);font-family:'JetBrains Mono',monospace">${f.code}</td>
+      <td class="num">${f.nav || '-'}</td>
+      <td class="num">${fmtReturn(f.return_1y)}</td>
+      <td class="num">${fmtReturn(f.return_3y)}</td>
+      <td>${fmtStatus(f.purchase_status)}</td>
+      <td class="num">${f.purchase_limit || '-'}</td>
+      <td class="num">${fmtFee(f.total_fee)}</td>
+      <td class="num">${f.scale || '-'}</td>
+      <td class="num">${f.drawdown_1y ? f.drawdown_1y.toFixed(2) + '%' : '-'}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('resultTable').classList.add('show');
+  if (queryPushTarget) pushAfterQuery(queryPushTarget, queryCodes);
+}
+
+async function pushAfterQuery(target, codes) {
+  const res = await api('/api/push', {target, codes});
+  if (res.ok) toast('\u5df2\u63a8\u9001\u5230' + (target === 'feishu' ? '\u98de\u4e66' : '\u4f01\u4e1a\u5fae\u4fe1'));
+  else toast('\u63a8\u9001\u5931\u8d25: ' + (res.error || ''));
+}
+
+loadConfig();
+</script>
+</body>
+</html>

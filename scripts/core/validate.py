@@ -308,7 +308,7 @@ def print_report(result: ValidationResult) -> None:
         for w in result.warnings[:30]:
             print(f"  - {w}")
         if len(result.warnings) > 30:
-            print(f"  ... 还有 {len(result.warning_count) - 30} 条")
+            print(f"  ... 还有 {len(result.warnings) - 30} 条")
     if not result.fatal and not result.warnings:
         print("✅ 全部通过")
 

@@ -1,16 +1,19 @@
 from __future__ import annotations
 
 import json
+import logging
 import random
 import re
 import time
-from abc import ABC, abstractmethod
 from datetime import datetime
 from typing import Optional
 
 import requests
 
 from core.models import FundInfo
+from core.sources.base import BaseSource, SourceError
+
+logger = logging.getLogger(__name__)
 
 HEADERS = {
     "User-Agent": (
@@ -19,13 +22,6 @@ HEADERS = {
         "Chrome/120.0.0.0 Safari/537.36"
     ),
     "Referer": "http://fund.eastmoney.com/",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
-}
-
-CSRC_HEADERS = {
-    "User-Agent": HEADERS["User-Agent"],
-    "Referer": "http://eid.csrc.gov.cn/fund/disclose/advanced_search.html",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
 }
@@ -45,44 +41,25 @@ _NAV_URL = (
 _FUND_CODES_URL = "http://fund.eastmoney.com/js/fundcode_search.js"
 
 
-class BaseSource(ABC):
-
-    @abstractmethod
-    def fetch_detail(self, code: str) -> FundInfo:
-        ...
-
-    @abstractmethod
-    def fetch_batch(self, codes: list[str]) -> list[FundInfo]:
-        ...
-
-    @abstractmethod
-    def search_funds(self, keyword: str, fund_type: str = "") -> list[dict]:
-        ...
-
-
 class EastMoneySource(BaseSource):
+    name = "eastmoney"
 
     def _get(self, url: str, timeout: int = 20, headers: dict | None = None) -> str:
         hdrs = headers or HEADERS
-        resp = requests.get(url, headers=hdrs, timeout=timeout)
-        resp.encoding = "utf-8"
-        if resp.status_code != 200:
-            raise RuntimeError(f"HTTP {resp.status_code} - {url}")
-        return resp.text
-
-    def _sleep(self, lo: float = 0.5, hi: float = 2.0) -> None:
-        time.sleep(random.uniform(lo, hi))
-
-    @staticmethod
-    def _strip_tags(html: str) -> str:
-        text = re.sub(r"<[^>]+>", " ", html)
-        return re.sub(r"\s+", " ", text).strip()
+        try:
+            resp = requests.get(url, headers=hdrs, timeout=timeout)
+            resp.encoding = "utf-8"
+            if resp.status_code != 200:
+                raise SourceError(self.name, f"HTTP {resp.status_code} - {url}")
+            return resp.text
+        except requests.RequestException as e:
+            raise SourceError(self.name, f"请求失败 {url}", original=e) from e
 
     def fetch_all_fund_codes(self) -> list[list[str]]:
         text = self._get(_FUND_CODES_URL)
         m = re.search(r"var r = (\[.*\])", text, re.DOTALL)
         if not m:
-            raise RuntimeError("无法解析 fundcode_search.js")
+            raise SourceError(self.name, "无法解析 fundcode_search.js")
         return json.loads(m.group(1))
 
     def search_funds(self, keyword: str, fund_type: str = "") -> list[dict]:
@@ -97,34 +74,48 @@ class EastMoneySource(BaseSource):
         return results
 
     def fetch_detail(self, code: str) -> FundInfo:
-        info = FundInfo(code=code)
+        info = FundInfo(code=code, data_source="eastmoney")
 
         main_html = self._get_with_retry(_FUND_URL.format(code=code))
         if main_html:
-            parsed = self._parse_main_page(main_html, code)
-            for k, v in parsed.items():
-                setattr(info, k, v)
+            try:
+                parsed = self._parse_main_page(main_html, code)
+                for k, v in parsed.items():
+                    setattr(info, k, v)
+            except Exception as e:
+                logger.warning("eastmoney _parse_main_page(%s) 部分解析失败: %s", code, e)
+        else:
+            logger.warning("eastmoney 基金 %s 主页获取失败", code)
         self._sleep(1.0, 2.0)
 
         archive_html = self._get_with_retry(_ARCHIVE_URL.format(code=code))
         if archive_html:
-            parsed = self._parse_archive_page(archive_html, code)
-            for k, v in parsed.items():
-                setattr(info, k, v)
+            try:
+                parsed = self._parse_archive_page(archive_html, code)
+                for k, v in parsed.items():
+                    setattr(info, k, v)
+            except Exception as e:
+                logger.warning("eastmoney _parse_archive_page(%s) 部分解析失败: %s", code, e)
         self._sleep(1.0, 2.0)
 
         manager_html = self._get_with_retry(_MANAGER_URL.format(code=code))
         if manager_html:
-            parsed = self._parse_manager_page(manager_html, code)
-            for k, v in parsed.items():
-                setattr(info, k, v)
+            try:
+                parsed = self._parse_manager_page(manager_html, code)
+                for k, v in parsed.items():
+                    setattr(info, k, v)
+            except Exception as e:
+                logger.warning("eastmoney _parse_manager_page(%s) 部分解析失败: %s", code, e)
         self._sleep(1.0, 2.0)
 
-        nav_result = self._fetch_nav_and_drawdown(code)
-        if nav_result:
-            info.nav_list = nav_result["nav_list"]
-            info.drawdown_1y = nav_result["drawdown_1y"]
-            info.drawdown_3y = nav_result["drawdown_3y"]
+        try:
+            nav_result = self._fetch_nav_and_drawdown(code)
+            if nav_result:
+                info.nav_list = nav_result["nav_list"]
+                info.drawdown_1y = nav_result["drawdown_1y"]
+                info.drawdown_3y = nav_result["drawdown_3y"]
+        except Exception as e:
+            logger.warning("eastmoney _fetch_nav_and_drawdown(%s) 失败: %s", code, e)
 
         info.update_date = time.strftime("%Y-%m-%d")
         return info
@@ -135,19 +126,12 @@ class EastMoneySource(BaseSource):
             try:
                 info = self.fetch_detail(code)
                 results.append(info)
+            except SourceError as e:
+                logger.warning("eastmoney fetch_detail(%s) 失败: %s", code, e)
             except Exception as e:
-                print(f"  ! fetch_detail({code}) 失败: {e}")
+                logger.warning("eastmoney fetch_detail(%s) 异常: %s", code, e)
             self._sleep(0.5, 1.0)
         return results
-
-    def _get_with_retry(self, url: str, retries: int = 2, timeout: int = 20) -> Optional[str]:
-        for i in range(retries + 1):
-            try:
-                return self._get(url, timeout=timeout)
-            except Exception as e:
-                print(f"  ! 请求失败 ({i + 1}/{retries + 1}) {url} - {e}")
-                self._sleep()
-        return None
 
     def _parse_main_page(self, html: str, code: str) -> dict:
         info: dict = {}
@@ -350,7 +334,8 @@ class EastMoneySource(BaseSource):
             url = _NAV_URL.format(code=code, page=page, start=start_3y, end=today)
             try:
                 text = self._get(url)
-            except Exception:
+            except SourceError as e:
+                logger.warning("eastmoney NAV 请求失败 %s page=%d: %s", code, page, e)
                 break
             m = re.search(r'"Data":\s*(\{.*?\})\s*\}', text, re.DOTALL)
             if not m:
