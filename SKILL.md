@@ -497,4 +497,6 @@ Profile 决定必填字段集：
 - 敏感词检测 → xhs-sensitive-word-check
 - 自动发布笔记到小红书
 - 投资建议生成
+- 合规审查 → 使用者须自行遵守 `#[[file:references/compliance.md]]` 中的合规要求
+- 替使用者承担数据获取和使用的法律责任
 - 实时行情推送（非公开数据）

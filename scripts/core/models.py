@@ -5,7 +5,12 @@ from dataclasses import dataclass, field, asdict
 from typing import Any
 
 
-DISCLAIMER = "数据来源公开渠道，仅供学习参考，不构成任何投资建议。历史业绩不代表未来表现。"
+DISCLAIMER = (
+    "数据来源：天天基金、好买基金、证监会等公开渠道 | "
+    "仅供个人学习参考，不构成任何投资建议 | "
+    "历史业绩不代表未来表现，申购限额随时变动 | "
+    "数据版权归原始平台所有，禁止商业转载和使用"
+)
 
 
 @dataclass
