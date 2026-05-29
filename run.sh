@@ -92,9 +92,11 @@ show_menu() {
     echo "    6) 编辑我的基金列表"
     echo "    7) 配置推送渠道（飞书/企业微信）"
     echo "    8) 打开可视化界面（浏览器配置）"
+    echo "    9) 设置每日定时推送（自动运行）"
+    echo "    10) 取消定时推送"
     echo "    0) 退出"
     echo ""
-    read -p "  请输入数字 (0-8): " CHOICE
+    read -p "  请输入数字 (0-10): " CHOICE
     echo ""
 }
 
@@ -331,6 +333,215 @@ start_ui() {
     kill $PID 2>/dev/null || true
 }
 
+# ── 设置每日定时推送 ──────────────────────────
+setup_schedule() {
+    clear
+    title "设置每日定时推送"
+
+    if [ ! -f "$CONFIG_FILE" ]; then
+        warn "尚未配置基金列表，请先添加基金"
+        sleep 2
+        edit_funds
+        if [ ! -f "$CONFIG_FILE" ]; then
+            return
+        fi
+    fi
+
+    # 读取已有的推送配置
+    FEISHU_URL=$(read_push_urls | head -1)
+    WECHAT_URL=$(read_push_urls | tail -1)
+
+    if [ -z "$FEISHU_URL" ] && [ -z "$WECHAT_URL" ]; then
+        warn "未配置推送渠道，请先配置"
+        sleep 1
+        edit_push
+        FEISHU_URL=$(read_push_urls | head -1)
+        WECHAT_URL=$(read_push_urls | tail -1)
+        if [ -z "$FEISHU_URL" ] && [ -z "$WECHAT_URL" ]; then
+            return
+        fi
+    fi
+
+    echo "  当前推送渠道："
+    [ -n "$FEISHU_URL" ] && echo "    飞书 ✓"
+    [ -n "$WECHAT_URL" ] && echo "    企业微信 ✓"
+    echo ""
+    echo "  选择推送时段："
+    echo "    1) 工作日 09:00（开盘前）"
+    echo "    2) 工作日 15:30（收盘后）"
+    echo "    3) 工作日 09:00 + 15:30（两次）"
+    echo "    4) 每天 09:00"
+    echo ""
+    read -p "  请选择 (1-4): " TIME_SLOT
+    echo ""
+
+    local CRON_EXPR=""
+    local LABEL=""
+    case "$TIME_SLOT" in
+        1) CRON_EXPR="0 9 * * 1-5"; LABEL="工作日 09:00" ;;
+        2) CRON_EXPR="30 15 * * 1-5"; LABEL="工作日 15:30" ;;
+        3) CRON_EXPR="0 9,15 * * 1-5"; LABEL="工作日 09:00 + 15:30" ;;
+        4) CRON_EXPR="0 9 * * *"; LABEL="每天 09:00" ;;
+        *) warn "无效选择"; sleep 1; return ;;
+    esac
+
+    # 创建定时任务包装脚本
+    mkdir -p "$CONFIG_DIR"
+    SCHEDULE_SCRIPT="$CONFIG_DIR/scheduled_push.sh"
+    cat > "$SCHEDULE_SCRIPT" <<'SHSCRIPT'
+#!/bin/bash
+# QDII-fund-scout 定时推送脚本（由 run.sh 自动生成）
+CONFIG_FILE="$HOME/.fund-scout/config.json"
+SCRIPT_DIR="
+SHSCRIPT
+    echo "$SCRIPT_DIR" >> "$SCHEDULE_SCRIPT"
+    cat >> "$SCHEDULE_SCRIPT" <<'SHSCRIPT'
+"
+
+if [ ! -f "$CONFIG_FILE" ]; then
+    echo "[$(date)] 配置文件不存在，跳过" >> "$HOME/.fund-scout/schedule.log"
+    exit 1
+fi
+
+cd "$SCRIPT_DIR/scripts"
+python3 cli.py compare --config "$CONFIG_FILE" --push feishu,wechat >> "$HOME/.fund-scout/schedule.log" 2>&1
+echo "[$(date)] 推送完成" >> "$HOME/.fund-scout/schedule.log"
+SHSCRIPT
+    chmod +x "$SCHEDULE_SCRIPT"
+
+    # 根据系统设置定时任务
+    local OS_TYPE="$(uname -s)"
+    if [ "$OS_TYPE" = "Darwin" ]; then
+        # macOS: 使用 launchd
+        local MINUTES=$(echo "$CRON_EXPR" | awk '{print $1}')
+        local CRON_HOURS=$(echo "$CRON_EXPR" | awk '{print $2}')
+        local DOW=$(echo "$CRON_EXPR" | awk '{print $5}')
+
+        cat > "$HOME/Library/LaunchAgents/com.fundscout.push.plist" <<PLIST
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.fundscout.push</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>${SCHEDULE_SCRIPT}</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <array>
+PLIST
+
+        # 生成 StartCalendarInterval 条目
+        local IFS_OLD="$IFS"
+        IFS=','; for H in $CRON_HOURS; do
+            HOUR=$H
+            if [ "$DOW" = "*" ]; then
+                # 每天
+                cat >> "$HOME/Library/LaunchAgents/com.fundscout.push.plist" <<PLIST
+        <dict>
+            <key>Hour</key>
+            <integer>${HOUR}</integer>
+            <key>Minute</key>
+            <integer>${MINUTES}</integer>
+        </dict>
+PLIST
+            else
+                # 工作日: 1=周一 .. 5=周五
+                for D in 1 2 3 4 5; do
+                    cat >> "$HOME/Library/LaunchAgents/com.fundscout.push.plist" <<PLIST
+        <dict>
+            <key>Hour</key>
+            <integer>${HOUR}</integer>
+            <key>Minute</key>
+            <integer>${MINUTES}</integer>
+            <key>Weekday</key>
+            <integer>${D}</integer>
+        </dict>
+PLIST
+                done
+            fi
+        done
+        IFS="$IFS_OLD"
+
+        cat >> "$HOME/Library/LaunchAgents/com.fundscout.push.plist" <<PLIST
+    </array>
+    <key>StandardOutPath</key>
+    <string>${HOME}/.fund-scout/schedule.log</string>
+    <key>StandardErrorPath</key>
+    <string>${HOME}/.fund-scout/schedule.log</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>
+PLIST
+
+        launchctl load "$HOME/Library/LaunchAgents/com.fundscout.push.plist" 2>/dev/null
+        info "launchd 定时任务已加载"
+        info "运行日志：~/.fund-scout/schedule.log"
+
+    elif [ "$OS_TYPE" = "Linux" ]; then
+        # Linux: 使用 crontab
+        (crontab -l 2>/dev/null | grep -v 'scheduled_push.sh'; echo "$CRON_EXPR bash $SCHEDULE_SCRIPT") | crontab -
+        info "crontab 定时任务已添加"
+
+    else
+        # Windows
+        warn "检测到 Windows 系统"
+        echo ""
+        echo "  请以管理员身份运行以下命令来创建定时任务："
+        echo ""
+        echo "  schtasks /create /tn QDIIFundScoutPush /tr \"bash $SCHEDULE_SCRIPT\" /sc DAILY /st 09:00 /f"
+        echo ""
+        echo "  或者在 Windows 搜索"任务计划程序" → 创建基本任务"
+        echo "  设置为每天执行：bash $SCHEDULE_SCRIPT"
+        echo ""
+        read -p "按回车键返回..."
+        return
+    fi
+
+    echo ""
+    info "每日定时推送设置完成！"
+    echo "  时间：$LABEL"
+    echo "  推送渠道：飞书 + 企业微信（已配置的均会推送）"
+    echo "  日志文件：~/.fund-scout/schedule.log"
+    echo ""
+    echo "  ⚠ 电脑在计划时间需要保持开机并联网"
+    echo "  ⚠ 如需修改时间，先选 10) 取消定时推送，再重新设置"
+    echo ""
+    read -p "按回车键返回主菜单..."
+}
+
+# ── 取消定时推送 ──────────────────────────
+remove_schedule() {
+    clear
+    title "取消定时推送"
+
+    local OS_TYPE="$(uname -s)"
+    if [ "$OS_TYPE" = "Darwin" ]; then
+        if [ -f "$HOME/Library/LaunchAgents/com.fundscout.push.plist" ]; then
+            launchctl unload "$HOME/Library/LaunchAgents/com.fundscout.push.plist" 2>/dev/null
+            rm -f "$HOME/Library/LaunchAgents/com.fundscout.push.plist"
+            info "macOS launchd 定时任务已取消"
+        else
+            warn "未设置过定时任务"
+        fi
+    elif [ "$OS_TYPE" = "Linux" ]; then
+        (crontab -l 2>/dev/null | grep -v 'scheduled_push.sh') | crontab -
+        info "crontab 定时任务已取消"
+    else
+        warn "请在 Windows 任务计划程序中手动删除 QDIIFundScoutPush 任务"
+    fi
+
+    rm -f "$CONFIG_DIR/scheduled_push.sh"
+    echo ""
+    read -p "按回车键返回主菜单..."
+}
+
 # ── 主循环 ──────────────────────────
 main() {
     check_deps
@@ -416,13 +627,19 @@ main() {
             8)
                 start_ui
                 ;;
+            9)
+                setup_schedule
+                ;;
+            10)
+                remove_schedule
+                ;;
             0)
                 echo ""
                 info "再见！"
                 exit 0
                 ;;
             *)
-                warn "无效选择，请输入 0-8"
+                warn "无效选择，请输入 0-10"
                 sleep 1
                 ;;
         esac
