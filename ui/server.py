@@ -35,7 +35,7 @@ def _save_config(cfg: dict) -> None:
 
 def _run_query(codes: list[str]) -> dict:
     from core.fetcher import FundFetcher
-    fetcher = FundFetcher(rate_limit=0.5)
+    fetcher = FundFetcher(rate_limit=0.3)
     result = fetcher.compare(codes=codes, cross_validate=True)
 
     rows = []

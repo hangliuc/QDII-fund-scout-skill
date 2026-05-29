@@ -42,7 +42,7 @@ class HowbuySource(BaseSource):
         except Exception as e:
             logger.warning("howbuy _parse_main_page(%s) 部分解析失败: %s", code, e)
 
-        self._sleep(1.0, 2.0)
+        self._sleep(0.3, 0.5)
 
         fee_html = self._get_with_retry(_FEE_URL.format(code=code), headers=HOWBUY_HEADERS)
         if fee_html:
@@ -67,7 +67,7 @@ class HowbuySource(BaseSource):
                 logger.warning("howbuy fetch_detail(%s) 失败: %s", code, e)
             except Exception as e:
                 logger.warning("howbuy fetch_detail(%s) 异常: %s", code, e)
-            self._sleep(0.5, 1.0)
+            self._sleep(0.3, 0.5)
         return results
 
     def search_funds(self, keyword: str, fund_type: str = "") -> list[dict]:

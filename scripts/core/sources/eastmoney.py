@@ -86,7 +86,7 @@ class EastMoneySource(BaseSource):
                 logger.warning("eastmoney _parse_main_page(%s) 部分解析失败: %s", code, e)
         else:
             logger.warning("eastmoney 基金 %s 主页获取失败", code)
-        self._sleep(1.0, 2.0)
+        self._sleep(0.3, 0.5)
 
         archive_html = self._get_with_retry(_ARCHIVE_URL.format(code=code))
         if archive_html:
@@ -96,7 +96,7 @@ class EastMoneySource(BaseSource):
                     setattr(info, k, v)
             except Exception as e:
                 logger.warning("eastmoney _parse_archive_page(%s) 部分解析失败: %s", code, e)
-        self._sleep(1.0, 2.0)
+        self._sleep(0.3, 0.5)
 
         manager_html = self._get_with_retry(_MANAGER_URL.format(code=code))
         if manager_html:
@@ -106,7 +106,7 @@ class EastMoneySource(BaseSource):
                     setattr(info, k, v)
             except Exception as e:
                 logger.warning("eastmoney _parse_manager_page(%s) 部分解析失败: %s", code, e)
-        self._sleep(1.0, 2.0)
+        self._sleep(0.3, 0.5)
 
         try:
             nav_result = self._fetch_nav_and_drawdown(code)
@@ -130,7 +130,7 @@ class EastMoneySource(BaseSource):
                 logger.warning("eastmoney fetch_detail(%s) 失败: %s", code, e)
             except Exception as e:
                 logger.warning("eastmoney fetch_detail(%s) 异常: %s", code, e)
-            self._sleep(0.5, 1.0)
+            self._sleep(0.3, 0.5)
         return results
 
     def _parse_main_page(self, html: str, code: str) -> dict:

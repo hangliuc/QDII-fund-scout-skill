@@ -14,7 +14,7 @@ from core.sources.csrc import CSRCSource
 
 logger = logging.getLogger(__name__)
 
-MIN_RATE_LIMIT = 0.5
+MIN_RATE_LIMIT = 0.3
 
 CROSS_VAL_THRESHOLDS: dict[str, dict] = {
     "return_1y": {"diff": 1.0, "unit": "百分点"},
@@ -34,11 +34,11 @@ def _build_purchase_info(status: str, limit: str, effectively_closed: bool) -> s
         amt = _parse_limit_amount(limit)
         if amt and amt < 100000:
             return f"限小额 {limit}"
-        return f"限小额（{limit}）"
+        return f"限小额（{limit}）" if limit else "限小额"
     if status == "限大额":
         return f"限大额（{limit}）" if limit else "限大额"
     if status in ("开放", "开放申购"):
-        return "开放申购"
+        return "开放申购（无限额）"
     return f"{status}（{limit}）" if limit else status
 
 

@@ -37,7 +37,7 @@ def _build_purchase_info(status: str, limit: str, effectively_closed: bool) -> s
     if status == "\u9650\u5927\u989d":
         return f"\u9650\u5927\u989d\uff08{limit}\uff09" if limit else "\u9650\u5927\u989d"
     if status in ("\u5f00\u653e", "\u5f00\u653e\u7533\u8d2d"):
-        return "\u5f00\u653e\u7533\u8d2d"
+        return "\u5f00\u653e\u7533\u8d2d\uff08\u65e0\u9650\u989d\uff09"
     return f"{status}\uff08{limit}\uff09" if limit else status
 
 
@@ -133,6 +133,18 @@ def _format_csv(data: dict) -> str:
 LABEL_SKIP = {"name", "code"}
 RAW_HIDE = {"purchase_status", "purchase_limit", "data_unavailable", "_purchase_info"}
 
+TABLE_FIELDS = [
+    ("name", "名称"),
+    ("code", "代码"),
+    ("nav", "净值"),
+    ("return_1y", "近1年"),
+    ("return_3y", "近3年"),
+    ("purchase_info", "申购状态"),
+    ("total_fee", "总费率"),
+    ("scale", "规模(亿)"),
+    ("drawdown_1y", "近1年回撤"),
+]
+
 def _format_md(data: dict, style: str = "table") -> str:
     funds = data.get("funds", [])
     if not funds:
@@ -163,20 +175,21 @@ def _format_md(data: dict, style: str = "table") -> str:
             blocks.append("\n".join(lines))
         return "\n\n---\n\n".join(blocks)
 
-    all_keys = []
-    for f in funds:
-        for k in f.keys():
-            if k not in all_keys:
-                all_keys.append(k)
-    header = "| " + " | ".join(all_keys) + " |"
-    sep = "| " + " | ".join(["---"] * len(all_keys)) + " |"
+    header = "| " + " | ".join(h for _, h in TABLE_FIELDS) + " |"
+    sep = "| " + " | ".join(["---"] * len(TABLE_FIELDS)) + " |"
     rows = []
     for f in funds:
         cells = []
-        for k in all_keys:
-            v = f.get(k, "")
+        for key, _ in TABLE_FIELDS:
+            v = f.get(key, "")
+            if key == "name" and len(str(v)) > 18:
+                v = str(v)[:16] + ".."
+            if key == "purchase_info" and not v:
+                v = f.get("purchase_status", "-")
             if isinstance(v, (dict, list)):
                 v = json.dumps(v, ensure_ascii=False)
+            if v is None or v == "None":
+                v = "-"
             cells.append(str(v))
         rows.append("| " + " | ".join(cells) + " |")
     return "\n".join([header, sep] + rows)

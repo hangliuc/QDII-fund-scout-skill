@@ -85,13 +85,13 @@ show_menu() {
     echo "  请选择操作："
     echo ""
     echo "    1) 查看我的基金（使用配置文件）"
-    echo "    2) 手动输入基金代码查询"
-    echo "    3) 查询我的基金并推送到飞书"
-    echo "    4) 查询我的基金并推送到企业微信"
-    echo "    5) 查询我的基金并同时推送飞书 + 企业微信"
-    echo "    6) 编辑我的基金列表"
-    echo "    7) 配置推送渠道（飞书/企业微信）"
-    echo "    8) 打开可视化界面（浏览器配置）"
+    echo "    2) 编辑我的基金列表"
+    echo "    3) 打开可视化界面（浏览器配置）"
+    echo "    4) 手动输入基金代码查询"
+    echo "    5) 查询我的基金并推送到飞书"
+    echo "    6) 查询我的基金并推送到企业微信"
+    echo "    7) 查询我的基金并同时推送飞书 + 企业微信"
+    echo "    8) 配置推送渠道（飞书/企业微信）"
     echo "    9) 设置每日定时推送（自动运行）"
     echo "    10) 取消定时推送"
     echo "    0) 退出"
@@ -106,7 +106,7 @@ run_compare() {
     local push_target="$2"
 
     cd "$SCRIPT_DIR/scripts"
-    CMD="python3 cli.py compare --format md --style card"
+    CMD="python3 cli.py compare --format md --style table"
 
     if [ -n "$codes" ]; then
         CMD="$CMD $codes"
@@ -119,7 +119,7 @@ run_compare() {
     fi
 
     echo ""
-    info "正在查询，请耐心等待（每只基金约需 5-10 秒）..."
+    info "正在查询，请耐心等待（每只基金约需 1-2 秒）..."
     echo ""
     eval "$CMD"
     local EXIT_CODE=$?
@@ -141,6 +141,7 @@ edit_funds() {
     title "编辑我的基金列表"
 
     echo "  每行输入一只基金，格式：基金代码 基金名称"
+    echo "  ⚠ 基金代码为 6 位数字，必须正确（名称可以自定义，仅做展示）"
     echo "  示例：012870 易方达纳指100C"
     echo "  输入完毕后输入空行结束"
     echo ""
@@ -148,7 +149,9 @@ edit_funds() {
     echo "  012870 易方达纳指100C     006479 广发纳指100C"
     echo "  008971 大成纳指100C       012044 华安纳指100C"
     echo "  000834 国富纳指100C       006075 博时标普500C"
-    echo "  008631 招商中证白酒C      050025 博时黄金C"
+    echo "  012922 易方达全球成长精选  021842 国富全球科技"
+    echo "  539002 建信新兴市场混合    008631 招商中证白酒C"
+    echo "  050025 博时黄金C"
     echo ""
 
     FUNDS_LIST=""
@@ -160,6 +163,11 @@ edit_funds() {
         CODE=$(echo "$LINE" | awk '{print $1}')
         NAME=$(echo "$LINE" | cut -d' ' -f2-)
         if [ -n "$CODE" ] && [ -n "$NAME" ]; then
+            # 校验：基金代码必须是 6 位数字
+            if ! echo "$CODE" | grep -qE '^[0-9]{6}$'; then
+                warn "基金代码 '$CODE' 不是有效的 6 位数字，请重新输入"
+                continue
+            fi
             FUNDS_LIST="${FUNDS_LIST}{\"code\": \"$CODE\", \"name\": \"$NAME\"},"
         else
             warn "格式错误，请重新输入"
@@ -554,11 +562,11 @@ main() {
                 if [ -f "$CONFIG_FILE" ]; then
                     run_compare "" ""
                 else
-                    warn "尚未配置基金列表，请先选择 6) 编辑我的基金列表"
+                    warn "尚未配置基金列表，请先选择 2) 编辑我的基金列表"
                     sleep 2
                 fi
                 ;;
-            2)
+            4)
                 clear
                 title "手动输入基金代码"
                 echo "  输入基金代码，多只基金用逗号分隔"
@@ -569,12 +577,12 @@ main() {
                     run_compare "$CODES" ""
                 fi
                 ;;
-            3)
+            5)
                 clear
                 title "查询并推送飞书"
                 FEISHU_URL=$(read_push_urls | head -1)
                 if [ -z "$FEISHU_URL" ]; then
-                    warn "未配置飞书 Webhook，请先选择 7) 配置推送渠道"
+                    warn "未配置飞书 Webhook，请先选择 8) 配置推送渠道"
                     sleep 2
                 else
                     if [ -f "$CONFIG_FILE" ]; then
@@ -585,12 +593,12 @@ main() {
                     fi
                 fi
                 ;;
-            4)
+            6)
                 clear
                 title "查询并推送企业微信"
                 WECHAT_URL=$(read_push_urls | tail -1)
                 if [ -z "$WECHAT_URL" ]; then
-                    warn "未配置企业微信 Webhook，请先选择 7) 配置推送渠道"
+                    warn "未配置企业微信 Webhook，请先选择 8) 配置推送渠道"
                     sleep 2
                 else
                     if [ -f "$CONFIG_FILE" ]; then
@@ -601,13 +609,13 @@ main() {
                     fi
                 fi
                 ;;
-            5)
+            7)
                 clear
                 title "查询并同时推送飞书 + 企业微信"
                 FEISHU_URL=$(read_push_urls | head -1)
                 WECHAT_URL=$(read_push_urls | tail -1)
                 if [ -z "$FEISHU_URL" ] && [ -z "$WECHAT_URL" ]; then
-                    warn "未配置任何推送渠道，请先选择 7) 配置推送渠道"
+                    warn "未配置任何推送渠道，请先选择 8) 配置推送渠道"
                     sleep 2
                 else
                     if [ -f "$CONFIG_FILE" ]; then
@@ -618,13 +626,13 @@ main() {
                     fi
                 fi
                 ;;
-            6)
+            2)
                 edit_funds
                 ;;
-            7)
+            8)
                 edit_push
                 ;;
-            8)
+            3)
                 start_ui
                 ;;
             9)
