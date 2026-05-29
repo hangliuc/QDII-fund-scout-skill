@@ -28,12 +28,8 @@ def _build_purchase_info(status: str, limit: str, effectively_closed: bool) -> s
     if status == "\u9650\u5c0f\u989d":
         m = re.search(r"([\d.]+)\s*(\u4e07|\u5143)?", str(limit or ""))
         if m:
-            amt = float(m.group(1))
-            if m.group(2) == "\u4e07":
-                amt *= 10000
-            if amt < 100000:
-                return f"\u9650\u5c0f\u989d {limit}"
-        return f"\u9650\u5c0f\u989d\uff08{limit}\uff09" if limit else "\u9650\u5c0f\u989d"
+            return f"\u9650\u5c0f\u989d {limit}"
+        return f"\u9650\u5c0f\u989d {limit}" if limit else "\u9650\u5c0f\u989d\uff08\u8bf7\u4ee5\u5e73\u53f0\u4e3a\u51c6\uff09"
     if status == "\u9650\u5927\u989d":
         return f"\u9650\u5927\u989d\uff08{limit}\uff09" if limit else "\u9650\u5927\u989d"
     if status in ("\u5f00\u653e", "\u5f00\u653e\u7533\u8d2d"):
@@ -130,20 +126,6 @@ def _format_csv(data: dict) -> str:
     return buf.getvalue()
 
 
-LABEL_SKIP = {"name", "code"}
-RAW_HIDE = {"purchase_status", "purchase_limit", "data_unavailable", "_purchase_info"}
-
-TABLE_FIELDS = [
-    ("name", "名称"),
-    ("code", "代码"),
-    ("nav", "净值"),
-    ("return_1y", "近1年"),
-    ("return_3y", "近3年"),
-    ("purchase_info", "申购状态"),
-    ("total_fee", "总费率"),
-    ("scale", "规模(亿)"),
-    ("drawdown_1y", "近1年回撤"),
-]
 
 def _format_md(data: dict, style: str = "table") -> str:
     funds = data.get("funds", [])
@@ -162,12 +144,13 @@ def _format_md(data: dict, style: str = "table") -> str:
 
     if style == "card":
         blocks = []
+        safe_hide = {"purchase_status", "purchase_limit", "data_unavailable", "_purchase_info"}
         for f in funds:
             lines = [f"### {f.get('name', '')} ({f.get('code', '')})"]
             for k, v in f.items():
-                if k in LABEL_SKIP or v is None or v == "" or v == [] or v == {}:
+                if k in ("name", "code") or v is None or v == "" or v == [] or v == {}:
                     continue
-                if k in RAW_HIDE:
+                if k in safe_hide:
                     continue
                 if isinstance(v, (dict, list)):
                     v = json.dumps(v, ensure_ascii=False)
@@ -175,24 +158,81 @@ def _format_md(data: dict, style: str = "table") -> str:
             blocks.append("\n".join(lines))
         return "\n\n---\n\n".join(blocks)
 
-    header = "| " + " | ".join(h for _, h in TABLE_FIELDS) + " |"
-    sep = "| " + " | ".join(["---"] * len(TABLE_FIELDS)) + " |"
-    rows = []
+    if style == "table":
+        return _format_rich_table(funds)
+
+    return ""
+
+
+TABLE_COLS = [
+    ("name", "名称", 18),
+    ("code", "代码", 8),
+    ("return_1y", "近1年", 8),
+    ("drawdown_1y", "回撤", 8),
+    ("scale", "规模(亿)", 9),
+    ("total_fee", "总费率", 8),
+    ("purchase_info", "申购状态", 16),
+]
+
+
+def _fmt_table_val(f: dict, key: str) -> str:
+    if key == "purchase_info":
+        v = f.get("purchase_info", "")
+        if not v:
+            v = f.get("purchase_status", "-")
+    else:
+        v = f.get(key, "")
+    if isinstance(v, (dict, list)):
+        v = json.dumps(v, ensure_ascii=False)
+    if v is None or v == "None":
+        v = "-"
+    return str(v)
+
+
+def _render_sep(col_widths: list[int], left: str, mid: str, right: str, fill: str) -> str:
+    parts = [fill * w for w in col_widths]
+    return left + mid.join(parts) + right
+
+
+def _format_rich_table(funds: list[dict]) -> str:
+    col_widths = []
+    for key, label, min_w in TABLE_COLS:
+        vals = [_fmt_table_val(f, key) for f in funds]
+        max_data = max(len(v) for v in vals) if vals else 0
+        col_widths.append(max(max_data + 2, len(label) + 2, min_w))
+
+    top = _render_sep(col_widths, "┌", "┬", "┐", "─")
+    sep = _render_sep(col_widths, "├", "┼", "┤", "─")
+    bot = _render_sep(col_widths, "└", "┴", "┘", "─")
+
+    # header
+    hdr_cells = []
+    for i, (_, label, _) in enumerate(TABLE_COLS):
+        w = col_widths[i]
+        if i == 0:
+            hdr_cells.append(" " + label + " " * (w - len(label) - 1))
+        else:
+            hdr_cells.append(" " * (w - len(label) - 1) + label + " ")
+    hdr = "│" + "│".join(hdr_cells) + "│"
+
+    # data rows (right-aligned for all except name)
+    lines = [top, hdr, sep]
     for f in funds:
         cells = []
-        for key, _ in TABLE_FIELDS:
-            v = f.get(key, "")
-            if key == "name" and len(str(v)) > 18:
-                v = str(v)[:16] + ".."
-            if key == "purchase_info" and not v:
-                v = f.get("purchase_status", "-")
-            if isinstance(v, (dict, list)):
-                v = json.dumps(v, ensure_ascii=False)
-            if v is None or v == "None":
-                v = "-"
-            cells.append(str(v))
-        rows.append("| " + " | ".join(cells) + " |")
-    return "\n".join([header, sep] + rows)
+        for i, (key, _, _) in enumerate(TABLE_COLS):
+            v = _fmt_table_val(f, key)
+            w = col_widths[i]
+            if key == "name":
+                if len(v) > w - 2:
+                    v = v[:w - 4] + ".."
+                padded = " " + v + " " * (w - len(v) - 1)
+            else:
+                padded = " " * (w - len(v) - 1) + v + " "
+            cells.append(padded)
+        lines.append("│" + "│".join(cells) + "│")
+
+    lines.append(bot)
+    return "\n".join(lines)
 
 
 def _format_output(data: dict, fmt: str, style: str = "table") -> str:
@@ -371,7 +411,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_compare = sub.add_parser("compare", help="批量对比")
     p_compare.add_argument("codes", nargs="?", default="", help="逗号分隔的基金代码")
     p_compare.add_argument("--config", default="", help="配置文件路径（默认 ~/.fund-scout/config.json）")
-    p_compare.add_argument("--style", choices=["table", "card", "summary"], default="card", help="md 格式专用")
+    p_compare.add_argument("--style", choices=["table", "card", "summary"], default="table", help="输出格式")
     p_compare.add_argument("--format", choices=["json", "csv", "md"], default="md")
     p_compare.add_argument("--push", default="", help="推送目标 (feishu/wechat/feishu,wechat)")
     p_compare.add_argument("--output", default=".")

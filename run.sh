@@ -195,7 +195,7 @@ edit_funds() {
   },
   "defaults": {
     "format": "md",
-    "style": "card",
+    "style": "table",
     "profile": "compare"
   }
 }

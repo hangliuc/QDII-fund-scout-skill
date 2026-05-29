@@ -333,13 +333,11 @@ body.dark .footer{letter-spacing:.18em}
       <tr>
         <th>基金名称</th>
         <th>代码</th>
-        <th>净值</th>
         <th>近1年</th>
-        <th>近3年</th>
-        <th>申购状态</th>
+        <th>近1年回撤</th>
+        <th>规模(亿)</th>
         <th>总费率</th>
-        <th>规模</th>
-        <th>回撤</th>
+        <th>申购状态</th>
       </tr>
     </thead>
     <tbody id="resultBody"></tbody>
@@ -525,13 +523,11 @@ function renderResult(data) {
     return `<tr>
       <td><strong>${f.name}</strong>${crossHtml}</td>
       <td style="color:var(--accent);font-family:'JetBrains Mono',monospace">${f.code}</td>
-      <td class="num">${f.nav || '-'}</td>
       <td class="num">${fmtReturn(f.return_1y)}</td>
-      <td class="num">${fmtReturn(f.return_3y)}</td>
-      <td>${fmtStatus(f.purchase_info || f.purchase_status, f.purchase_limit)}</td>
-      <td class="num">${fmtFee(f.total_fee)}</td>
-      <td class="num">${f.scale || '-'}</td>
       <td class="num">${f.drawdown_1y ? f.drawdown_1y.toFixed(2) + '%' : '-'}</td>
+      <td class="num">${f.scale || '-'}</td>
+      <td class="num">${fmtFee(f.total_fee)}</td>
+      <td>${fmtStatus(f.purchase_info || f.purchase_status, f.purchase_limit)}</td>
     </tr>`;
   }).join('');
   document.getElementById('resultTable').classList.add('show');

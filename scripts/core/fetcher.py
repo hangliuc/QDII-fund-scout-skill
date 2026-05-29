@@ -32,9 +32,9 @@ def _build_purchase_info(status: str, limit: str, effectively_closed: bool) -> s
         return "暂停申购"
     if status == "限小额":
         amt = _parse_limit_amount(limit)
-        if amt and amt < 100000:
+        if amt is not None:
             return f"限小额 {limit}"
-        return f"限小额（{limit}）" if limit else "限小额"
+        return f"限小额 {limit}" if limit else "限小额（请以平台为准）"
     if status == "限大额":
         return f"限大额（{limit}）" if limit else "限大额"
     if status in ("开放", "开放申购"):
