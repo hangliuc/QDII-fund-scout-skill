@@ -49,7 +49,7 @@ PERCENT_FIELDS = {
     "drawdown_1y", "manager_return", "tracking_error",
 }
 
-SKIP_FIELDS = {"top10_holdings", "market_distribution", "manager_avatar"}
+SKIP_FIELDS = {"top10_holdings", "market_distribution", "manager_avatar", "_purchase_info"}
 
 
 def _format_value(key: str, value) -> str:

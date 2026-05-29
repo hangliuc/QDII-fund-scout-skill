@@ -333,7 +333,6 @@ body.dark .footer{letter-spacing:.18em}
         <th>近1年</th>
         <th>近3年</th>
         <th>申购状态</th>
-        <th>限额</th>
         <th>总费率</th>
         <th>规模</th>
         <th>回撤</th>
@@ -495,12 +494,13 @@ function fmtFee(val) {
   return v.toFixed(2) + '%';
 }
 
-function fmtStatus(status) {
-  if (status === '暂停') return '<span class="status-pause">暂停</span>';
-  if (status === '限小额') return '<span class="status-limit-small">限小额</span>';
-  if (status === '限大额') return '<span class="status-limit-big">限大额</span>';
-  if (status === '开放') return '<span class="status-open">开放</span>';
-  return status || '-';
+function fmtStatus(info, limit) {
+  if (!info) return '-';
+  if (info.includes('暂停')) return '<span class="status-pause">' + info + '</span>';
+  if (info.includes('限小额')) return '<span class="status-limit-small">' + info + '</span>';
+  if (info.includes('限大额')) return '<span class="status-limit-big">' + info + '</span>';
+  if (info.includes('开放')) return '<span class="status-open">' + info + '</span>';
+  return info;
 }
 
 function renderResult(data) {
@@ -524,8 +524,7 @@ function renderResult(data) {
       <td class="num">${f.nav || '-'}</td>
       <td class="num">${fmtReturn(f.return_1y)}</td>
       <td class="num">${fmtReturn(f.return_3y)}</td>
-      <td>${fmtStatus(f.purchase_status)}</td>
-      <td class="num">${f.purchase_limit || '-'}</td>
+      <td>${fmtStatus(f.purchase_info || f.purchase_status, f.purchase_limit)}</td>
       <td class="num">${fmtFee(f.total_fee)}</td>
       <td class="num">${f.scale || '-'}</td>
       <td class="num">${f.drawdown_1y ? f.drawdown_1y.toFixed(2) + '%' : '-'}</td>

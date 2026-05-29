@@ -6,8 +6,10 @@ import csv
 import io
 import json
 import os
+import re
 import sys
 import time
+
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -18,6 +20,25 @@ from core.sources.csrc import CSRCSource
 from core.sources.base import SourceError
 from core.validate import validate_data, print_report
 from adapters import get_adapter, list_adapters
+
+
+def _build_purchase_info(status: str, limit: str, effectively_closed: bool) -> str:
+    if effectively_closed or status == "\u6682\u505c":
+        return "\u6682\u505c\u7533\u8d2d"
+    if status == "\u9650\u5c0f\u989d":
+        m = re.search(r"([\d.]+)\s*(\u4e07|\u5143)?", str(limit or ""))
+        if m:
+            amt = float(m.group(1))
+            if m.group(2) == "\u4e07":
+                amt *= 10000
+            if amt < 100000:
+                return f"\u9650\u5c0f\u989d {limit}"
+        return f"\u9650\u5c0f\u989d\uff08{limit}\uff09" if limit else "\u9650\u5c0f\u989d"
+    if status == "\u9650\u5927\u989d":
+        return f"\u9650\u5927\u989d\uff08{limit}\uff09" if limit else "\u9650\u5927\u989d"
+    if status in ("\u5f00\u653e", "\u5f00\u653e\u7533\u8d2d"):
+        return "\u5f00\u653e\u7533\u8d2d"
+    return f"{status}\uff08{limit}\uff09" if limit else status
 
 
 CONFIG_DIR = os.path.expanduser("~/.fund-scout")
@@ -53,6 +74,10 @@ class FundFetcher:
                 print(f"  ! 备用源(howbuy)也失败: {e2}")
                 return FundInfo(code=code, data_source="unavailable", data_unavailable=True)
 
+        info._purchase_info = _build_purchase_info(
+            info.purchase_status, info.purchase_limit, info.effectively_closed
+        )
+
         if holdings:
             year = time.localtime().tm_year
             try:
@@ -71,7 +96,13 @@ class FundFetcher:
         return info
 
     def fetch_batch(self, codes: list[str]) -> list[FundInfo]:
-        return self.em.fetch_batch(codes)
+        results = self.em.fetch_batch(codes)
+        for info in results:
+            if not info.data_unavailable:
+                info._purchase_info = _build_purchase_info(
+                    info.purchase_status, info.purchase_limit, info.effectively_closed
+                )
+        return results
 
     def search(self, keyword: str, fund_type: str = "") -> list[dict]:
         return self.em.search_funds(keyword, fund_type)
@@ -99,6 +130,9 @@ def _format_csv(data: dict) -> str:
     return buf.getvalue()
 
 
+LABEL_SKIP = {"name", "code"}
+RAW_HIDE = {"purchase_status", "purchase_limit", "data_unavailable", "_purchase_info"}
+
 def _format_md(data: dict, style: str = "table") -> str:
     funds = data.get("funds", [])
     if not funds:
@@ -110,8 +144,8 @@ def _format_md(data: dict, style: str = "table") -> str:
             name = f.get("name", "")
             code = f.get("code", "")
             ret = f.get("return_1y", "")
-            status = f.get("purchase_status", "")
-            lines.append(f"- **{name}** ({code})  近1年: {ret}  申购: {status}")
+            purchase_info = f.get("purchase_info", "") or f.get("purchase_status", "")
+            lines.append(f"- **{name}** ({code})  近1年: {ret}  申购: {purchase_info}")
         return "\n".join(lines)
 
     if style == "card":
@@ -119,7 +153,9 @@ def _format_md(data: dict, style: str = "table") -> str:
         for f in funds:
             lines = [f"### {f.get('name', '')} ({f.get('code', '')})"]
             for k, v in f.items():
-                if k in ("name", "code") or v is None or v == "" or v == [] or v == {}:
+                if k in LABEL_SKIP or v is None or v == "" or v == [] or v == {}:
+                    continue
+                if k in RAW_HIDE:
                     continue
                 if isinstance(v, (dict, list)):
                     v = json.dumps(v, ensure_ascii=False)

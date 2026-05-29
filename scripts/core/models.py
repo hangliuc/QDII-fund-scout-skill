@@ -53,9 +53,12 @@ class FundInfo:
     data_unavailable: bool = False
     _cross_validation: list[dict] = field(default_factory=list)
     _cross_resolved: list[dict] = field(default_factory=list)
+    _purchase_info: str = ""
 
     def to_dict(self) -> dict[str, Any]:
-        return asdict(self)
+        d = asdict(self)
+        d["purchase_info"] = self._purchase_info
+        return d
 
 
 @dataclass

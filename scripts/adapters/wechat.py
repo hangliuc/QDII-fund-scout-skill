@@ -87,20 +87,20 @@ class WechatAdapter(BaseAdapter):
             else:
                 r1y_line = "近1年: -"
 
-            if fund.purchase_status == "暂停":
-                status_line = '<font color="warning">申购: 暂停</font>'
-                limit_line = '<font color="warning">限额: 暂停</font>'
-            elif fund.purchase_status == "开放":
-                status_line = '<font color="info">申购: 开放</font>'
-                limit_line = '<font color="info">限额: 无限制</font>'
+            purchase_info = fund._purchase_info or "-"
+            if "暂停" in purchase_info:
+                purchase_color = "warning"
+            elif "限小额" in purchase_info:
+                purchase_color = "warning"
+            elif "限大额" in purchase_info:
+                purchase_color = "warning"
             else:
-                status_line = f'<font color="info">申购: {fund.purchase_status}</font>'
-                limit_val = fund.purchase_limit or "-"
-                limit_line = f'<font color="info">限额: {limit_val}</font>'
+                purchase_color = "info"
+            purchase_line = f'<font color="{purchase_color}">{purchase_info}</font>'
 
             fund_blocks.append(
                 f"**{idx + 1}. {name}** {code}{cross_mark}\n"
-                f"{r1y_line}  |  {status_line}  |  {limit_line}"
+                f"{r1y_line}  |  {purchase_line}"
             )
 
         lines.append("\n---\n".join(fund_blocks))

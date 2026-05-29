@@ -98,16 +98,16 @@ class FeishuAdapter(BaseAdapter):
             else:
                 r1y_display = "-"
 
-            if fund.purchase_status == "暂停":
-                status_display = '<font color="red">暂停</font>'
-                limit_display = '<font color="red">暂停</font>'
-            elif fund.purchase_status == "开放":
-                status_display = '<font color="green">开放</font>'
-                limit_display = '<font color="green">无限制</font>'
+            purchase_info = fund._purchase_info or "-"
+            if "暂停" in purchase_info:
+                purchase_color = "red"
+            elif "限小额" in purchase_info:
+                purchase_color = "orange"
+            elif "限大额" in purchase_info:
+                purchase_color = "orange"
             else:
-                status_display = f'<font color="green">{fund.purchase_status}</font>'
-                limit_val = fund.purchase_limit or "-"
-                limit_display = f'<font color="green">{limit_val}</font>'
+                purchase_color = "green"
+            purchase_display = f'<font color="{purchase_color}">{purchase_info}</font>'
 
             elements.append({"tag": "hr"})
 
@@ -117,7 +117,7 @@ class FeishuAdapter(BaseAdapter):
                     "tag": "lark_md",
                     "content": (
                         f"**{idx + 1}. {name}** {code}{cross_mark}\n"
-                        f"近1年: {r1y_display}  |  申购: {status_display}  |  限额: {limit_display}"
+                        f"近1年: {r1y_display}  |  {purchase_display}"
                     ),
                 },
             })
