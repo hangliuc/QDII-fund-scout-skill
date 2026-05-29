@@ -101,6 +101,7 @@ QDII 基金与普通基金的关键差异，本 skill 已针对性处理：
 
 | 基金类别 | 参考列表 | 说明 |
 |---------|---------|------|
+| 全量 QDII 基金 | `#[[file:references/qdii_fund_list.json]]` | 727 只，含分类，由天天基金实时数据生成 |
 | 纳斯达克被动QDII C类 | `#[[file:references/nasdaq_passive_qdii_c_funds.json]]` | 17 只主流跟踪纳指100的C类份额 |
 
 用法：Agent 读取对应 JSON 文件，取出 `code` 列表，调用 `fetch_batch()` 批量拉取数据，再按需排序、格式化、推送。
@@ -485,6 +486,7 @@ Profile 决定必填字段集：
 - 校验规则完整列表：`#[[file:references/validation-rules.md]]`
 - 合规指南 + 免责声明：`#[[file:references/compliance.md]]`
 - 配置文件示例：`#[[file:references/config.example.json]]`
+- QDII 全量基金列表：`#[[file:references/qdii_fund_list.json]]`
 - 纳斯达克被动QDII C类基金参考列表：`#[[file:references/nasdaq_passive_qdii_c_funds.json]]`
 
 ## Out of scope

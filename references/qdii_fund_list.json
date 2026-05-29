@@ -1,0 +1,5107 @@
+{
+  "count": 727,
+  "update_date": "2026-05-29",
+  "types": [
+    "QDII-FOF",
+    "QDII-REITs",
+    "QDII-商品",
+    "QDII-普通股票",
+    "QDII-混合债",
+    "QDII-混合偏股",
+    "QDII-混合平衡",
+    "QDII-混合灵活",
+    "QDII-纯债",
+    "指数型-海外股票"
+  ],
+  "funds": [
+    {
+      "code": "007721",
+      "name": "天弘标普500发起(QDII-FOF)A",
+      "abbr": "THBP500FQQDIIFOFA",
+      "type": "QDII-FOF",
+      "pinyin": "TIANHONGBIAOPU500FAQIQDIIFOFA"
+    },
+    {
+      "code": "007722",
+      "name": "天弘标普500发起(QDII-FOF)C",
+      "abbr": "THBP500FQQDIIFOFC",
+      "type": "QDII-FOF",
+      "pinyin": "TIANHONGBIAOPU500FAQIQDIIFOFC"
+    },
+    {
+      "code": "017970",
+      "name": "摩根海外稳健配置混合(QDII-FOF)人民币A",
+      "abbr": "MGHWWJPZHHQDIIFOFRMBA",
+      "type": "QDII-FOF",
+      "pinyin": "MOGENHAIWAIWENJIANPEIZHIHUNHEQDIIFOFRENMINBIA"
+    },
+    {
+      "code": "017971",
+      "name": "摩根海外稳健配置混合(QDII-FOF)美元现汇",
+      "abbr": "MGHWWJPZHHQDIIFOFMYXH",
+      "type": "QDII-FOF",
+      "pinyin": "MOGENHAIWAIWENJIANPEIZHIHUNHEQDIIFOFMEIYUANXIANHUI"
+    },
+    {
+      "code": "017972",
+      "name": "摩根海外稳健配置混合(QDII-FOF)美元现钞",
+      "abbr": "MGHWWJPZHHQDIIFOFMYXC",
+      "type": "QDII-FOF",
+      "pinyin": "MOGENHAIWAIWENJIANPEIZHIHUNHEQDIIFOFMEIYUANXIANCHAO"
+    },
+    {
+      "code": "020512",
+      "name": "摩根海外稳健配置混合(QDII-FOF)人民币C",
+      "abbr": "MGHWWJPZHHQDIIFOFRMBC",
+      "type": "QDII-FOF",
+      "pinyin": "MOGENHAIWAIWENJIANPEIZHIHUNHEQDIIFOFRENMINBIC"
+    },
+    {
+      "code": "020957",
+      "name": "中银全球策略(QDII-FOF)C",
+      "abbr": "ZYQQCLQDIIFOFC",
+      "type": "QDII-FOF",
+      "pinyin": "ZHONGYINQUANQIUCELUEQDIIFOFC"
+    },
+    {
+      "code": "022523",
+      "name": "天弘标普500发起(QDII-FOF)D",
+      "abbr": "THBP500FQQDIIFOFD",
+      "type": "QDII-FOF",
+      "pinyin": "TIANHONGBIAOPU500FAQIQDIIFOFD"
+    },
+    {
+      "code": "163813",
+      "name": "中银全球策略(QDII-FOF)A",
+      "abbr": "ZYQQCLQDIIFOFA",
+      "type": "QDII-FOF",
+      "pinyin": "ZHONGYINQUANQIUCELUEQDIIFOFA"
+    },
+    {
+      "code": "006283",
+      "name": "鹏华美国房地产美元现汇",
+      "abbr": "PHMGFDCMYXH",
+      "type": "QDII-REITs",
+      "pinyin": "PENGHUAMEIGUOFANGDICHANMEIYUANXIANHUI"
+    },
+    {
+      "code": "070031",
+      "name": "嘉实全球房地产(QDII)",
+      "abbr": "JSQQFDCQDII",
+      "type": "QDII-REITs",
+      "pinyin": "JIASHIQUANQIUFANGDICHANQDII"
+    },
+    {
+      "code": "206011",
+      "name": "鹏华美国房地产(QDII)",
+      "abbr": "PHMGFDCQDII",
+      "type": "QDII-REITs",
+      "pinyin": "PENGHUAMEIGUOFANGDICHANQDII"
+    },
+    {
+      "code": "320017",
+      "name": "诺安全球收益不动产",
+      "abbr": "NAQQSYBDC",
+      "type": "QDII-REITs",
+      "pinyin": "NUOANQUANQIUSHOUYIBUDONGCHAN"
+    },
+    {
+      "code": "003321",
+      "name": "易方达原油C类人民币",
+      "abbr": "YFDYYCLRMB",
+      "type": "QDII-商品",
+      "pinyin": "YIFANGDAYUANYOUCLEIRENMINBI"
+    },
+    {
+      "code": "003322",
+      "name": "易方达原油A类美元汇",
+      "abbr": "YFDYYALMYH",
+      "type": "QDII-商品",
+      "pinyin": "YIFANGDAYUANYOUALEIMEIYUANHUI"
+    },
+    {
+      "code": "003323",
+      "name": "易方达原油C类美元汇",
+      "abbr": "YFDYYCLMYH",
+      "type": "QDII-商品",
+      "pinyin": "YIFANGDAYUANYOUCLEIMEIYUANHUI"
+    },
+    {
+      "code": "006476",
+      "name": "南方原油C",
+      "abbr": "NFYYC",
+      "type": "QDII-商品",
+      "pinyin": "NANFANGYUANYOUC"
+    },
+    {
+      "code": "007976",
+      "name": "易方达黄金主题人民币C",
+      "abbr": "YFDHJZTRMBC",
+      "type": "QDII-商品",
+      "pinyin": "YIFANGDAHUANGJINZHUTIRENMINBIC"
+    },
+    {
+      "code": "007977",
+      "name": "易方达黄金主题美元现汇A",
+      "abbr": "YFDHJZTMYXHA",
+      "type": "QDII-商品",
+      "pinyin": "YIFANGDAHUANGJINZHUTIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "007978",
+      "name": "易方达黄金主题美元现汇C",
+      "abbr": "YFDHJZTMYXHC",
+      "type": "QDII-商品",
+      "pinyin": "YIFANGDAHUANGJINZHUTIMEIYUANXIANHUIC"
+    },
+    {
+      "code": "018543",
+      "name": "汇添富黄金及贵金属(QDII-LOF-FOF)C",
+      "abbr": "HTFHJJGJSQDIILOFFOFC",
+      "type": "QDII-商品",
+      "pinyin": "HUITIANFUHUANGJINJIGUIJINSHUQDIILOFFOFC"
+    },
+    {
+      "code": "020969",
+      "name": "中信保诚全球商品主题(QDII-FOF-LOF)C",
+      "abbr": "ZXBCQQSPZTQDIIFOFLOFC",
+      "type": "QDII-商品",
+      "pinyin": "ZHONGXINBAOCHENGQUANQIUSHANGPINZHUTIQDIIFOFLOFC"
+    },
+    {
+      "code": "021694",
+      "name": "银华抗通胀主题(QDII-FOF-LOF)C",
+      "abbr": "YHKTZZTQDIIFOFLOFC",
+      "type": "QDII-商品",
+      "pinyin": "YINHUAKANGTONGZHANGZHUTIQDIIFOFLOFC"
+    },
+    {
+      "code": "025162",
+      "name": "国泰大宗商品(QDII-LOF)D",
+      "abbr": "GTDZSPQDIILOFD",
+      "type": "QDII-商品",
+      "pinyin": "GUOTAIDAZONGSHANGPINQDIILOFD"
+    },
+    {
+      "code": "050020",
+      "name": "博时抗通胀增强回报",
+      "abbr": "BSKTZZQHB",
+      "type": "QDII-商品",
+      "pinyin": "BOSHIKANGTONGZHANGZENGQIANGHUIBAO"
+    },
+    {
+      "code": "160216",
+      "name": "国泰大宗商品(QDII-LOF)A",
+      "abbr": "GTDZSPQDIILOFA",
+      "type": "QDII-商品",
+      "pinyin": "GUOTAIDAZONGSHANGPINQDIILOFA"
+    },
+    {
+      "code": "160719",
+      "name": "嘉实黄金",
+      "abbr": "JSHJ",
+      "type": "QDII-商品",
+      "pinyin": "JIASHIHUANGJIN"
+    },
+    {
+      "code": "160723",
+      "name": "嘉实原油(QDII-LOF)",
+      "abbr": "JSYYQDIILOF",
+      "type": "QDII-商品",
+      "pinyin": "JIASHIYUANYOUQDIILOF"
+    },
+    {
+      "code": "161116",
+      "name": "易方达黄金主题人民币A",
+      "abbr": "YFDHJZTRMBA",
+      "type": "QDII-商品",
+      "pinyin": "YIFANGDAHUANGJINZHUTIRENMINBIA"
+    },
+    {
+      "code": "161129",
+      "name": "易方达原油A类人民币",
+      "abbr": "YFDYYALRMB",
+      "type": "QDII-商品",
+      "pinyin": "YIFANGDAYUANYOUALEIRENMINBI"
+    },
+    {
+      "code": "161815",
+      "name": "银华抗通胀主题(QDII-FOF-LOF)A",
+      "abbr": "YHKTZZTQDIIFOFLOFA",
+      "type": "QDII-商品",
+      "pinyin": "YINHUAKANGTONGZHANGZHUTIQDIIFOFLOFA"
+    },
+    {
+      "code": "164701",
+      "name": "汇添富黄金及贵金属(QDII-LOF-FOF)A",
+      "abbr": "HTFHJJGJSQDIILOFFOFA",
+      "type": "QDII-商品",
+      "pinyin": "HUITIANFUHUANGJINJIGUIJINSHUQDIILOFFOFA"
+    },
+    {
+      "code": "165513",
+      "name": "中信保诚全球商品主题(QDII-FOF-LOF)A",
+      "abbr": "ZXBCQQSPZTQDIIFOFLOFA",
+      "type": "QDII-商品",
+      "pinyin": "ZHONGXINBAOCHENGQUANQIUSHANGPINZHUTIQDIIFOFLOFA"
+    },
+    {
+      "code": "320013",
+      "name": "诺安全球黄金",
+      "abbr": "NAQQHJ",
+      "type": "QDII-商品",
+      "pinyin": "NUOANQUANQIUHUANGJIN"
+    },
+    {
+      "code": "501018",
+      "name": "南方原油A",
+      "abbr": "NFYYA",
+      "type": "QDII-商品",
+      "pinyin": "NANFANGYUANYOUA"
+    },
+    {
+      "code": "000041",
+      "name": "华夏全球股票(QDII)(人民币)",
+      "abbr": "HXQQGPQDIIRMB",
+      "type": "QDII-普通股票",
+      "pinyin": "HUAXIAQUANQIUGUPIAOQDIIRENMINBI"
+    },
+    {
+      "code": "000043",
+      "name": "嘉实美国成长股票人民币",
+      "abbr": "JSMGCZGPRMB",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIMEIGUOCHENGZHANGGUPIAORENMINBI"
+    },
+    {
+      "code": "000044",
+      "name": "嘉实美国成长股票美元现汇",
+      "abbr": "JSMGCZGPMYXH",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIMEIGUOCHENGZHANGGUPIAOMEIYUANXIANHUI"
+    },
+    {
+      "code": "000157",
+      "name": "富国全球科技互联网股票(QDII)A(后端)",
+      "abbr": "FGQQKJHLWGPQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "FUGUOQUANQIUKEJIHULIANWANGGUPIAOQDIIA"
+    },
+    {
+      "code": "000906",
+      "name": "广发全球精选股票(QDII)美元A",
+      "abbr": "GFQQJXGPQDIIMYA",
+      "type": "QDII-普通股票",
+      "pinyin": "GUANGFAQUANQIUJINGXUANGUPIAOQDIIMEIYUANA"
+    },
+    {
+      "code": "000927",
+      "name": "博时大中华亚太精选美元现汇",
+      "abbr": "BSDZHYTJXMYXH",
+      "type": "QDII-普通股票",
+      "pinyin": "BOSHIDAZHONGHUAYATAIJINGXUANMEIYUANXIANHUI"
+    },
+    {
+      "code": "000988",
+      "name": "嘉实全球互联网股票人民币",
+      "abbr": "JSQQHLWGPRMB",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIQUANQIUHULIANWANGGUPIAORENMINBI"
+    },
+    {
+      "code": "000989",
+      "name": "嘉实全球互联网股票美元现汇",
+      "abbr": "JSQQHLWGPMYXH",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIQUANQIUHULIANWANGGUPIAOMEIYUANXIANHUI"
+    },
+    {
+      "code": "000990",
+      "name": "嘉实全球互联网股票美元现钞",
+      "abbr": "JSQQHLWGPMYXC",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIQUANQIUHULIANWANGGUPIAOMEIYUANXIANCHAO"
+    },
+    {
+      "code": "002379",
+      "name": "工银香港中小盘人民币",
+      "abbr": "GYXGZXPRMB",
+      "type": "QDII-普通股票",
+      "pinyin": "GONGYINXIANGGANGZHONGXIAOPANRENMINBI"
+    },
+    {
+      "code": "002380",
+      "name": "工银香港中小盘美元",
+      "abbr": "GYXGZXPMY",
+      "type": "QDII-普通股票",
+      "pinyin": "GONGYINXIANGGANGZHONGXIAOPANMEIYUAN"
+    },
+    {
+      "code": "006105",
+      "name": "宏利印度股票(QDII)A",
+      "abbr": "HLYDGPQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "HONGLIYINDUGUPIAOQDIIA"
+    },
+    {
+      "code": "006282",
+      "name": "摩根欧洲动力策略股票(QDII)A",
+      "abbr": "MGOZDLCLGPQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "MOGENOUZHOUDONGLICELUEGUPIAOQDIIA"
+    },
+    {
+      "code": "006555",
+      "name": "浦银安盛全球智能科技(QDII)A",
+      "abbr": "PYASQQZNKJQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "PUYINANSHENGQUANQIUZHINENGKEJIQDIIA"
+    },
+    {
+      "code": "006792",
+      "name": "鹏华港美互联股票美元现汇",
+      "abbr": "PHGMHLGPMYXH",
+      "type": "QDII-普通股票",
+      "pinyin": "PENGHUAGANGMEIHULIANGUPIAOMEIYUANXIANHUI"
+    },
+    {
+      "code": "007280",
+      "name": "摩根日本精选股票(QDII)A",
+      "abbr": "MGRBJXGPQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "MOGENRIBENJINGXUANGUPIAOQDIIA"
+    },
+    {
+      "code": "007455",
+      "name": "富国蓝筹精选股票(QDII)人民币",
+      "abbr": "FGLCJXGPQDIIRMB",
+      "type": "QDII-普通股票",
+      "pinyin": "FUGUOLANCHOUJINGXUANGUPIAOQDIIRENMINBI"
+    },
+    {
+      "code": "008763",
+      "name": "天弘越南市场股票发起(QDII)A",
+      "abbr": "THYNSCGPFQQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "TIANHONGYUENANSHICHANGGUPIAOFAQIQDIIA"
+    },
+    {
+      "code": "008764",
+      "name": "天弘越南市场股票发起(QDII)C",
+      "abbr": "THYNSCGPFQQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "TIANHONGYUENANSHICHANGGUPIAOFAQIQDIIC"
+    },
+    {
+      "code": "009562",
+      "name": "工银全球股票(QDII)美元",
+      "abbr": "GYQQGPQDIIMY",
+      "type": "QDII-普通股票",
+      "pinyin": "GONGYINQUANQIUGUPIAOQDIIMEIYUAN"
+    },
+    {
+      "code": "009563",
+      "name": "工银全球股票(QDII)港币",
+      "abbr": "GYQQGPQDIIGB",
+      "type": "QDII-普通股票",
+      "pinyin": "GONGYINQUANQIUGUPIAOQDIIGANGBI"
+    },
+    {
+      "code": "010583",
+      "name": "富国蓝筹精选股票(QDII)美元",
+      "abbr": "FGLCJXGPQDIIMY",
+      "type": "QDII-普通股票",
+      "pinyin": "FUGUOLANCHOUJINGXUANGUPIAOQDIIMEIYUAN"
+    },
+    {
+      "code": "013328",
+      "name": "嘉实全球价值股票(QDII)人民币",
+      "abbr": "JSQQJZGPQDIIRMB",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIQUANQIUJIAZHIGUPIAOQDIIRENMINBI"
+    },
+    {
+      "code": "013329",
+      "name": "嘉实全球价值股票(QDII)美元现汇",
+      "abbr": "JSQQJZGPQDIIMYXH",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIQUANQIUJIAZHIGUPIAOQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "014002",
+      "name": "浦银安盛全球智能科技(QDII)C",
+      "abbr": "PYASQQZNKJQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "PUYINANSHENGQUANQIUZHINENGKEJIQDIIC"
+    },
+    {
+      "code": "015204",
+      "name": "银华全球新能源车量化优选股票(QDII)A",
+      "abbr": "YHQQXNYCLHYXGPQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "YINHUAQUANQIUXINNENGYUANCHELIANGHUAYOUXUANGUPIAOQDIIA"
+    },
+    {
+      "code": "015205",
+      "name": "银华全球新能源车量化优选股票(QDII)C",
+      "abbr": "YHQQXNYCLHYXGPQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "YINHUAQUANQIUXINNENGYUANCHELIANGHUAYOUXUANGUPIAOQDIIC"
+    },
+    {
+      "code": "016667",
+      "name": "景顺长城全球半导体芯片股票A(QDII-LOF)(美元现汇)",
+      "abbr": "JSCCQQBDTXPGPAQDIILOFMYXH",
+      "type": "QDII-普通股票",
+      "pinyin": "JINGSHUNCHANGCHENGQUANQIUBANDAOTIXINPIANGUPIAOAQDIILOFMEIYUANXIANHUI"
+    },
+    {
+      "code": "016668",
+      "name": "景顺长城全球半导体芯片股票C(QDII-LOF)(人民币)",
+      "abbr": "JSCCQQBDTXPGPCQDIILOFRMB",
+      "type": "QDII-普通股票",
+      "pinyin": "JINGSHUNCHANGCHENGQUANQIUBANDAOTIXINPIANGUPIAOCQDIILOFRENMINBI"
+    },
+    {
+      "code": "016742",
+      "name": "华安大中华升级股票(QDII)C",
+      "abbr": "HADZHSJGPQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "HUAANDAZHONGHUASHENGJIGUPIAOQDIIC"
+    },
+    {
+      "code": "016823",
+      "name": "天弘全球新能源汽车股票(QDII-LOF)C",
+      "abbr": "THQQXNYQCGPQDIILOFC",
+      "type": "QDII-普通股票",
+      "pinyin": "TIANHONGQUANQIUXINNENGYUANQICHEGUPIAOQDIILOFC"
+    },
+    {
+      "code": "017071",
+      "name": "申万菱信全球新能源股票型发起式(QDII)A",
+      "abbr": "SWLXQQXNYGPXFQSQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "SHENWANLINGXINQUANQIUXINNENGYUANGUPIAOXINGFAQISHIQDIIA"
+    },
+    {
+      "code": "017072",
+      "name": "申万菱信全球新能源股票型发起式(QDII)C",
+      "abbr": "SWLXQQXNYGPXFQSQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "SHENWANLINGXINQUANQIUXINNENGYUANGUPIAOXINGFAQISHIQDIIC"
+    },
+    {
+      "code": "017144",
+      "name": "华宝海外新能源汽车股票发起式(QDII)A",
+      "abbr": "HBHWXNYQCGPFQSQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "HUABAOHAIWAIXINNENGYUANQICHEGUPIAOFAQISHIQDIIA"
+    },
+    {
+      "code": "017145",
+      "name": "华宝海外新能源汽车股票发起式(QDII)C",
+      "abbr": "HBHWXNYQCGPFQSQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "HUABAOHAIWAIXINNENGYUANQICHEGUPIAOFAQISHIQDIIC"
+    },
+    {
+      "code": "017204",
+      "name": "华宝海外科技股票(QDII-LOF)C",
+      "abbr": "HBHWKJGPQDIILOFC",
+      "type": "QDII-普通股票",
+      "pinyin": "HUABAOHAIWAIKEJIGUPIAOQDIILOFC"
+    },
+    {
+      "code": "017429",
+      "name": "嘉实全球创新龙头股票(QDII)人民币A",
+      "abbr": "JSQQCXLTGPQDIIRMBA",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIQUANQIUCHUANGXINLONGTOUGUPIAOQDIIRENMINBIA"
+    },
+    {
+      "code": "017430",
+      "name": "嘉实全球创新龙头股票(QDII)美元",
+      "abbr": "JSQQCXLTGPQDIIMY",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIQUANQIUCHUANGXINLONGTOUGUPIAOQDIIMEIYUAN"
+    },
+    {
+      "code": "017431",
+      "name": "嘉实全球创新龙头股票(QDII)人民币C",
+      "abbr": "JSQQCXLTGPQDIIRMBC",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIQUANQIUCHUANGXINLONGTOUGUPIAOQDIIRENMINBIC"
+    },
+    {
+      "code": "017436",
+      "name": "华宝纳斯达克精选股票发起式(QDII)A",
+      "abbr": "HBNSDKJXGPFQSQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "HUABAONASIDAKEJINGXUANGUPIAOFAQISHIQDIIA"
+    },
+    {
+      "code": "017437",
+      "name": "华宝纳斯达克精选股票发起式(QDII)C",
+      "abbr": "HBNSDKJXGPFQSQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "HUABAONASIDAKEJINGXUANGUPIAOFAQISHIQDIIC"
+    },
+    {
+      "code": "017653",
+      "name": "创金合信全球芯片产业股票发起(QDII)A",
+      "abbr": "CJHXQQXPCYGPFQQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "CHUANGJINHEXINQUANQIUXINPIANCHANYEGUPIAOFAQIQDIIA"
+    },
+    {
+      "code": "017654",
+      "name": "创金合信全球芯片产业股票发起(QDII)C",
+      "abbr": "CJHXQQXPCYGPFQQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "CHUANGJINHEXINQUANQIUXINPIANCHANYEGUPIAOFAQIQDIIC"
+    },
+    {
+      "code": "017730",
+      "name": "嘉实全球产业升级股票发起式(QDII)A",
+      "abbr": "JSQQCYSJGPFQSQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIQUANQIUCHANYESHENGJIGUPIAOFAQISHIQDIIA"
+    },
+    {
+      "code": "017731",
+      "name": "嘉实全球产业升级股票发起式(QDII)C",
+      "abbr": "JSQQCYSJGPFQSQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "JIASHIQUANQIUCHANYESHENGJIGUPIAOFAQISHIQDIIC"
+    },
+    {
+      "code": "018036",
+      "name": "长城全球新能源车股票发起式(QDII)C",
+      "abbr": "CCQQXNYCGPFQSQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "CHANGCHENGQUANQIUXINNENGYUANCHEGUPIAOFAQISHIQDIIC"
+    },
+    {
+      "code": "018155",
+      "name": "创金合信全球医药生物股票发起(QDII)A",
+      "abbr": "CJHXQQYYSWGPFQQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "CHUANGJINHEXINQUANQIUYIYAOSHENGWUGUPIAOFAQIQDIIA"
+    },
+    {
+      "code": "018156",
+      "name": "创金合信全球医药生物股票发起(QDII)C",
+      "abbr": "CJHXQQYYSWGPFQQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "CHUANGJINHEXINQUANQIUYIYAOSHENGWUGUPIAOFAQIQDIIC"
+    },
+    {
+      "code": "019449",
+      "name": "摩根日本精选股票(QDII)C",
+      "abbr": "MGRBJXGPQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "MOGENRIBENJINGXUANGUPIAOQDIIC"
+    },
+    {
+      "code": "019450",
+      "name": "摩根欧洲动力策略股票(QDII)C",
+      "abbr": "MGOZDLCLGPQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "MOGENOUZHOUDONGLICELUEGUPIAOQDIIC"
+    },
+    {
+      "code": "019549",
+      "name": "华夏全球股票美元现汇(QDII)",
+      "abbr": "HXQQGPMYXHQDII",
+      "type": "QDII-普通股票",
+      "pinyin": "HUAXIAQUANQIUGUPIAOMEIYUANXIANHUIQDII"
+    },
+    {
+      "code": "019550",
+      "name": "华夏全球股票美元现钞(QDII)",
+      "abbr": "HXQQGPMYXCQDII",
+      "type": "QDII-普通股票",
+      "pinyin": "HUAXIAQUANQIUGUPIAOMEIYUANXIANCHAOQDII"
+    },
+    {
+      "code": "021277",
+      "name": "广发全球精选股票(QDII)人民币C",
+      "abbr": "GFQQJXGPQDIIRMBC",
+      "type": "QDII-普通股票",
+      "pinyin": "GUANGFAQUANQIUJINGXUANGUPIAOQDIIRENMINBIC"
+    },
+    {
+      "code": "021662",
+      "name": "国富亚洲机会股票(QDII)C",
+      "abbr": "GFYZJHGPQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "GUOFUYAZHOUJIHUIGUPIAOQDIIC"
+    },
+    {
+      "code": "022184",
+      "name": "富国全球科技互联网股票(QDII)C",
+      "abbr": "FGQQKJHLWGPQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "FUGUOQUANQIUKEJIHULIANWANGGUPIAOQDIIC"
+    },
+    {
+      "code": "022524",
+      "name": "天弘越南市场股票发起(QDII)D",
+      "abbr": "THYNSCGPFQQDIID",
+      "type": "QDII-普通股票",
+      "pinyin": "TIANHONGYUENANSHICHANGGUPIAOFAQIQDIID"
+    },
+    {
+      "code": "023402",
+      "name": "广发全球精选股票(QDII)人民币F",
+      "abbr": "GFQQJXGPQDIIRMBF",
+      "type": "QDII-普通股票",
+      "pinyin": "GUANGFAQUANQIUJINGXUANGUPIAOQDIIRENMINBIF"
+    },
+    {
+      "code": "023591",
+      "name": "南方全球精选配置股票(QDII-FOF)C",
+      "abbr": "NFQQJXPZGPQDIIFOFC",
+      "type": "QDII-普通股票",
+      "pinyin": "NANFANGQUANQIUJINGXUANPEIZHIGUPIAOQDIIFOFC"
+    },
+    {
+      "code": "026015",
+      "name": "宏利印度股票(QDII)C",
+      "abbr": "HLYDGPQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "HONGLIYINDUGUPIAOQDIIC"
+    },
+    {
+      "code": "026228",
+      "name": "富国全球科技互联网股票(QDII)D",
+      "abbr": "FGQQKJHLWGPQDIID",
+      "type": "QDII-普通股票",
+      "pinyin": "FUGUOQUANQIUKEJIHULIANWANGGUPIAOQDIID"
+    },
+    {
+      "code": "026246",
+      "name": "汇丰晋信港股精选股票(QDII)人民币A",
+      "abbr": "HFJXGGJXGPQDIIRMBA",
+      "type": "QDII-普通股票",
+      "pinyin": "HUIFENGJINXINGANGGUJINGXUANGUPIAOQDIIRENMINBIA"
+    },
+    {
+      "code": "026247",
+      "name": "汇丰晋信港股精选股票(QDII)人民币C",
+      "abbr": "HFJXGGJXGPQDIIRMBC",
+      "type": "QDII-普通股票",
+      "pinyin": "HUIFENGJINXINGANGGUJINGXUANGUPIAOQDIIRENMINBIC"
+    },
+    {
+      "code": "026248",
+      "name": "汇丰晋信港股精选股票(QDII)美元现汇A",
+      "abbr": "HFJXGGJXGPQDIIMYXHA",
+      "type": "QDII-普通股票",
+      "pinyin": "HUIFENGJINXINGANGGUJINGXUANGUPIAOQDIIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "026357",
+      "name": "平安港股医疗优选股票(QDII)A",
+      "abbr": "PAGGYLYXGPQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "PINGANGANGGUYILIAOYOUXUANGUPIAOQDIIA"
+    },
+    {
+      "code": "026358",
+      "name": "平安港股医疗优选股票(QDII)C",
+      "abbr": "PAGGYLYXGPQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "PINGANGANGGUYILIAOYOUXUANGUPIAOQDIIC"
+    },
+    {
+      "code": "026442",
+      "name": "国泰海通港股优势精选股票发起(QDII)A",
+      "abbr": "GTHTGGYSJXGPFQQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "GUOTAIHAITONGGANGGUYOUSHIJINGXUANGUPIAOFAQIQDIIA"
+    },
+    {
+      "code": "026443",
+      "name": "国泰海通港股优势精选股票发起(QDII)C",
+      "abbr": "GTHTGGYSJXGPFQQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "GUOTAIHAITONGGANGGUYOUSHIJINGXUANGUPIAOFAQIQDIIC"
+    },
+    {
+      "code": "026703",
+      "name": "长城港股价值优选股票(QDII)A",
+      "abbr": "CCGGJZYXGPQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "CHANGCHENGGANGGUJIAZHIYOUXUANGUPIAOQDIIA"
+    },
+    {
+      "code": "026704",
+      "name": "长城港股价值优选股票(QDII)C",
+      "abbr": "CCGGJZYXGPQDIIC",
+      "type": "QDII-普通股票",
+      "pinyin": "CHANGCHENGGANGGUJIAZHIYOUXUANGUPIAOQDIIC"
+    },
+    {
+      "code": "040018",
+      "name": "华安香港精选股票(QDII)",
+      "abbr": "HAXGJXGPQDII",
+      "type": "QDII-普通股票",
+      "pinyin": "HUAANXIANGGANGJINGXUANGUPIAOQDII"
+    },
+    {
+      "code": "040021",
+      "name": "华安大中华升级股票(QDII)A",
+      "abbr": "HADZHSJGPQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "HUAANDAZHONGHUASHENGJIGUPIAOQDIIA"
+    },
+    {
+      "code": "050015",
+      "name": "博时大中华亚太精选",
+      "abbr": "BSDZHYTJX",
+      "type": "QDII-普通股票",
+      "pinyin": "BOSHIDAZHONGHUAYATAIJINGXUAN"
+    },
+    {
+      "code": "100055",
+      "name": "富国全球科技互联网股票(QDII)A",
+      "abbr": "FGQQKJHLWGPQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "FUGUOQUANQIUKEJIHULIANWANGGUPIAOQDIIA"
+    },
+    {
+      "code": "118001",
+      "name": "易方达亚洲精选股票",
+      "abbr": "YFDYZJXGP",
+      "type": "QDII-普通股票",
+      "pinyin": "YIFANGDAYAZHOUJINGXUANGUPIAO"
+    },
+    {
+      "code": "160125",
+      "name": "南方香港优选股票",
+      "abbr": "NFXGYXGP",
+      "type": "QDII-普通股票",
+      "pinyin": "NANFANGXIANGGANGYOUXUANGUPIAO"
+    },
+    {
+      "code": "160126",
+      "name": "南方香港优选股票(后端)",
+      "abbr": "NFXGYXGP",
+      "type": "QDII-普通股票",
+      "pinyin": "NANFANGXIANGGANGYOUXUANGUPIAO"
+    },
+    {
+      "code": "160644",
+      "name": "鹏华港美互联股票人民币",
+      "abbr": "PHGMHLGPRMB",
+      "type": "QDII-普通股票",
+      "pinyin": "PENGHUAGANGMEIHULIANGUPIAORENMINBI"
+    },
+    {
+      "code": "161229",
+      "name": "国投瑞银中国价值发现股票",
+      "abbr": "GTRYZGJZFXGP",
+      "type": "QDII-普通股票",
+      "pinyin": "GUOTOURUIYINZHONGGUOJIAZHIFAXIANGUPIAO"
+    },
+    {
+      "code": "163208",
+      "name": "诺安油气能源",
+      "abbr": "NAYQNY",
+      "type": "QDII-普通股票",
+      "pinyin": "NUOANYOUQINENGYUAN"
+    },
+    {
+      "code": "164212",
+      "name": "天弘全球新能源汽车股票(QDII-LOF)A",
+      "abbr": "THQQXNYQCGPQDIILOFA",
+      "type": "QDII-普通股票",
+      "pinyin": "TIANHONGQUANQIUXINNENGYUANQICHEGUPIAOQDIILOFA"
+    },
+    {
+      "code": "202801",
+      "name": "南方全球精选配置股票(QDII-FOF)A",
+      "abbr": "NFQQJXPZGPQDIIFOFA",
+      "type": "QDII-普通股票",
+      "pinyin": "NANFANGQUANQIUJINGXUANPEIZHIGUPIAOQDIIFOFA"
+    },
+    {
+      "code": "270023",
+      "name": "广发全球精选股票(QDII)人民币A",
+      "abbr": "GFQQJXGPQDIIRMBA",
+      "type": "QDII-普通股票",
+      "pinyin": "GUANGFAQUANQIUJINGXUANGUPIAOQDIIRENMINBIA"
+    },
+    {
+      "code": "457001",
+      "name": "国富亚洲机会股票(QDII)A",
+      "abbr": "GFYZJHGPQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "GUOFUYAZHOUJIHUIGUPIAOQDIIA"
+    },
+    {
+      "code": "486001",
+      "name": "工银全球股票(QDII)人民币",
+      "abbr": "GYQQGPQDIIRMB",
+      "type": "QDII-普通股票",
+      "pinyin": "GONGYINQUANQIUGUPIAOQDIIRENMINBI"
+    },
+    {
+      "code": "486002",
+      "name": "工银全球精选股票(QDII)",
+      "abbr": "GYQQJXGPQDII",
+      "type": "QDII-普通股票",
+      "pinyin": "GONGYINQUANQIUJINGXUANGUPIAOQDII"
+    },
+    {
+      "code": "501225",
+      "name": "景顺长城全球半导体芯片股票A(QDII-LOF)(人民币)",
+      "abbr": "JSCCQQBDTXPGPAQDIILOFRMB",
+      "type": "QDII-普通股票",
+      "pinyin": "JINGSHUNCHANGCHENGQUANQIUBANDAOTIXINPIANGUPIAOAQDIILOFRENMINBI"
+    },
+    {
+      "code": "501226",
+      "name": "长城全球新能源车股票发起式(QDII)A",
+      "abbr": "CCQQXNYCGPFQSQDIIA",
+      "type": "QDII-普通股票",
+      "pinyin": "CHANGCHENGQUANQIUXINNENGYUANCHEGUPIAOFAQISHIQDIIA"
+    },
+    {
+      "code": "501312",
+      "name": "华宝海外科技股票(QDII-LOF)A",
+      "abbr": "HBHWKJGPQDIILOFA",
+      "type": "QDII-普通股票",
+      "pinyin": "HUABAOHAIWAIKEJIGUPIAOQDIILOFA"
+    },
+    {
+      "code": "000163",
+      "name": "富国全球债券(QDII)人民币A(后端)",
+      "abbr": "FGQQZQQDIIRMBA",
+      "type": "QDII-混合债",
+      "pinyin": "FUGUOQUANQIUZHAIQUANQDIIRENMINBIA"
+    },
+    {
+      "code": "002391",
+      "name": "华安全球美元收益债人民币A",
+      "abbr": "HAQQMYSYZRMBA",
+      "type": "QDII-混合债",
+      "pinyin": "HUAANQUANQIUMEIYUANSHOUYIZHAIRENMINBIA"
+    },
+    {
+      "code": "002392",
+      "name": "华安全球美元收益债美元现汇A",
+      "abbr": "HAQQMYSYZMYXHA",
+      "type": "QDII-混合债",
+      "pinyin": "HUAANQUANQIUMEIYUANSHOUYIZHAIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "002393",
+      "name": "华安全球美元收益债C",
+      "abbr": "HAQQMYSYZC",
+      "type": "QDII-混合债",
+      "pinyin": "HUAANQUANQIUMEIYUANSHOUYIZHAIC"
+    },
+    {
+      "code": "002426",
+      "name": "华安全球美元票息债人民币A",
+      "abbr": "HAQQMYPXZRMBA",
+      "type": "QDII-混合债",
+      "pinyin": "HUAANQUANQIUMEIYUANPIAOXIZHAIRENMINBIA"
+    },
+    {
+      "code": "002427",
+      "name": "华安全球美元票息债美元现汇A",
+      "abbr": "HAQQMYPXZMYXHA",
+      "type": "QDII-混合债",
+      "pinyin": "HUAANQUANQIUMEIYUANPIAOXIZHAIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "002429",
+      "name": "华安全球美元票息债C",
+      "abbr": "HAQQMYPXZC",
+      "type": "QDII-混合债",
+      "pinyin": "HUAANQUANQIUMEIYUANPIAOXIZHAIC"
+    },
+    {
+      "code": "003972",
+      "name": "国富美元债一年持有期债券(QDII)人民币",
+      "abbr": "GFMYZYNCYQZQQDIIRMB",
+      "type": "QDII-混合债",
+      "pinyin": "GUOFUMEIYUANZHAIYINIANCHIYOUQIZHAIQUANQDIIRENMINBI"
+    },
+    {
+      "code": "003973",
+      "name": "国富美元债一年持有期债券(QDII)美元现汇",
+      "abbr": "GFMYZYNCYQZQQDIIMYXH",
+      "type": "QDII-混合债",
+      "pinyin": "GUOFUMEIYUANZHAIYINIANCHIYOUQIZHAIQUANQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "005243",
+      "name": "融通中国概念债券(QDII)A",
+      "abbr": "RTZGGNZQQDIIA",
+      "type": "QDII-混合债",
+      "pinyin": "RONGTONGZHONGGUOGAINIANZHAIQUANQDIIA"
+    },
+    {
+      "code": "006285",
+      "name": "鹏华全球中短债(QDII)美元现汇A",
+      "abbr": "PHQQZDZQDIIMYXHA",
+      "type": "QDII-混合债",
+      "pinyin": "PENGHUAQUANQIUZHONGDUANZHAIQDIIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "007140",
+      "name": "富国全球债券(QDII)美元现汇",
+      "abbr": "FGQQZQQDIIMYXH",
+      "type": "QDII-混合债",
+      "pinyin": "FUGUOQUANQIUZHAIQUANQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "008320",
+      "name": "鹏华全球中短债(QDII)人民币C",
+      "abbr": "PHQQZDZQDIIRMBC",
+      "type": "QDII-混合债",
+      "pinyin": "PENGHUAQUANQIUZHONGDUANZHAIQDIIRENMINBIC"
+    },
+    {
+      "code": "008321",
+      "name": "鹏华全球中短债(QDII)美元现汇C",
+      "abbr": "PHQQZDZQDIIMYXHC",
+      "type": "QDII-混合债",
+      "pinyin": "PENGHUAQUANQIUZHONGDUANZHAIQDIIMEIYUANXIANHUIC"
+    },
+    {
+      "code": "019230",
+      "name": "广发全球稳健配置混合(QDII)人民币A",
+      "abbr": "GFQQWJPZHHQDIIRMBA",
+      "type": "QDII-混合债",
+      "pinyin": "GUANGFAQUANQIUWENJIANPEIZHIHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "019231",
+      "name": "广发全球稳健配置混合(QDII)人民币C",
+      "abbr": "GFQQWJPZHHQDIIRMBC",
+      "type": "QDII-混合债",
+      "pinyin": "GUANGFAQUANQIUWENJIANPEIZHIHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "019232",
+      "name": "广发全球稳健配置混合(QDII)美元A",
+      "abbr": "GFQQWJPZHHQDIIMYA",
+      "type": "QDII-混合债",
+      "pinyin": "GUANGFAQUANQIUWENJIANPEIZHIHUNHEQDIIMEIYUANA"
+    },
+    {
+      "code": "019233",
+      "name": "广发全球稳健配置混合(QDII)美元C",
+      "abbr": "GFQQWJPZHHQDIIMYC",
+      "type": "QDII-混合债",
+      "pinyin": "GUANGFAQUANQIUWENJIANPEIZHIHUNHEQDIIMEIYUANC"
+    },
+    {
+      "code": "019518",
+      "name": "富国全球债券(QDII)人民币C",
+      "abbr": "FGQQZQQDIIRMBC",
+      "type": "QDII-混合债",
+      "pinyin": "FUGUOQUANQIUZHAIQUANQDIIRENMINBIC"
+    },
+    {
+      "code": "020571",
+      "name": "融通中国概念债券(QDII)C",
+      "abbr": "RTZGGNZQQDIIC",
+      "type": "QDII-混合债",
+      "pinyin": "RONGTONGZHONGGUOGAINIANZHAIQUANQDIIC"
+    },
+    {
+      "code": "022503",
+      "name": "富国全球债券(QDII)人民币E",
+      "abbr": "FGQQZQQDIIRMBE",
+      "type": "QDII-混合债",
+      "pinyin": "FUGUOQUANQIUZHAIQUANQDIIRENMINBIE"
+    },
+    {
+      "code": "100050",
+      "name": "富国全球债券(QDII)人民币A",
+      "abbr": "FGQQZQQDIIRMBA",
+      "type": "QDII-混合债",
+      "pinyin": "FUGUOQUANQIUZHAIQUANQDIIRENMINBIA"
+    },
+    {
+      "code": "206006",
+      "name": "鹏华全球中短债(QDII)人民币A",
+      "abbr": "PHQQZDZQDIIRMBA",
+      "type": "QDII-混合债",
+      "pinyin": "PENGHUAQUANQIUZHONGDUANZHAIQDIIRENMINBIA"
+    },
+    {
+      "code": "000162",
+      "name": "富国中国中小盘混合(QDII)人民币A(后端)",
+      "abbr": "FGZGZXPHHQDIIRMBA",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOZHONGGUOZHONGXIAOPANHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "000934",
+      "name": "国富大中华精选混合",
+      "abbr": "GFDZHJXHH",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUOFUDAZHONGHUAJINGXUANHUNHE"
+    },
+    {
+      "code": "001984",
+      "name": "摩根中国生物医药混合(QDII)A",
+      "abbr": "MGZGSWYYHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "MOGENZHONGGUOSHENGWUYIYAOHUNHEQDIIA"
+    },
+    {
+      "code": "004877",
+      "name": "汇添富全球医疗混合(QDII)人民币",
+      "abbr": "HTFQQYLHHQDIIRMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUQUANQIUYILIAOHUNHEQDIIRENMINBI"
+    },
+    {
+      "code": "004878",
+      "name": "汇添富全球医疗混合(QDII)美元现汇",
+      "abbr": "HTFQQYLHHQDIIMYXH",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUQUANQIUYILIAOHUNHEQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "004879",
+      "name": "汇添富全球医疗混合(QDII)美元现钞",
+      "abbr": "HTFQQYLHHQDIIMYXC",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUQUANQIUYILIAOHUNHEQDIIMEIYUANXIANCHAO"
+    },
+    {
+      "code": "005698",
+      "name": "华夏全球科技先锋混合(QDII)A(人民币)",
+      "abbr": "HXQQKJXFHHQDIIARMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUAXIAQUANQIUKEJIXIANFENGHUNHEQDIIARENMINBI"
+    },
+    {
+      "code": "005801",
+      "name": "工银印度基金美元",
+      "abbr": "GYYDJJMY",
+      "type": "QDII-混合偏股",
+      "pinyin": "GONGYINYINDUJIJINMEIYUAN"
+    },
+    {
+      "code": "006308",
+      "name": "汇添富全球消费混合(QDII)人民币A",
+      "abbr": "HTFQQXFHHQDIIRMBA",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUQUANQIUXIAOFEIHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "006309",
+      "name": "汇添富全球消费混合(QDII)人民币C",
+      "abbr": "HTFQQXFHHQDIIRMBC",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUQUANQIUXIAOFEIHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "006310",
+      "name": "汇添富全球消费混合(QDII)美元现汇",
+      "abbr": "HTFQQXFHHQDIIMYXH",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUQUANQIUXIAOFEIHUNHEQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "006370",
+      "name": "国富大中华精选混合美元",
+      "abbr": "GFDZHJXHHMY",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUOFUDAZHONGHUAJINGXUANHUNHEMEIYUAN"
+    },
+    {
+      "code": "006373",
+      "name": "国富全球科技互联混合(QDII)人民币A",
+      "abbr": "GFQQKJHLHHQDIIRMBA",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUOFUQUANQIUKEJIHULIANHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "006374",
+      "name": "国富全球科技互联混合(QDII)美元现汇A",
+      "abbr": "GFQQKJHLHHQDIIMYXHA",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUOFUQUANQIUKEJIHULIANHUNHEQDIIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "008253",
+      "name": "华宝致远混合(QDII)A",
+      "abbr": "HBZYHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUABAOZHIYUANHUNHEQDIIA"
+    },
+    {
+      "code": "008254",
+      "name": "华宝致远混合(QDII)C",
+      "abbr": "HBZYHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUABAOZHIYUANHUNHEQDIIC"
+    },
+    {
+      "code": "008284",
+      "name": "易方达全球医药行业混合发起式(QDII)A(人民币)",
+      "abbr": "YFDQQYYHYHHFQSQDIIARMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUYIYAOHANGYEHUNHEFAQISHIQDIIARENMINBI"
+    },
+    {
+      "code": "008285",
+      "name": "易方达全球医药行业混合发起式(QDII)A(美元现汇)",
+      "abbr": "YFDQQYYHYHHFQSQDIIAMYXH",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUYIYAOHANGYEHUNHEFAQISHIQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "009108",
+      "name": "富国红利精选混合(QDII)人民币",
+      "abbr": "FGHLJXHHQDIIRMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOHONGLIJINGXUANHUNHEQDIIRENMINBI"
+    },
+    {
+      "code": "009193",
+      "name": "富国红利精选混合(QDII)美元",
+      "abbr": "FGHLJXHHQDIIMY",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOHONGLIJINGXUANHUNHEQDIIMEIYUAN"
+    },
+    {
+      "code": "010591",
+      "name": "富国中国中小盘混合(QDII)美元",
+      "abbr": "FGZGZXPHHQDIIMY",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOZHONGGUOZHONGXIAOPANHUNHEQDIIMEIYUAN"
+    },
+    {
+      "code": "010644",
+      "name": "富国全球健康生活主题混合(QDII)人民币A",
+      "abbr": "FGQQJKSHZTHHQDIIRMBA",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOQUANQIUJIANKANGSHENGHUOZHUTIHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "010645",
+      "name": "富国全球健康生活主题混合(QDII)美元",
+      "abbr": "FGQQJKSHZTHHQDIIMY",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOQUANQIUJIANKANGSHENGHUOZHUTIHUNHEQDIIMEIYUAN"
+    },
+    {
+      "code": "010671",
+      "name": "景顺长城大中华混合(QDII)A美元现汇",
+      "abbr": "JSCCDZHHHQDIIAMYXH",
+      "type": "QDII-混合偏股",
+      "pinyin": "JINGSHUNCHANGCHENGDAZHONGHUAHUNHEQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "011420",
+      "name": "广发全球科技三个月定开混合(QDII)人民币A",
+      "abbr": "GFQQKJSGYDKHHQDIIRMBA",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUANGFAQUANQIUKEJISANGEYUEDINGKAIHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "011421",
+      "name": "广发全球科技三个月定开混合(QDII)美元A",
+      "abbr": "GFQQKJSGYDKHHQDIIMYA",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUANGFAQUANQIUKEJISANGEYUEDINGKAIHUNHEQDIIMEIYUANA"
+    },
+    {
+      "code": "011422",
+      "name": "广发全球科技三个月定开混合(QDII)人民币C",
+      "abbr": "GFQQKJSGYDKHHQDIIRMBC",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUANGFAQUANQIUKEJISANGEYUEDINGKAIHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "011423",
+      "name": "广发全球科技三个月定开混合(QDII)美元C",
+      "abbr": "GFQQKJSGYDKHHQDIIMYC",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUANGFAQUANQIUKEJISANGEYUEDINGKAIHUNHEQDIIMEIYUANC"
+    },
+    {
+      "code": "011583",
+      "name": "大成港股精选混合(QDII)A",
+      "abbr": "DCGGJXHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "DACHENGGANGGUJINGXUANHUNHEQDIIA"
+    },
+    {
+      "code": "011584",
+      "name": "大成港股精选混合(QDII)C",
+      "abbr": "DCGGJXHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "DACHENGGANGGUJINGXUANHUNHEQDIIC"
+    },
+    {
+      "code": "012060",
+      "name": "富国全球消费精选混合(QDII)人民币A",
+      "abbr": "FGQQXFJXHHQDIIRMBA",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOQUANQIUXIAOFEIJINGXUANHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "012061",
+      "name": "富国全球消费精选混合(QDII)美元",
+      "abbr": "FGQQXFJXHHQDIIMY",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOQUANQIUXIAOFEIJINGXUANHUNHEQDIIMEIYUAN"
+    },
+    {
+      "code": "012062",
+      "name": "富国全球消费精选混合(QDII)人民币C",
+      "abbr": "FGQQXFJXHHQDIIRMBC",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOQUANQIUXIAOFEIJINGXUANHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "012208",
+      "name": "华夏港股前沿经济混合(QDII)A",
+      "abbr": "HXGGQYJJHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUAXIAGANGGUQIANYANJINGJIHUNHEQDIIA"
+    },
+    {
+      "code": "012209",
+      "name": "华夏港股前沿经济混合(QDII)C",
+      "abbr": "HXGGQYJJHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUAXIAGANGGUQIANYANJINGJIHUNHEQDIIC"
+    },
+    {
+      "code": "012379",
+      "name": "创金合信港股互联网3个月持有期混合(QDII)A",
+      "abbr": "CJHXGGHLW3GYCYQHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "CHUANGJINHEXINGANGGUHULIANWANG3GEYUECHIYOUQIHUNHEQDIIA"
+    },
+    {
+      "code": "012380",
+      "name": "创金合信港股互联网3个月持有期混合(QDII)C",
+      "abbr": "CJHXGGHLW3GYCYQHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "CHUANGJINHEXINGANGGUHULIANWANG3GEYUECHIYOUQIHUNHEQDIIC"
+    },
+    {
+      "code": "012535",
+      "name": "万家全球成长一年持有期混合(QDII)A",
+      "abbr": "WJQQCZYNCYQHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "WANJIAQUANQIUCHENGZHANGYINIANCHIYOUQIHUNHEQDIIA"
+    },
+    {
+      "code": "012536",
+      "name": "万家全球成长一年持有期混合(QDII)C",
+      "abbr": "WJQQCZYNCYQHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "WANJIAQUANQIUCHENGZHANGYINIANCHIYOUQIHUNHEQDIIC"
+    },
+    {
+      "code": "012584",
+      "name": "南方中国新兴经济9个月持有期混合(QDII)A",
+      "abbr": "NFZGXXJJ9GYCYQHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "NANFANGZHONGGUOXINXINGJINGJI9GEYUECHIYOUQIHUNHEQDIIA"
+    },
+    {
+      "code": "012585",
+      "name": "南方中国新兴经济9个月持有期混合(QDII)C",
+      "abbr": "NFZGXXJJ9GYCYQHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "NANFANGZHONGGUOXINXINGJINGJI9GEYUECHIYOUQIHUNHEQDIIC"
+    },
+    {
+      "code": "012920",
+      "name": "易方达全球成长精选混合(QDII)人民币A",
+      "abbr": "YFDQQCZJXHHQDIIRMBA",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUCHENGZHANGJINGXUANHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "012921",
+      "name": "易方达全球成长精选混合(QDII)美元现汇A",
+      "abbr": "YFDQQCZJXHHQDIIMYXHA",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUCHENGZHANGJINGXUANHUNHEQDIIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "012922",
+      "name": "易方达全球成长精选混合(QDII)人民币C",
+      "abbr": "YFDQQCZJXHHQDIIRMBC",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUCHENGZHANGJINGXUANHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "012923",
+      "name": "易方达全球成长精选混合(QDII)美元现汇C",
+      "abbr": "YFDQQCZJXHHQDIIMYXHC",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUCHENGZHANGJINGXUANHUNHEQDIIMEIYUANXIANHUIC"
+    },
+    {
+      "code": "013363",
+      "name": "大成中国优势混合(QDII)A",
+      "abbr": "DCZGYSHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "DACHENGZHONGGUOYOUSHIHUNHEQDIIA"
+    },
+    {
+      "code": "013364",
+      "name": "大成中国优势混合(QDII)C",
+      "abbr": "DCZGYSHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "DACHENGZHONGGUOYOUSHIHUNHEQDIIC"
+    },
+    {
+      "code": "015884",
+      "name": "中欧港股数字经济混合发起(QDII)A",
+      "abbr": "ZOGGSZJJHHFQQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "ZHONGOUGANGGUSHUZIJINGJIHUNHEFAQIQDIIA"
+    },
+    {
+      "code": "015885",
+      "name": "中欧港股数字经济混合发起(QDII)C",
+      "abbr": "ZOGGSZJJHHFQQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "ZHONGOUGANGGUSHUZIJINGJIHUNHEFAQIQDIIC"
+    },
+    {
+      "code": "016199",
+      "name": "汇添富全球汽车产业升级混合(QDII)人民币A",
+      "abbr": "HTFQQQCCYSJHHQDIIRMBA",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUQUANQIUQICHECHANYESHENGJIHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "016200",
+      "name": "汇添富全球汽车产业升级混合(QDII)美元现汇",
+      "abbr": "HTFQQQCCYSJHHQDIIMYXH",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUQUANQIUQICHECHANYESHENGJIHUNHEQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "016201",
+      "name": "汇添富全球汽车产业升级混合(QDII)美元现钞",
+      "abbr": "HTFQQQCCYSJHHQDIIMYXC",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUQUANQIUQICHECHANYESHENGJIHUNHEQDIIMEIYUANXIANCHAO"
+    },
+    {
+      "code": "016202",
+      "name": "汇添富全球汽车产业升级混合(QDII)人民币C",
+      "abbr": "HTFQQQCCYSJHHQDIIRMBC",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUQUANQIUQICHECHANYESHENGJIHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "016664",
+      "name": "天弘全球高端制造混合(QDII)A",
+      "abbr": "THQQGDZZHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "TIANHONGQUANQIUGAODUANZHIZAOHUNHEQDIIA"
+    },
+    {
+      "code": "016665",
+      "name": "天弘全球高端制造混合(QDII)C",
+      "abbr": "THQQGDZZHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "TIANHONGQUANQIUGAODUANZHIZAOHUNHEQDIIC"
+    },
+    {
+      "code": "016701",
+      "name": "银华海外数字经济量化选股混合发起式(QDII)A",
+      "abbr": "YHHWSZJJLHXGHHFQSQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "YINHUAHAIWAISHUZIJINGJILIANGHUAXUANGUHUNHEFAQISHIQDIIA"
+    },
+    {
+      "code": "016702",
+      "name": "银华海外数字经济量化选股混合发起式(QDII)C",
+      "abbr": "YHHWSZJJLHXGHHFQSQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "YINHUAHAIWAISHUZIJINGJILIANGHUAXUANGUHUNHEFAQISHIQDIIC"
+    },
+    {
+      "code": "016988",
+      "name": "景顺长城大中华混合(QDII)C人民币",
+      "abbr": "JSCCDZHHHQDIICRMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "JINGSHUNCHANGCHENGDAZHONGHUAHUNHEQDIICRENMINBI"
+    },
+    {
+      "code": "017873",
+      "name": "汇添富香港优势精选混合(QDII)C",
+      "abbr": "HTFXGYSJXHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUXIANGGANGYOUSHIJINGXUANHUNHEQDIIC"
+    },
+    {
+      "code": "018147",
+      "name": "建信新兴市场混合(QDII)C",
+      "abbr": "JXXXSCHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "JIANXINXINXINGSHICHANGHUNHEQDIIC"
+    },
+    {
+      "code": "018229",
+      "name": "易方达全球优质企业混合(QDII)A(人民币份额)",
+      "abbr": "YFDQQYZQYHHQDIIARMBFE",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUYOUZHIQIYEHUNHEQDIIARENMINBIFENE"
+    },
+    {
+      "code": "018230",
+      "name": "易方达全球优质企业混合(QDII)C(人民币份额)",
+      "abbr": "YFDQQYZQYHHQDIICRMBFE",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUYOUZHIQIYEHUNHEQDIICRENMINBIFENE"
+    },
+    {
+      "code": "018231",
+      "name": "易方达全球优质企业混合(QDII)A(美元现汇份额)",
+      "abbr": "YFDQQYZQYHHQDIIAMYXHFE",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUYOUZHIQIYEHUNHEQDIIAMEIYUANXIANHUIFENE"
+    },
+    {
+      "code": "018232",
+      "name": "易方达全球优质企业混合(QDII)C(美元现汇份额)",
+      "abbr": "YFDQQYZQYHHQDIICMYXHFE",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUYOUZHIQIYEHUNHEQDIICMEIYUANXIANHUIFENE"
+    },
+    {
+      "code": "019035",
+      "name": "易方达全球医药行业混合发起式(QDII)C(人民币)",
+      "abbr": "YFDQQYYHYHHFQSQDIICRMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUYIYAOHANGYEHUNHEFAQISHIQDIICRENMINBI"
+    },
+    {
+      "code": "019036",
+      "name": "易方达全球医药行业混合发起式(QDII)C(美元现汇)",
+      "abbr": "YFDQQYYHYHHFQSQDIICMYXH",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAQUANQIUYIYAOHANGYEHUNHEFAQISHIQDIICMEIYUANXIANHUI"
+    },
+    {
+      "code": "019075",
+      "name": "嘉实全球产业精选混合发起式(QDII)人民币",
+      "abbr": "JSQQCYJXHHFQSQDIIRMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "JIASHIQUANQIUCHANYEJINGXUANHUNHEFAQISHIQDIIRENMINBI"
+    },
+    {
+      "code": "019076",
+      "name": "嘉实全球产业精选混合发起式(QDII)美元",
+      "abbr": "JSQQCYJXHHFQSQDIIMY",
+      "type": "QDII-混合偏股",
+      "pinyin": "JIASHIQUANQIUCHANYEJINGXUANHUNHEFAQISHIQDIIMEIYUAN"
+    },
+    {
+      "code": "019265",
+      "name": "南方港股数字经济混合发起(QDII)A",
+      "abbr": "NFGGSZJJHHFQQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "NANFANGGANGGUSHUZIJINGJIHUNHEFAQIQDIIA"
+    },
+    {
+      "code": "019266",
+      "name": "南方港股数字经济混合发起(QDII)C",
+      "abbr": "NFGGSZJJHHFQQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "NANFANGGANGGUSHUZIJINGJIHUNHEFAQIQDIIC"
+    },
+    {
+      "code": "019415",
+      "name": "南方港股医药行业混合发起(QDII)A",
+      "abbr": "NFGGYYHYHHFQQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "NANFANGGANGGUYIYAOHANGYEHUNHEFAQIQDIIA"
+    },
+    {
+      "code": "019416",
+      "name": "南方港股医药行业混合发起(QDII)C",
+      "abbr": "NFGGYYHYHHFQQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "NANFANGGANGGUYIYAOHANGYEHUNHEFAQIQDIIC"
+    },
+    {
+      "code": "019447",
+      "name": "华夏全球科技先锋混合(QDII)A(美元现汇)",
+      "abbr": "HXQQKJXFHHQDIIAMYXH",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUAXIAQUANQIUKEJIXIANFENGHUNHEQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "019448",
+      "name": "华夏全球科技先锋混合(QDII)A(美元现钞)",
+      "abbr": "HXQQKJXFHHQDIIAMYXC",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUAXIAQUANQIUKEJIXIANFENGHUNHEQDIIAMEIYUANXIANCHAO"
+    },
+    {
+      "code": "019573",
+      "name": "摩根中国生物医药混合(QDII)C",
+      "abbr": "MGZGSWYYHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "MOGENZHONGGUOSHENGWUYIYAOHUNHEQDIIC"
+    },
+    {
+      "code": "019578",
+      "name": "摩根全球天然资源混合(QDII)C",
+      "abbr": "MGQQTRZYHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "MOGENQUANQIUTIANRANZIYUANHUNHEQDIIC"
+    },
+    {
+      "code": "019641",
+      "name": "摩根亚太优势混合(QDII)C",
+      "abbr": "MGYTYSHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "MOGENYATAIYOUSHIHUNHEQDIIC"
+    },
+    {
+      "code": "021842",
+      "name": "国富全球科技互联混合(QDII)人民币C",
+      "abbr": "GFQQKJHLHHQDIIRMBC",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUOFUQUANQIUKEJIHULIANHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "021843",
+      "name": "国富全球科技互联混合(QDII)美元现汇C",
+      "abbr": "GFQQKJHLHHQDIIMYXHC",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUOFUQUANQIUKEJIHULIANHUNHEQDIIMEIYUANXIANHUIC"
+    },
+    {
+      "code": "022170",
+      "name": "富国全球消费精选混合(QDII)人民币E",
+      "abbr": "FGQQXFJXHHQDIIRMBE",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOQUANQIUXIAOFEIJINGXUANHUNHEQDIIRENMINBIE"
+    },
+    {
+      "code": "023907",
+      "name": "富国全球健康生活主题混合(QDII)人民币C",
+      "abbr": "FGQQJKSHZTHHQDIIRMBC",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOQUANQIUJIANKANGSHENGHUOZHUTIHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "024239",
+      "name": "华夏全球科技先锋混合(QDII)C",
+      "abbr": "HXQQKJXFHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUAXIAQUANQIUKEJIXIANFENGHUNHEQDIIC"
+    },
+    {
+      "code": "024846",
+      "name": "富国中国中小盘混合(QDII)人民币C",
+      "abbr": "FGZGZXPHHQDIIRMBC",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOZHONGGUOZHONGXIAOPANHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "025070",
+      "name": "东方红医疗创新混合(QDII)A",
+      "abbr": "DFHYLCXHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "DONGFANGHONGYILIAOCHUANGXINHUNHEQDIIA"
+    },
+    {
+      "code": "025071",
+      "name": "东方红医疗创新混合(QDII)C",
+      "abbr": "DFHYLCXHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "DONGFANGHONGYILIAOCHUANGXINHUNHEQDIIC"
+    },
+    {
+      "code": "025174",
+      "name": "长城港股医疗保健精选混合发起(QDII)A",
+      "abbr": "CCGGYLBJJXHHFQQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "CHANGCHENGGANGGUYILIAOBAOJIANJINGXUANHUNHEFAQIQDIIA"
+    },
+    {
+      "code": "025175",
+      "name": "长城港股医疗保健精选混合发起(QDII)C",
+      "abbr": "CCGGYLBJJXHHFQQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "CHANGCHENGGANGGUYILIAOBAOJIANJINGXUANHUNHEFAQIQDIIC"
+    },
+    {
+      "code": "025587",
+      "name": "光大阳光香港精选混合(QDII)A人民币",
+      "abbr": "GDYGXGJXHHQDIIARMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUANGDAYANGGUANGXIANGGANGJINGXUANHUNHEQDIIARENMINBI"
+    },
+    {
+      "code": "025588",
+      "name": "光大阳光香港精选混合(QDII)A美元现汇",
+      "abbr": "GDYGXGJXHHQDIIAMYXH",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUANGDAYANGGUANGXIANGGANGJINGXUANHUNHEQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "025589",
+      "name": "光大阳光香港精选混合(QDII)C人民币",
+      "abbr": "GDYGXGJXHHQDIICRMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUANGDAYANGGUANGXIANGGANGJINGXUANHUNHEQDIICRENMINBI"
+    },
+    {
+      "code": "025654",
+      "name": "富国医药精选混合(QDII)A",
+      "abbr": "FGYYJXHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOYIYAOJINGXUANHUNHEQDIIA"
+    },
+    {
+      "code": "025655",
+      "name": "富国医药精选混合(QDII)C",
+      "abbr": "FGYYJXHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOYIYAOJINGXUANHUNHEQDIIC"
+    },
+    {
+      "code": "025787",
+      "name": "大成港股恒信混合(QDII)",
+      "abbr": "DCGGHXHHQDII",
+      "type": "QDII-混合偏股",
+      "pinyin": "DACHENGGANGGUHENGXINHUNHEQDII"
+    },
+    {
+      "code": "025852",
+      "name": "富国港股精选混合(QDII)人民币",
+      "abbr": "FGGGJXHHQDIIRMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOGANGGUJINGXUANHUNHEQDIIRENMINBI"
+    },
+    {
+      "code": "025853",
+      "name": "富国港股精选混合(QDII)美元现汇",
+      "abbr": "FGGGJXHHQDIIMYXH",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOGANGGUJINGXUANHUNHEQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "026259",
+      "name": "银华医疗创新混合(QDII)A",
+      "abbr": "YHYLCXHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "YINHUAYILIAOCHUANGXINHUNHEQDIIA"
+    },
+    {
+      "code": "026260",
+      "name": "银华医疗创新混合(QDII)C",
+      "abbr": "YHYLCXHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "YINHUAYILIAOCHUANGXINHUNHEQDIIC"
+    },
+    {
+      "code": "026291",
+      "name": "中欧港股消费混合发起(QDII)A",
+      "abbr": "ZOGGXFHHFQQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "ZHONGOUGANGGUXIAOFEIHUNHEFAQIQDIIA"
+    },
+    {
+      "code": "026292",
+      "name": "中欧港股消费混合发起(QDII)C",
+      "abbr": "ZOGGXFHHFQQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "ZHONGOUGANGGUXIAOFEIHUNHEFAQIQDIIC"
+    },
+    {
+      "code": "026492",
+      "name": "广发港股优选混合(QDII)",
+      "abbr": "GFGGYXHHQDII",
+      "type": "QDII-混合偏股",
+      "pinyin": "GUANGFAGANGGUYOUXUANHUNHEQDII"
+    },
+    {
+      "code": "027170",
+      "name": "交银环球精选混合(QDII)C",
+      "abbr": "JYHQJXHHQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "JIAOYINHUANQIUJINGXUANHUNHEQDIIC"
+    },
+    {
+      "code": "027379",
+      "name": "中欧港股医药混合发起(QDII)A",
+      "abbr": "ZOGGYYHHFQQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "ZHONGOUGANGGUYIYAOHUNHEFAQIQDIIA"
+    },
+    {
+      "code": "027380",
+      "name": "中欧港股医药混合发起(QDII)C",
+      "abbr": "ZOGGYYHHFQQDIIC",
+      "type": "QDII-混合偏股",
+      "pinyin": "ZHONGOUGANGGUYIYAOHUNHEFAQIQDIIC"
+    },
+    {
+      "code": "070012",
+      "name": "嘉实海外中国股票混合",
+      "abbr": "JSHWZGGPHH",
+      "type": "QDII-混合偏股",
+      "pinyin": "JIASHIHAIWAIZHONGGUOGUPIAOHUNHE"
+    },
+    {
+      "code": "080006",
+      "name": "长盛环球行业混合(QDII)",
+      "abbr": "CSHQHYHHQDII",
+      "type": "QDII-混合偏股",
+      "pinyin": "CHANGSHENGHUANQIUHANGYEHUNHEQDII"
+    },
+    {
+      "code": "100061",
+      "name": "富国中国中小盘混合(QDII)人民币A",
+      "abbr": "FGZGZXPHHQDIIRMBA",
+      "type": "QDII-混合偏股",
+      "pinyin": "FUGUOZHONGGUOZHONGXIAOPANHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "110011",
+      "name": "易方达优质精选混合(QDII)",
+      "abbr": "YFDYZJXHHQDII",
+      "type": "QDII-混合偏股",
+      "pinyin": "YIFANGDAYOUZHIJINGXUANHUNHEQDII"
+    },
+    {
+      "code": "164824",
+      "name": "工银印度基金人民币",
+      "abbr": "GYYDJJRMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "GONGYINYINDUJIJINRENMINBI"
+    },
+    {
+      "code": "241001",
+      "name": "华宝海外中国成长混合",
+      "abbr": "HBHWZGCZHH",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUABAOHAIWAIZHONGGUOCHENGZHANGHUNHE"
+    },
+    {
+      "code": "262001",
+      "name": "景顺长城大中华混合(QDII)A人民币",
+      "abbr": "JSCCDZHHHQDIIARMB",
+      "type": "QDII-混合偏股",
+      "pinyin": "JINGSHUNCHANGCHENGDAZHONGHUAHUNHEQDIIARENMINBI"
+    },
+    {
+      "code": "377016",
+      "name": "摩根亚太优势混合(QDII)A",
+      "abbr": "MGYTYSHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "MOGENYATAIYOUSHIHUNHEQDIIA"
+    },
+    {
+      "code": "378006",
+      "name": "摩根全球新兴市场混合(QDII)",
+      "abbr": "MGQQXXSCHHQDII",
+      "type": "QDII-混合偏股",
+      "pinyin": "MOGENQUANQIUXINXINGSHICHANGHUNHEQDII"
+    },
+    {
+      "code": "378546",
+      "name": "摩根全球天然资源混合(QDII)A",
+      "abbr": "MGQQTRZYHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "MOGENQUANQIUTIANRANZIYUANHUNHEQDIIA"
+    },
+    {
+      "code": "460010",
+      "name": "华泰柏瑞亚洲领导企业混合",
+      "abbr": "HTBRYZLDQYHH",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUATAIBAIRUIYAZHOULINGDAOQIYEHUNHE"
+    },
+    {
+      "code": "470888",
+      "name": "汇添富香港优势精选混合(QDII)A",
+      "abbr": "HTFXGYSJXHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "HUITIANFUXIANGGANGYOUSHIJINGXUANHUNHEQDIIA"
+    },
+    {
+      "code": "519601",
+      "name": "海富通中国海外混合",
+      "abbr": "HFTZGHWHH",
+      "type": "QDII-混合偏股",
+      "pinyin": "HAIFUTONGZHONGGUOHAIWAIHUNHE"
+    },
+    {
+      "code": "519696",
+      "name": "交银环球精选混合(QDII)A",
+      "abbr": "JYHQJXHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "JIAOYINHUANQIUJINGXUANHUNHEQDIIA"
+    },
+    {
+      "code": "539002",
+      "name": "建信新兴市场混合(QDII)A",
+      "abbr": "JXXXSCHHQDIIA",
+      "type": "QDII-混合偏股",
+      "pinyin": "JIANXINXINXINGSHICHANGHUNHEQDIIA"
+    },
+    {
+      "code": "003629",
+      "name": "摩根全球多元配置(QDII-FOF)人民币A",
+      "abbr": "MGQQDYPZQDIIFOFRMBA",
+      "type": "QDII-混合平衡",
+      "pinyin": "MOGENQUANQIUDUOYUANPEIZHIQDIIFOFRENMINBIA"
+    },
+    {
+      "code": "003630",
+      "name": "摩根全球多元配置(QDII-FOF)美元现钞",
+      "abbr": "MGQQDYPZQDIIFOFMYXC",
+      "type": "QDII-混合平衡",
+      "pinyin": "MOGENQUANQIUDUOYUANPEIZHIQDIIFOFMEIYUANXIANCHAO"
+    },
+    {
+      "code": "003631",
+      "name": "摩根全球多元配置(QDII-FOF)美元现汇",
+      "abbr": "MGQQDYPZQDIIFOFMYXH",
+      "type": "QDII-混合平衡",
+      "pinyin": "MOGENQUANQIUDUOYUANPEIZHIQDIIFOFMEIYUANXIANHUI"
+    },
+    {
+      "code": "006445",
+      "name": "华夏海外聚享混合发起式(QDII-FOF)A人民币",
+      "abbr": "HXHWJXHHFQSQDIIFOFARMB",
+      "type": "QDII-混合平衡",
+      "pinyin": "HUAXIAHAIWAIJUXIANGHUNHEFAQISHIQDIIFOFARENMINBI"
+    },
+    {
+      "code": "006446",
+      "name": "华夏海外聚享混合发起式(QDII-FOF)A美元现汇",
+      "abbr": "HXHWJXHHFQSQDIIFOFAMYXH",
+      "type": "QDII-混合平衡",
+      "pinyin": "HUAXIAHAIWAIJUXIANGHUNHEFAQISHIQDIIFOFAMEIYUANXIANHUI"
+    },
+    {
+      "code": "006447",
+      "name": "华夏海外聚享混合发起式(QDII-FOF)A美元现钞",
+      "abbr": "HXHWJXHHFQSQDIIFOFAMYXC",
+      "type": "QDII-混合平衡",
+      "pinyin": "HUAXIAHAIWAIJUXIANGHUNHEFAQISHIQDIIFOFAMEIYUANXIANCHAO"
+    },
+    {
+      "code": "006448",
+      "name": "华夏海外聚享混合发起式(QDII-FOF)C人民币",
+      "abbr": "HXHWJXHHFQSQDIIFOFCRMB",
+      "type": "QDII-混合平衡",
+      "pinyin": "HUAXIAHAIWAIJUXIANGHUNHEFAQISHIQDIIFOFCRENMINBI"
+    },
+    {
+      "code": "019512",
+      "name": "摩根全球多元配置(QDII-FOF)人民币C",
+      "abbr": "MGQQDYPZQDIIFOFRMBC",
+      "type": "QDII-混合平衡",
+      "pinyin": "MOGENQUANQIUDUOYUANPEIZHIQDIIFOFRENMINBIC"
+    },
+    {
+      "code": "001668",
+      "name": "汇添富全球移动互联混合(QDII)人民币A",
+      "abbr": "HTFQQYDHLHHQDIIRMBA",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUITIANFUQUANQIUYIDONGHULIANHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "001691",
+      "name": "南方香港成长灵活配置混合",
+      "abbr": "NFXGCZLHPZHH",
+      "type": "QDII-混合灵活",
+      "pinyin": "NANFANGXIANGGANGCHENGZHANGLINGHUOPEIZHIHUNHE"
+    },
+    {
+      "code": "002230",
+      "name": "华夏大中华混合(QDII)",
+      "abbr": "HXDZHHHQDII",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUAXIADAZHONGHUAHUNHEQDII"
+    },
+    {
+      "code": "002891",
+      "name": "华夏移动互联混合人民币",
+      "abbr": "HXYDHLHHRMB",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUAXIAYIDONGHULIANHUNHERENMINBI"
+    },
+    {
+      "code": "002892",
+      "name": "华夏移动互联混合美元现汇",
+      "abbr": "HXYDHLHHMYXH",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUAXIAYIDONGHULIANHUNHEMEIYUANXIANHUI"
+    },
+    {
+      "code": "002893",
+      "name": "华夏移动互联混合美元现钞",
+      "abbr": "HXYDHLHHMYXC",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUAXIAYIDONGHULIANHUNHEMEIYUANXIANCHAO"
+    },
+    {
+      "code": "003243",
+      "name": "摩根中国世纪混合(QDII)人民币",
+      "abbr": "MGZGSJHHQDIIRMB",
+      "type": "QDII-混合灵活",
+      "pinyin": "MOGENZHONGGUOSHIJIHUNHEQDIIRENMINBI"
+    },
+    {
+      "code": "003244",
+      "name": "摩根中国世纪混合(QDII)美元现钞",
+      "abbr": "MGZGSJHHQDIIMYXC",
+      "type": "QDII-混合灵活",
+      "pinyin": "MOGENZHONGGUOSHIJIHUNHEQDIIMEIYUANXIANCHAO"
+    },
+    {
+      "code": "003245",
+      "name": "摩根中国世纪混合(QDII)美元现汇",
+      "abbr": "MGZGSJHHQDIIMYXH",
+      "type": "QDII-混合灵活",
+      "pinyin": "MOGENZHONGGUOSHIJIHUNHEQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "005534",
+      "name": "华夏新时代混合人民币(QDII)",
+      "abbr": "HXXSDHHRMBQDII",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUAXIAXINSHIDAIHUNHERENMINBIQDII"
+    },
+    {
+      "code": "005699",
+      "name": "工银新经济混合(QDII)人民币A",
+      "abbr": "GYXJJHHQDIIRMBA",
+      "type": "QDII-混合灵活",
+      "pinyin": "GONGYINXINJINGJIHUNHEQDIIRENMINBIA"
+    },
+    {
+      "code": "005700",
+      "name": "工银新经济混合(QDII)美元",
+      "abbr": "GYXJJHHQDIIMY",
+      "type": "QDII-混合灵活",
+      "pinyin": "GONGYINXINJINGJIHUNHEQDIIMEIYUAN"
+    },
+    {
+      "code": "006426",
+      "name": "汇添富全球移动互联混合(QDII)美元现汇",
+      "abbr": "HTFQQYDHLHHQDIIMYXH",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUITIANFUQUANQIUYIDONGHULIANHUNHEQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "007729",
+      "name": "招商普盛全球配置(QDII)人民币A",
+      "abbr": "ZSPSQQPZQDIIRMBA",
+      "type": "QDII-混合灵活",
+      "pinyin": "ZHAOSHANGPUSHENGQUANQIUPEIZHIQDIIRENMINBIA"
+    },
+    {
+      "code": "007975",
+      "name": "招商普盛全球配置(QDII-FOF)美元现汇",
+      "abbr": "ZSPSQQPZQDIIFOFMYXH",
+      "type": "QDII-混合灵活",
+      "pinyin": "ZHAOSHANGPUSHENGQUANQIUPEIZHIQDIIFOFMEIYUANXIANHUI"
+    },
+    {
+      "code": "008183",
+      "name": "招商普盛全球配置(QDII-FOF)美元现钞",
+      "abbr": "ZSPSQQPZQDIIFOFMYXC",
+      "type": "QDII-混合灵活",
+      "pinyin": "ZHAOSHANGPUSHENGQUANQIUPEIZHIQDIIFOFMEIYUANXIANCHAO"
+    },
+    {
+      "code": "012924",
+      "name": "华夏新时代混合美元现汇(QDII)",
+      "abbr": "HXXSDHHMYXHQDII",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUAXIAXINSHIDAIHUNHEMEIYUANXIANHUIQDII"
+    },
+    {
+      "code": "012925",
+      "name": "华夏新时代混合美元现钞(QDII)",
+      "abbr": "HXXSDHHMYXCQDII",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUAXIAXINSHIDAIHUNHEMEIYUANXIANCHAOQDII"
+    },
+    {
+      "code": "014127",
+      "name": "融通核心价值混合C",
+      "abbr": "RTHXJZHHC",
+      "type": "QDII-混合灵活",
+      "pinyin": "RONGTONGHEXINJIAZHIHUNHEC"
+    },
+    {
+      "code": "015202",
+      "name": "汇添富全球移动互联混合(QDII)人民币C",
+      "abbr": "HTFQQYDHLHHQDIIRMBC",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUITIANFUQUANQIUYIDONGHULIANHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "015203",
+      "name": "汇添富全球移动互联混合(QDII)人民币D",
+      "abbr": "HTFQQYDHLHHQDIIRMBD",
+      "type": "QDII-混合灵活",
+      "pinyin": "HUITIANFUQUANQIUYIDONGHULIANHUNHEQDIIRENMINBID"
+    },
+    {
+      "code": "019155",
+      "name": "易方达全球配置混合(QDII)A(人民币)",
+      "abbr": "YFDQQPZHHQDIIARMB",
+      "type": "QDII-混合灵活",
+      "pinyin": "YIFANGDAQUANQIUPEIZHIHUNHEQDIIARENMINBI"
+    },
+    {
+      "code": "019156",
+      "name": "易方达全球配置混合(QDII)C(人民币)",
+      "abbr": "YFDQQPZHHQDIICRMB",
+      "type": "QDII-混合灵活",
+      "pinyin": "YIFANGDAQUANQIUPEIZHIHUNHEQDIICRENMINBI"
+    },
+    {
+      "code": "019157",
+      "name": "易方达全球配置混合(QDII)A(美元现汇)",
+      "abbr": "YFDQQPZHHQDIIAMYXH",
+      "type": "QDII-混合灵活",
+      "pinyin": "YIFANGDAQUANQIUPEIZHIHUNHEQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "019158",
+      "name": "易方达全球配置混合(QDII)C(美元现汇)",
+      "abbr": "YFDQQPZHHQDIICMYXH",
+      "type": "QDII-混合灵活",
+      "pinyin": "YIFANGDAQUANQIUPEIZHIHUNHEQDIICMEIYUANXIANHUI"
+    },
+    {
+      "code": "023559",
+      "name": "招商普盛全球配置(QDII)人民币C",
+      "abbr": "ZSPSQQPZQDIIRMBC",
+      "type": "QDII-混合灵活",
+      "pinyin": "ZHAOSHANGPUSHENGQUANQIUPEIZHIQDIIRENMINBIC"
+    },
+    {
+      "code": "025339",
+      "name": "招商普盛全球配置(QDII)人民币D",
+      "abbr": "ZSPSQQPZQDIIRMBD",
+      "type": "QDII-混合灵活",
+      "pinyin": "ZHAOSHANGPUSHENGQUANQIUPEIZHIQDIIRENMINBID"
+    },
+    {
+      "code": "025403",
+      "name": "工银新经济混合(QDII)人民币C",
+      "abbr": "GYXJJHHQDIIRMBC",
+      "type": "QDII-混合灵活",
+      "pinyin": "GONGYINXINJINGJIHUNHEQDIIRENMINBIC"
+    },
+    {
+      "code": "161620",
+      "name": "融通核心价值混合A",
+      "abbr": "RTHXJZHHA",
+      "type": "QDII-混合灵活",
+      "pinyin": "RONGTONGHEXINJIAZHIHUNHEA"
+    },
+    {
+      "code": "000103",
+      "name": "国泰境外高收益债(QDII)",
+      "abbr": "GTJWGSYZQDII",
+      "type": "QDII-纯债",
+      "pinyin": "GUOTAIJINGWAIGAOSHOUYIZHAIQDII"
+    },
+    {
+      "code": "000274",
+      "name": "广发亚太中高收益债(QDII)A",
+      "abbr": "GFYTZGSYZQDIIA",
+      "type": "QDII-纯债",
+      "pinyin": "GUANGFAYATAIZHONGGAOSHOUYIZHAIQDIIA"
+    },
+    {
+      "code": "000275",
+      "name": "广发亚太中高收益债美元现汇(QDII)A",
+      "abbr": "GFYTZGSYZMYXHQDIIA",
+      "type": "QDII-纯债",
+      "pinyin": "GUANGFAYATAIZHONGGAOSHOUYIZHAIMEIYUANXIANHUIQDIIA"
+    },
+    {
+      "code": "000290",
+      "name": "鹏华全球高收益债(QDII)",
+      "abbr": "PHQQGSYZQDII",
+      "type": "QDII-纯债",
+      "pinyin": "PENGHUAQUANQIUGAOSHOUYIZHAIQDII"
+    },
+    {
+      "code": "000341",
+      "name": "嘉实新兴市场C2(QDII)",
+      "abbr": "JSXXSCC2QDII",
+      "type": "QDII-纯债",
+      "pinyin": "JIASHIXINXINGSHICHANGC2QDII"
+    },
+    {
+      "code": "000342",
+      "name": "嘉实新兴市场A1(QDII)",
+      "abbr": "JSXXSCA1QDII",
+      "type": "QDII-纯债",
+      "pinyin": "JIASHIXINXINGSHICHANGA1QDII"
+    },
+    {
+      "code": "001061",
+      "name": "华夏收益债券(QDII)A",
+      "abbr": "HXSYZQQDIIA",
+      "type": "QDII-纯债",
+      "pinyin": "HUAXIASHOUYIZHAIQUANQDIIA"
+    },
+    {
+      "code": "001063",
+      "name": "华夏收益债券(QDII)C",
+      "abbr": "HXSYZQQDIIC",
+      "type": "QDII-纯债",
+      "pinyin": "HUAXIASHOUYIZHAIQUANQDIIC"
+    },
+    {
+      "code": "001065",
+      "name": "华夏海外收益债券现汇",
+      "abbr": "HXHWSYZQXH",
+      "type": "QDII-纯债",
+      "pinyin": "HUAXIAHAIWAISHOUYIZHAIQUANXIANHUI"
+    },
+    {
+      "code": "001066",
+      "name": "华夏海外收益债券现钞",
+      "abbr": "HXHWSYZQXC",
+      "type": "QDII-纯债",
+      "pinyin": "HUAXIAHAIWAISHOUYIZHAIQUANXIANCHAO"
+    },
+    {
+      "code": "001876",
+      "name": "鹏华全球高收益债美元现汇",
+      "abbr": "PHQQGSYZMYXH",
+      "type": "QDII-纯债",
+      "pinyin": "PENGHUAQUANQIUGAOSHOUYIZHAIMEIYUANXIANHUI"
+    },
+    {
+      "code": "002286",
+      "name": "中银美元债债券(QDII)人民币A",
+      "abbr": "ZYMYZZQQDIIRMBA",
+      "type": "QDII-纯债",
+      "pinyin": "ZHONGYINMEIYUANZHAIZHAIQUANQDIIRENMINBIA"
+    },
+    {
+      "code": "002287",
+      "name": "中银美元债债券(QDII)美元",
+      "abbr": "ZYMYZZQQDIIMY",
+      "type": "QDII-纯债",
+      "pinyin": "ZHONGYINMEIYUANZHAIZHAIQUANQDIIMEIYUAN"
+    },
+    {
+      "code": "002400",
+      "name": "南方亚洲美元收益债券(QDII)A(人民币)",
+      "abbr": "NFYZMYSYZQQDIIARMB",
+      "type": "QDII-纯债",
+      "pinyin": "NANFANGYAZHOUMEIYUANSHOUYIZHAIQUANQDIIARENMINBI"
+    },
+    {
+      "code": "002401",
+      "name": "南方亚洲美元收益债券(QDII)C(人民币)",
+      "abbr": "NFYZMYSYZQQDIICRMB",
+      "type": "QDII-纯债",
+      "pinyin": "NANFANGYAZHOUMEIYUANSHOUYIZHAIQUANQDIICRENMINBI"
+    },
+    {
+      "code": "002402",
+      "name": "南方亚洲美元收益债券(QDII)A(美元现汇)",
+      "abbr": "NFYZMYSYZQQDIIAMYXH",
+      "type": "QDII-纯债",
+      "pinyin": "NANFANGYAZHOUMEIYUANSHOUYIZHAIQUANQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "002403",
+      "name": "南方亚洲美元收益债券(QDII)C(美元现汇)",
+      "abbr": "NFYZMYSYZQQDIICMYXH",
+      "type": "QDII-纯债",
+      "pinyin": "NANFANGYAZHOUMEIYUANSHOUYIZHAIQUANQDIICMEIYUANXIANHUI"
+    },
+    {
+      "code": "002877",
+      "name": "华夏大中华信用债A",
+      "abbr": "HXDZHXYZA",
+      "type": "QDII-纯债",
+      "pinyin": "HUAXIADAZHONGHUAXINYONGZHAIA"
+    },
+    {
+      "code": "002878",
+      "name": "华夏大中华信用债美元现汇A",
+      "abbr": "HXDZHXYZMYXHA",
+      "type": "QDII-纯债",
+      "pinyin": "HUAXIADAZHONGHUAXINYONGZHAIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "002879",
+      "name": "华夏大中华信用债美元现钞A",
+      "abbr": "HXDZHXYZMYXCA",
+      "type": "QDII-纯债",
+      "pinyin": "HUAXIADAZHONGHUAXINYONGZHAIMEIYUANXIANCHAOA"
+    },
+    {
+      "code": "002880",
+      "name": "华夏大中华信用债C",
+      "abbr": "HXDZHXYZC",
+      "type": "QDII-纯债",
+      "pinyin": "HUAXIADAZHONGHUAXINYONGZHAIC"
+    },
+    {
+      "code": "003385",
+      "name": "工银全球美元债A人民币",
+      "abbr": "GYQQMYZARMB",
+      "type": "QDII-纯债",
+      "pinyin": "GONGYINQUANQIUMEIYUANZHAIARENMINBI"
+    },
+    {
+      "code": "003386",
+      "name": "工银全球美元债A美元现汇",
+      "abbr": "GYQQMYZAMYXH",
+      "type": "QDII-纯债",
+      "pinyin": "GONGYINQUANQIUMEIYUANZHAIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "003387",
+      "name": "工银全球美元债C",
+      "abbr": "GYQQMYZC",
+      "type": "QDII-纯债",
+      "pinyin": "GONGYINQUANQIUMEIYUANZHAIC"
+    },
+    {
+      "code": "003606",
+      "name": "海富通全球收益债券美元",
+      "abbr": "HFTQQSYZQMY",
+      "type": "QDII-纯债",
+      "pinyin": "HAIFUTONGQUANQIUSHOUYIZHAIQUANMEIYUAN"
+    },
+    {
+      "code": "004419",
+      "name": "汇添富美元债债券(QDII)人民币A",
+      "abbr": "HTFMYZZQQDIIRMBA",
+      "type": "QDII-纯债",
+      "pinyin": "HUITIANFUMEIYUANZHAIZHAIQUANQDIIRENMINBIA"
+    },
+    {
+      "code": "004420",
+      "name": "汇添富美元债债券(QDII)人民币C",
+      "abbr": "HTFMYZZQQDIIRMBC",
+      "type": "QDII-纯债",
+      "pinyin": "HUITIANFUMEIYUANZHAIZHAIQUANQDIIRENMINBIC"
+    },
+    {
+      "code": "004421",
+      "name": "汇添富美元债债券(QDII)美元现汇A",
+      "abbr": "HTFMYZZQQDIIMYXHA",
+      "type": "QDII-纯债",
+      "pinyin": "HUITIANFUMEIYUANZHAIZHAIQUANQDIIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "004422",
+      "name": "汇添富美元债债券(QDII)美元现汇C",
+      "abbr": "HTFMYZZQQDIIMYXHC",
+      "type": "QDII-纯债",
+      "pinyin": "HUITIANFUMEIYUANZHAIZHAIQUANQDIIMEIYUANXIANHUIC"
+    },
+    {
+      "code": "004998",
+      "name": "长信全球债券人民币",
+      "abbr": "CXQQZQRMB",
+      "type": "QDII-纯债",
+      "pinyin": "CHANGXINQUANQIUZHAIQUANRENMINBI"
+    },
+    {
+      "code": "004999",
+      "name": "长信全球债券美元",
+      "abbr": "CXQQZQMY",
+      "type": "QDII-纯债",
+      "pinyin": "CHANGXINQUANQIUZHAIQUANMEIYUAN"
+    },
+    {
+      "code": "007204",
+      "name": "银华美元债精选债券(QDII)A",
+      "abbr": "YHMYZJXZQQDIIA",
+      "type": "QDII-纯债",
+      "pinyin": "YINHUAMEIYUANZHAIJINGXUANZHAIQUANQDIIA"
+    },
+    {
+      "code": "007205",
+      "name": "银华美元债精选债券(QDII)C",
+      "abbr": "YHMYZJXZQQDIIC",
+      "type": "QDII-纯债",
+      "pinyin": "YINHUAMEIYUANZHAIJINGXUANZHAIQUANQDIIC"
+    },
+    {
+      "code": "007360",
+      "name": "易方达中短期美元债(QDII)A人民币",
+      "abbr": "YFDZDQMYZQDIIARMB",
+      "type": "QDII-纯债",
+      "pinyin": "YIFANGDAZHONGDUANQIMEIYUANZHAIQDIIARENMINBI"
+    },
+    {
+      "code": "007361",
+      "name": "易方达中短期美元债(QDII)C人民币",
+      "abbr": "YFDZDQMYZQDIICRMB",
+      "type": "QDII-纯债",
+      "pinyin": "YIFANGDAZHONGDUANQIMEIYUANZHAIQDIICRENMINBI"
+    },
+    {
+      "code": "007362",
+      "name": "易方达中短期美元债(QDII)A美元现汇",
+      "abbr": "YFDZDQMYZQDIIAMYXH",
+      "type": "QDII-纯债",
+      "pinyin": "YIFANGDAZHONGDUANQIMEIYUANZHAIQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "007363",
+      "name": "易方达中短期美元债(QDII)C美元现汇",
+      "abbr": "YFDZDQMYZQDIICMYXH",
+      "type": "QDII-纯债",
+      "pinyin": "YIFANGDAZHONGDUANQIMEIYUANZHAIQDIICMEIYUANXIANHUI"
+    },
+    {
+      "code": "008095",
+      "name": "中银亚太精选债券(QDII)人民币A",
+      "abbr": "ZYYTJXZQQDIIRMBA",
+      "type": "QDII-纯债",
+      "pinyin": "ZHONGYINYATAIJINGXUANZHAIQUANQDIIRENMINBIA"
+    },
+    {
+      "code": "008096",
+      "name": "中银亚太精选债券(QDII)人民币C",
+      "abbr": "ZYYTJXZQQDIIRMBC",
+      "type": "QDII-纯债",
+      "pinyin": "ZHONGYINYATAIJINGXUANZHAIQUANQDIIRENMINBIC"
+    },
+    {
+      "code": "008097",
+      "name": "中银亚太精选债券(QDII)美元A",
+      "abbr": "ZYYTJXZQQDIIMYA",
+      "type": "QDII-纯债",
+      "pinyin": "ZHONGYINYATAIJINGXUANZHAIQUANQDIIMEIYUANA"
+    },
+    {
+      "code": "008098",
+      "name": "中银亚太精选债券(QDII)美元C",
+      "abbr": "ZYYTJXZQQDIIMYC",
+      "type": "QDII-纯债",
+      "pinyin": "ZHONGYINYATAIJINGXUANZHAIQUANQDIIMEIYUANC"
+    },
+    {
+      "code": "008367",
+      "name": "富国亚洲收益债券(QDII)人民币A",
+      "abbr": "FGYZSYZQQDIIRMBA",
+      "type": "QDII-纯债",
+      "pinyin": "FUGUOYAZHOUSHOUYIZHAIQUANQDIIRENMINBIA"
+    },
+    {
+      "code": "008368",
+      "name": "富国亚洲收益债券(QDII)美元现汇",
+      "abbr": "FGYZSYZQQDIIMYXH",
+      "type": "QDII-纯债",
+      "pinyin": "FUGUOYAZHOUSHOUYIZHAIQUANQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "008751",
+      "name": "大成全球美元债(QDII)A人民币",
+      "abbr": "DCQQMYZQDIIARMB",
+      "type": "QDII-纯债",
+      "pinyin": "DACHENGQUANQIUMEIYUANZHAIQDIIARENMINBI"
+    },
+    {
+      "code": "008752",
+      "name": "大成全球美元债(QDII)C人民币",
+      "abbr": "DCQQMYZQDIICRMB",
+      "type": "QDII-纯债",
+      "pinyin": "DACHENGQUANQIUMEIYUANZHAIQDIICRENMINBI"
+    },
+    {
+      "code": "011940",
+      "name": "大成全球美元债(QDII)A美元",
+      "abbr": "DCQQMYZQDIIAMY",
+      "type": "QDII-纯债",
+      "pinyin": "DACHENGQUANQIUMEIYUANZHAIQDIIAMEIYUAN"
+    },
+    {
+      "code": "011941",
+      "name": "大成全球美元债(QDII)C美元",
+      "abbr": "DCQQMYZQDIICMY",
+      "type": "QDII-纯债",
+      "pinyin": "DACHENGQUANQIUMEIYUANZHAIQDIICMEIYUAN"
+    },
+    {
+      "code": "013508",
+      "name": "广发亚太中高收益债(QDII)C",
+      "abbr": "GFYTZGSYZQDIIC",
+      "type": "QDII-纯债",
+      "pinyin": "GUANGFAYATAIZHONGGAOSHOUYIZHAIQDIIC"
+    },
+    {
+      "code": "013509",
+      "name": "广发亚太中高收益债美元现汇(QDII)C",
+      "abbr": "GFYTZGSYZMYXHQDIIC",
+      "type": "QDII-纯债",
+      "pinyin": "GUANGFAYATAIZHONGGAOSHOUYIZHAIMEIYUANXIANHUIQDIIC"
+    },
+    {
+      "code": "019480",
+      "name": "博时亚洲票息收益债券C人民币",
+      "abbr": "BSYZPXSYZQCRMB",
+      "type": "QDII-纯债",
+      "pinyin": "BOSHIYAZHOUPIAOXISHOUYIZHAIQUANCRENMINBI"
+    },
+    {
+      "code": "019481",
+      "name": "博时亚洲票息收益债券C美元现汇",
+      "abbr": "BSYZPXSYZQCMYXH",
+      "type": "QDII-纯债",
+      "pinyin": "BOSHIYAZHOUPIAOXISHOUYIZHAIQUANCMEIYUANXIANHUI"
+    },
+    {
+      "code": "019630",
+      "name": "银华美元债精选债券(QDII)D",
+      "abbr": "YHMYZJXZQQDIID",
+      "type": "QDII-纯债",
+      "pinyin": "YINHUAMEIYUANZHAIJINGXUANZHAIQUANQDIID"
+    },
+    {
+      "code": "019709",
+      "name": "富国亚洲收益债券(QDII)人民币C",
+      "abbr": "FGYZSYZQQDIIRMBC",
+      "type": "QDII-纯债",
+      "pinyin": "FUGUOYAZHOUSHOUYIZHAIQUANQDIIRENMINBIC"
+    },
+    {
+      "code": "019893",
+      "name": "中银美元债债券(QDII)人民币C",
+      "abbr": "ZYMYZZQQDIIRMBC",
+      "type": "QDII-纯债",
+      "pinyin": "ZHONGYINMEIYUANZHAIZHAIQUANQDIIRENMINBIC"
+    },
+    {
+      "code": "022374",
+      "name": "富国亚洲收益债券(QDII)人民币E",
+      "abbr": "FGYZSYZQQDIIRMBE",
+      "type": "QDII-纯债",
+      "pinyin": "FUGUOYAZHOUSHOUYIZHAIQUANQDIIRENMINBIE"
+    },
+    {
+      "code": "022512",
+      "name": "南方亚洲美元收益债券(QDII)E(人民币)",
+      "abbr": "NFYZMYSYZQQDIIERMB",
+      "type": "QDII-纯债",
+      "pinyin": "NANFANGYAZHOUMEIYUANSHOUYIZHAIQUANQDIIERENMINBI"
+    },
+    {
+      "code": "050030",
+      "name": "博时亚洲票息收益债券A人民币",
+      "abbr": "BSYZPXSYZQARMB",
+      "type": "QDII-纯债",
+      "pinyin": "BOSHIYAZHOUPIAOXISHOUYIZHAIQUANARENMINBI"
+    },
+    {
+      "code": "050202",
+      "name": "博时亚洲票息收益债券A美元现汇",
+      "abbr": "BSYZPXSYZQAMYXH",
+      "type": "QDII-纯债",
+      "pinyin": "BOSHIYAZHOUPIAOXISHOUYIZHAIQUANAMEIYUANXIANHUI"
+    },
+    {
+      "code": "050203",
+      "name": "博时亚洲票息收益债券A美元现钞",
+      "abbr": "BSYZPXSYZQAMYXC",
+      "type": "QDII-纯债",
+      "pinyin": "BOSHIYAZHOUPIAOXISHOUYIZHAIQUANAMEIYUANXIANCHAO"
+    },
+    {
+      "code": "501300",
+      "name": "海富通全球收益债券人民币",
+      "abbr": "HFTQQSYZQRMB",
+      "type": "QDII-纯债",
+      "pinyin": "HAIFUTONGQUANQIUSHOUYIZHAIQUANRENMINBI"
+    },
+    {
+      "code": "000055",
+      "name": "广发纳斯达克100ETF联接美元(QDII)A",
+      "abbr": "GFNSDK100ETFLJMYQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFANASIDAKE100ETFLIANJIEMEIYUANQDIIA"
+    },
+    {
+      "code": "000071",
+      "name": "华夏恒生ETF联接A",
+      "abbr": "HXHSETFLJA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGETFLIANJIEA"
+    },
+    {
+      "code": "000075",
+      "name": "华夏恒生ETF联接现汇",
+      "abbr": "HXHSETFLJXH",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGETFLIANJIEXIANHUI"
+    },
+    {
+      "code": "000076",
+      "name": "华夏恒生ETF联接现钞",
+      "abbr": "HXHSETFLJXC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGETFLIANJIEXIANCHAO"
+    },
+    {
+      "code": "000179",
+      "name": "广发美国房地产指数人民币(QDII)A",
+      "abbr": "GFMGFDCZSRMBQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAMEIGUOFANGDICHANZHISHURENMINBIQDIIA"
+    },
+    {
+      "code": "000180",
+      "name": "广发美国房地产指数美元现汇(QDII)A",
+      "abbr": "GFMGFDCZSMYXHQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAMEIGUOFANGDICHANZHISHUMEIYUANXIANHUIQDIIA"
+    },
+    {
+      "code": "000369",
+      "name": "广发全球医疗保健指数人民币(QDII)A",
+      "abbr": "GFQQYLBJZSRMBQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAQUANQIUYILIAOBAOJIANZHISHURENMINBIQDIIA"
+    },
+    {
+      "code": "000370",
+      "name": "广发全球医疗保健美元现汇(QDII)A",
+      "abbr": "GFQQYLBJMYXHQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAQUANQIUYILIAOBAOJIANMEIYUANXIANHUIQDIIA"
+    },
+    {
+      "code": "000593",
+      "name": "易方达标普消费品指数美元现汇A",
+      "abbr": "YFDBPXFPZSMYXHA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUXIAOFEIPINZHISHUMEIYUANXIANHUIA"
+    },
+    {
+      "code": "000614",
+      "name": "华安德国(DAX)联接(QDII)A",
+      "abbr": "HADGDAXLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANDEGUODAXLIANJIEQDIIA"
+    },
+    {
+      "code": "000834",
+      "name": "大成纳斯达克100ETF联接(QDII)A",
+      "abbr": "DCNSDK100ETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGNASIDAKE100ETFLIANJIEQDIIA"
+    },
+    {
+      "code": "001092",
+      "name": "广发生物科技指数人民币(QDII)A",
+      "abbr": "GFSWKJZSRMBQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFASHENGWUKEJIZHISHURENMINBIQDIIA"
+    },
+    {
+      "code": "001093",
+      "name": "广发生物科技指数美元(QDII)A",
+      "abbr": "GFSWKJZSMYQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFASHENGWUKEJIZHISHUMEIYUANQDIIA"
+    },
+    {
+      "code": "001481",
+      "name": "华宝标普油气上游股票美元A",
+      "abbr": "HBBPYQSYGPMYA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUABAOBIAOPUYOUQISHANGYOUGUPIAOMEIYUANA"
+    },
+    {
+      "code": "002423",
+      "name": "华宝标普美国消费美元",
+      "abbr": "HBBPMGXFMY",
+      "type": "指数型-海外股票",
+      "pinyin": "HUABAOBIAOPUMEIGUOXIAOFEIMEIYUAN"
+    },
+    {
+      "code": "003718",
+      "name": "易方达标普500指数美元汇A",
+      "abbr": "YFDBP500ZSMYHA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPU500ZHISHUMEIYUANHUIA"
+    },
+    {
+      "code": "003719",
+      "name": "易方达标普医疗保健美元汇A",
+      "abbr": "YFDBPYLBJMYHA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUYILIAOBAOJIANMEIYUANHUIA"
+    },
+    {
+      "code": "003720",
+      "name": "易方达标普生物科技美元汇A",
+      "abbr": "YFDBPSWKJMYHA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUSHENGWUKEJIMEIYUANHUIA"
+    },
+    {
+      "code": "003721",
+      "name": "易方达标普信息科技指数(QDII-LOF)A(美元现汇)",
+      "abbr": "YFDBPXXKJZSQDIILOFAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUXINXIKEJIZHISHUQDIILOFAMEIYUANXIANHUI"
+    },
+    {
+      "code": "003722",
+      "name": "易方达纳斯达克100ETF联接(QDII-LOF)A(美元现汇)",
+      "abbr": "YFDNSDK100ETFLJQDIILOFAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDANASIDAKE100ETFLIANJIEQDIILOFAMEIYUANXIANHUI"
+    },
+    {
+      "code": "004243",
+      "name": "广发道琼斯石油指数人民币C",
+      "abbr": "GFDQSSYZSRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFADAOQIONGSISHIYOUZHISHURENMINBIC"
+    },
+    {
+      "code": "005613",
+      "name": "摩根富时发达市场REITs指数(QDII)人民币A",
+      "abbr": "MGFSFDSCREITSZSQDIIRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENFUSHIFADASHICHANGREITSZHISHUQDIIRENMINBIA"
+    },
+    {
+      "code": "005614",
+      "name": "摩根富时发达市场REITs指数(QDII)美钞",
+      "abbr": "MGFSFDSCREITSZSQDIIMC",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENFUSHIFADASHICHANGREITSZHISHUQDIIMEICHAO"
+    },
+    {
+      "code": "005615",
+      "name": "摩根富时发达市场REITs指数(QDII)美汇",
+      "abbr": "MGFSFDSCREITSZSQDIIMH",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENFUSHIFADASHICHANGREITSZHISHUQDIIMEIHUI"
+    },
+    {
+      "code": "005675",
+      "name": "易方达恒生国企ETF联接C",
+      "abbr": "YFDHSGQETFLJC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAHENGSHENGGUOQIETFLIANJIEC"
+    },
+    {
+      "code": "005676",
+      "name": "易方达标普消费品指数C",
+      "abbr": "YFDBPXFPZSC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUXIAOFEIPINZHISHUC"
+    },
+    {
+      "code": "006075",
+      "name": "博时标普500ETF联接C",
+      "abbr": "BSBP500ETFLJC",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIBIAOPU500ETFLIANJIEC"
+    },
+    {
+      "code": "006263",
+      "name": "易方达香港小型股指数C",
+      "abbr": "YFDXGXXGZSC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAXIANGGANGXIAOXINGGUZHISHUC"
+    },
+    {
+      "code": "006327",
+      "name": "易方达中证海外互联网50ETF联接(QDII)A",
+      "abbr": "YFDZZHWHLW50ETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAZHONGZHENGHAIWAIHULIANWANG50ETFLIANJIEQDIIA"
+    },
+    {
+      "code": "006328",
+      "name": "易方达中证海外互联网50ETF联接(QDII)C",
+      "abbr": "YFDZZHWHLW50ETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAZHONGZHENGHAIWAIHULIANWANG50ETFLIANJIEQDIIC"
+    },
+    {
+      "code": "006329",
+      "name": "易方达中证海外互联网50ETF联接(QDII)(美元现汇)A",
+      "abbr": "YFDZZHWHLW50ETFLJQDIIMYXHA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAZHONGZHENGHAIWAIHULIANWANG50ETFLIANJIEQDIIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "006330",
+      "name": "易方达中证海外互联网50ETF联接(QDII)(美元现汇)C",
+      "abbr": "YFDZZHWHLW50ETFLJQDIIMYXHC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAZHONGZHENGHAIWAIHULIANWANG50ETFLIANJIEQDIIMEIYUANXIANHUIC"
+    },
+    {
+      "code": "006381",
+      "name": "华夏恒生ETF联接C",
+      "abbr": "HXHSETFLJC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGETFLIANJIEC"
+    },
+    {
+      "code": "006479",
+      "name": "广发纳斯达克100ETF联接人民币(QDII)C",
+      "abbr": "GFNSDK100ETFLJRMBQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFANASIDAKE100ETFLIANJIERENMINBIQDIIC"
+    },
+    {
+      "code": "006480",
+      "name": "广发纳斯达克100ETF联接美元(QDII)C",
+      "abbr": "GFNSDK100ETFLJMYQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFANASIDAKE100ETFLIANJIEMEIYUANQDIIC"
+    },
+    {
+      "code": "006679",
+      "name": "广发道琼斯石油指数美元现汇A",
+      "abbr": "GFDQSSYZSMYXHA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFADAOQIONGSISHIYOUZHISHUMEIYUANXIANHUIA"
+    },
+    {
+      "code": "006680",
+      "name": "广发道琼斯石油指数美元现汇C",
+      "abbr": "GFDQSSYZSMYXHC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFADAOQIONGSISHIYOUZHISHUMEIYUANXIANHUIC"
+    },
+    {
+      "code": "007844",
+      "name": "华宝标普油气上游股票人民币C",
+      "abbr": "HBBPYQSYGPRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUABAOBIAOPUYOUQISHANGYOUGUPIAORENMINBIC"
+    },
+    {
+      "code": "008401",
+      "name": "大成标普500等权重指数(QDII)C人民币",
+      "abbr": "DCBP500DQZZSQDIICRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGBIAOPU500DENGQUANZHONGZHISHUQDIICRENMINBI"
+    },
+    {
+      "code": "008706",
+      "name": "建信富时100指数(QDII)C人民币",
+      "abbr": "JXFS100ZSQDIICRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINFUSHI100ZHISHUQDIICRENMINBI"
+    },
+    {
+      "code": "008707",
+      "name": "建信富时100指数(QDII)A美元现汇",
+      "abbr": "JXFS100ZSQDIIAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINFUSHI100ZHISHUQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "008708",
+      "name": "建信富时100指数(QDII)C美元现汇",
+      "abbr": "JXFS100ZSQDIICMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINFUSHI100ZHISHUQDIICMEIYUANXIANHUI"
+    },
+    {
+      "code": "008971",
+      "name": "大成纳斯达克100ETF联接(QDII)C",
+      "abbr": "DCNSDK100ETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGNASIDAKE100ETFLIANJIEQDIIC"
+    },
+    {
+      "code": "009225",
+      "name": "天弘中证中美互联网(QDII)A",
+      "abbr": "THZZZMHLWQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "TIANHONGZHONGZHENGZHONGMEIHULIANWANGQDIIA"
+    },
+    {
+      "code": "009226",
+      "name": "天弘中证中美互联网(QDII)C",
+      "abbr": "THZZZMHLWQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "TIANHONGZHONGZHENGZHONGMEIHULIANWANGQDIIC"
+    },
+    {
+      "code": "009975",
+      "name": "华宝标普美国消费人民币C",
+      "abbr": "HBBPMGXFRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUABAOBIAOPUMEIGUOXIAOFEIRENMINBIC"
+    },
+    {
+      "code": "010789",
+      "name": "汇添富恒生指数(QDII-LOF)C",
+      "abbr": "HTFHSZSQDIILOFC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUHENGSHENGZHISHUQDIILOFC"
+    },
+    {
+      "code": "011706",
+      "name": "长信标普100等权重指数美元",
+      "abbr": "CXBP100DQZZSMY",
+      "type": "指数型-海外股票",
+      "pinyin": "CHANGXINBIAOPU100DENGQUANZHONGZHISHUMEIYUAN"
+    },
+    {
+      "code": "012348",
+      "name": "天弘恒生科技ETF联接A",
+      "abbr": "THHSKJETFLJA",
+      "type": "指数型-海外股票",
+      "pinyin": "TIANHONGHENGSHENGKEJIETFLIANJIEA"
+    },
+    {
+      "code": "012349",
+      "name": "天弘恒生科技ETF联接C",
+      "abbr": "THHSKJETFLJC",
+      "type": "指数型-海外股票",
+      "pinyin": "TIANHONGHENGSHENGKEJIETFLIANJIEC"
+    },
+    {
+      "code": "012570",
+      "name": "建信恒生科技指数发起(QDII)A",
+      "abbr": "JXHSKJZSFQQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINHENGSHENGKEJIZHISHUFAQIQDIIA"
+    },
+    {
+      "code": "012571",
+      "name": "建信恒生科技指数发起(QDII)C",
+      "abbr": "JXHSKJZSFQQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINHENGSHENGKEJIZHISHUFAQIQDIIC"
+    },
+    {
+      "code": "012751",
+      "name": "建信纳斯达克100指数(QDII)A美元现汇",
+      "abbr": "JXNSDK100ZSQDIIAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINNASIDAKE100ZHISHUQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "012752",
+      "name": "建信纳斯达克100指数(QDII)C人民币",
+      "abbr": "JXNSDK100ZSQDIICRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINNASIDAKE100ZHISHUQDIICRENMINBI"
+    },
+    {
+      "code": "012753",
+      "name": "建信纳斯达克100指数(QDII)C美元现汇",
+      "abbr": "JXNSDK100ZSQDIICMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINNASIDAKE100ZHISHUQDIICMEIYUANXIANHUI"
+    },
+    {
+      "code": "012804",
+      "name": "广发恒生科技ETF联接(QDII)A",
+      "abbr": "GFHSKJETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAHENGSHENGKEJIETFLIANJIEQDIIA"
+    },
+    {
+      "code": "012805",
+      "name": "广发恒生科技ETF联接(QDII)C",
+      "abbr": "GFHSKJETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAHENGSHENGKEJIETFLIANJIEQDIIC"
+    },
+    {
+      "code": "012860",
+      "name": "易方达标普500指数人民币C",
+      "abbr": "YFDBP500ZSRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPU500ZHISHURENMINBIC"
+    },
+    {
+      "code": "012861",
+      "name": "易方达标普500指数美元汇C",
+      "abbr": "YFDBP500ZSMYHC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPU500ZHISHUMEIYUANHUIC"
+    },
+    {
+      "code": "012864",
+      "name": "易方达标普医疗保健人民币C",
+      "abbr": "YFDBPYLBJRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUYILIAOBAOJIANRENMINBIC"
+    },
+    {
+      "code": "012865",
+      "name": "易方达标普医疗保健美元汇C",
+      "abbr": "YFDBPYLBJMYHC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUYILIAOBAOJIANMEIYUANHUIC"
+    },
+    {
+      "code": "012866",
+      "name": "易方达标普生物科技人民币C",
+      "abbr": "YFDBPSWKJRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUSHENGWUKEJIRENMINBIC"
+    },
+    {
+      "code": "012867",
+      "name": "易方达标普生物科技美元汇C",
+      "abbr": "YFDBPSWKJMYHC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUSHENGWUKEJIMEIYUANHUIC"
+    },
+    {
+      "code": "012868",
+      "name": "易方达标普信息科技指数(QDII-LOF)C(人民币)",
+      "abbr": "YFDBPXXKJZSQDIILOFCRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUXINXIKEJIZHISHUQDIILOFCRENMINBI"
+    },
+    {
+      "code": "012869",
+      "name": "易方达标普信息科技指数(QDII-LOF)C(美元现汇)",
+      "abbr": "YFDBPXXKJZSQDIILOFCMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUXINXIKEJIZHISHUQDIILOFCMEIYUANXIANHUI"
+    },
+    {
+      "code": "012870",
+      "name": "易方达纳斯达克100ETF联接(QDII-LOF)C(人民币)",
+      "abbr": "YFDNSDK100ETFLJQDIILOFCRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDANASIDAKE100ETFLIANJIEQDIILOFCRENMINBI"
+    },
+    {
+      "code": "012871",
+      "name": "易方达纳斯达克100ETF联接(QDII-LOF)C(美元现汇)",
+      "abbr": "YFDNSDK100ETFLJQDIILOFCMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDANASIDAKE100ETFLIANJIEQDIILOFCMEIYUANXIANHUI"
+    },
+    {
+      "code": "012979",
+      "name": "大成恒生科技ETF发起式联接A",
+      "abbr": "DCHSKJETFFQSLJA",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGHENGSHENGKEJIETFFAQISHILIANJIEA"
+    },
+    {
+      "code": "012980",
+      "name": "大成恒生科技ETF发起式联接C",
+      "abbr": "DCHSKJETFFQSLJC",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGHENGSHENGKEJIETFFAQISHILIANJIEC"
+    },
+    {
+      "code": "013127",
+      "name": "汇添富恒生科技ETF联接发起式(QDII)A",
+      "abbr": "HTFHSKJETFLJFQSQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUHENGSHENGKEJIETFLIANJIEFAQISHIQDIIA"
+    },
+    {
+      "code": "013128",
+      "name": "汇添富恒生科技ETF联接发起式(QDII)C",
+      "abbr": "HTFHSKJETFLJFQSQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUHENGSHENGKEJIETFLIANJIEFAQISHIQDIIC"
+    },
+    {
+      "code": "013171",
+      "name": "华夏恒生互联网科技业ETF联接(QDII)A",
+      "abbr": "HXHSHLWKJYETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGHULIANWANGKEJIYEETFLIANJIEQDIIA"
+    },
+    {
+      "code": "013172",
+      "name": "华夏恒生互联网科技业ETF联接(QDII)C",
+      "abbr": "HXHSHLWKJYETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGHULIANWANGKEJIYEETFLIANJIEQDIIC"
+    },
+    {
+      "code": "013308",
+      "name": "易方达恒生科技ETF联接(QDII)A",
+      "abbr": "YFDHSKJETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAHENGSHENGKEJIETFLIANJIEQDIIA"
+    },
+    {
+      "code": "013309",
+      "name": "易方达恒生科技ETF联接(QDII)C",
+      "abbr": "YFDHSKJETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAHENGSHENGKEJIETFLIANJIEQDIIC"
+    },
+    {
+      "code": "013402",
+      "name": "华夏恒生科技ETF发起式联接(QDII)A",
+      "abbr": "HXHSKJETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGKEJIETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "013403",
+      "name": "华夏恒生科技ETF发起式联接(QDII)C",
+      "abbr": "HXHSKJETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGKEJIETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "013404",
+      "name": "大成标普500等权重指数(QDII)A美元",
+      "abbr": "DCBP500DQZZSQDIIAMY",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGBIAOPU500DENGQUANZHONGZHISHUQDIIAMEIYUAN"
+    },
+    {
+      "code": "013425",
+      "name": "博时标普500ETF联接美元汇(QDII)A",
+      "abbr": "BSBP500ETFLJMYHQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIBIAOPU500ETFLIANJIEMEIYUANHUIQDIIA"
+    },
+    {
+      "code": "013499",
+      "name": "博时标普500ETF联接美元汇(QDII)C",
+      "abbr": "BSBP500ETFLJMYHQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIBIAOPU500ETFLIANJIEMEIYUANHUIQDIIC"
+    },
+    {
+      "code": "013945",
+      "name": "交银中证海外中国互联网指数(LOF)C",
+      "abbr": "JYZZHWZGHLWZSLOFC",
+      "type": "指数型-海外股票",
+      "pinyin": "JIAOYINZHONGZHENGHAIWAIZHONGGUOHULIANWANGZHISHULOFC"
+    },
+    {
+      "code": "014424",
+      "name": "博时恒生医疗保健ETF发起式联接(QDII)A",
+      "abbr": "BSHSYLBJETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIHENGSHENGYILIAOBAOJIANETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "014425",
+      "name": "博时恒生医疗保健ETF发起式联接(QDII)C",
+      "abbr": "BSHSYLBJETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIHENGSHENGYILIAOBAOJIANETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "014438",
+      "name": "博时恒生科技ETF发起式联接(QDII)A",
+      "abbr": "BSHSKJETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIHENGSHENGKEJIETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "014439",
+      "name": "博时恒生科技ETF发起式联接(QDII)C",
+      "abbr": "BSHSKJETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIHENGSHENGKEJIETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "014978",
+      "name": "华安纳斯达克100ETF联接(QDII)C",
+      "abbr": "HANSDK100ETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANNASIDAKE100ETFLIANJIEQDIIC"
+    },
+    {
+      "code": "014982",
+      "name": "华安标普全球石油指数(LOF)C",
+      "abbr": "HABPQQSYZSLOFC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANBIAOPUQUANQIUSHIYOUZHISHULOFC"
+    },
+    {
+      "code": "015016",
+      "name": "华安德国(DAX)联接(QDII)C",
+      "abbr": "HADGDAXLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANDEGUODAXLIANJIEQDIIC"
+    },
+    {
+      "code": "015282",
+      "name": "华安恒生科技ETF发起式联接(QDII)A",
+      "abbr": "HAHSKJETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANHENGSHENGKEJIETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "015283",
+      "name": "华安恒生科技ETF发起式联接(QDII)C",
+      "abbr": "HAHSKJETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANHENGSHENGKEJIETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "015299",
+      "name": "华夏纳斯达克100ETF发起式联接(QDII)A",
+      "abbr": "HXNSDK100ETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIANASIDAKE100ETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "015300",
+      "name": "华夏纳斯达克100ETF发起式联接(QDII)C",
+      "abbr": "HXNSDK100ETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIANASIDAKE100ETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "015310",
+      "name": "华泰柏瑞恒生科技ETF联接(QDII)A",
+      "abbr": "HTBRHSKJETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUIHENGSHENGKEJIETFLIANJIEQDIIA"
+    },
+    {
+      "code": "015311",
+      "name": "华泰柏瑞恒生科技ETF联接(QDII)C",
+      "abbr": "HTBRHSKJETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUIHENGSHENGKEJIETFLIANJIEQDIIC"
+    },
+    {
+      "code": "015518",
+      "name": "华夏纳斯达克100ETF发起式联接(QDII)A美元现汇",
+      "abbr": "HXNSDK100ETFFQSLJQDIIAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIANASIDAKE100ETFFAQISHILIANJIEQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "015545",
+      "name": "大成标普500等权重指数(QDII)C美元",
+      "abbr": "DCBP500DQZZSQDIICMY",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGBIAOPU500DENGQUANZHONGZHISHUQDIICMEIYUAN"
+    },
+    {
+      "code": "015546",
+      "name": "大成恒生指数(QDII-LOF)C",
+      "abbr": "DCHSZSQDIILOFC",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGHENGSHENGZHISHUQDIILOFC"
+    },
+    {
+      "code": "016055",
+      "name": "博时纳斯达克100ETF发起式联接(QDII)A人民币",
+      "abbr": "BSNSDK100ETFFQSLJQDIIARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHINASIDAKE100ETFFAQISHILIANJIEQDIIARENMINBI"
+    },
+    {
+      "code": "016056",
+      "name": "博时纳斯达克100ETF发起式联接(QDII)A美元现汇",
+      "abbr": "BSNSDK100ETFFQSLJQDIIAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHINASIDAKE100ETFFAQISHILIANJIEQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "016057",
+      "name": "博时纳斯达克100ETF发起式联接(QDII)C人民币",
+      "abbr": "BSNSDK100ETFFQSLJQDIICRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHINASIDAKE100ETFFAQISHILIANJIEQDIICRENMINBI"
+    },
+    {
+      "code": "016058",
+      "name": "博时纳斯达克100ETF发起式联接(QDII)C美元现汇",
+      "abbr": "BSNSDK100ETFFQSLJQDIICMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHINASIDAKE100ETFFAQISHILIANJIEQDIICMEIYUANXIANHUI"
+    },
+    {
+      "code": "016278",
+      "name": "广发美国房地产指数人民币(QDII)C",
+      "abbr": "GFMGFDCZSRMBQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAMEIGUOFANGDICHANZHISHURENMINBIQDIIC"
+    },
+    {
+      "code": "016279",
+      "name": "广发美国房地产指数美元现汇(QDII)C",
+      "abbr": "GFMGFDCZSMYXHQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAMEIGUOFANGDICHANZHISHUMEIYUANXIANHUIQDIIC"
+    },
+    {
+      "code": "016280",
+      "name": "广发全球医疗保健指数人民币(QDII)C",
+      "abbr": "GFQQYLBJZSRMBQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAQUANQIUYILIAOBAOJIANZHISHURENMINBIQDIIC"
+    },
+    {
+      "code": "016281",
+      "name": "广发全球医疗保健美元现汇(QDII)C",
+      "abbr": "GFQQYLBJMYXHQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAQUANQIUYILIAOBAOJIANMEIYUANXIANHUIQDIIC"
+    },
+    {
+      "code": "016452",
+      "name": "南方纳斯达克100指数发起(QDII)A",
+      "abbr": "NFNSDK100ZSFQQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGNASIDAKE100ZHISHUFAQIQDIIA"
+    },
+    {
+      "code": "016453",
+      "name": "南方纳斯达克100指数发起(QDII)C",
+      "abbr": "NFNSDK100ZSFQQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGNASIDAKE100ZHISHUFAQIQDIIC"
+    },
+    {
+      "code": "016470",
+      "name": "广发生物科技指数人民币(QDII)C",
+      "abbr": "GFSWKJZSRMBQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFASHENGWUKEJIZHISHURENMINBIQDIIC"
+    },
+    {
+      "code": "016471",
+      "name": "广发生物科技指数美元(QDII)C",
+      "abbr": "GFSWKJZSMYQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFASHENGWUKEJIZHISHUMEIYUANQDIIC"
+    },
+    {
+      "code": "016532",
+      "name": "嘉实纳斯达克100ETF发起联接(QDII)A人民币",
+      "abbr": "JSNSDK100ETFFQLJQDIIARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JIASHINASIDAKE100ETFFAQILIANJIEQDIIARENMINBI"
+    },
+    {
+      "code": "016533",
+      "name": "嘉实纳斯达克100ETF发起联接(QDII)C人民币",
+      "abbr": "JSNSDK100ETFFQLJQDIICRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JIASHINASIDAKE100ETFFAQILIANJIEQDIICRENMINBI"
+    },
+    {
+      "code": "016534",
+      "name": "嘉实纳斯达克100ETF发起联接(QDII)A美元现汇",
+      "abbr": "JSNSDK100ETFFQLJQDIIAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "JIASHINASIDAKE100ETFFAQILIANJIEQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "016535",
+      "name": "嘉实纳斯达克100ETF发起联接(QDII)C美元现汇",
+      "abbr": "JSNSDK100ETFFQLJQDIICMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "JIASHINASIDAKE100ETFFAQILIANJIEQDIICMEIYUANXIANHUI"
+    },
+    {
+      "code": "016970",
+      "name": "华夏恒生生物科技ETF发起式联接(QDII)A",
+      "abbr": "HXHSSWKJETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGSHENGWUKEJIETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "016971",
+      "name": "华夏恒生生物科技ETF发起式联接(QDII)C",
+      "abbr": "HXHSSWKJETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGSHENGWUKEJIETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "017028",
+      "name": "国泰标普500ETF发起联接(QDII)A人民币",
+      "abbr": "GTBP500ETFFQLJQDIIARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "GUOTAIBIAOPU500ETFFAQILIANJIEQDIIARENMINBI"
+    },
+    {
+      "code": "017030",
+      "name": "国泰标普500ETF发起联接(QDII)C人民币",
+      "abbr": "GTBP500ETFFQLJQDIICRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "GUOTAIBIAOPU500ETFFAQILIANJIEQDIICRENMINBI"
+    },
+    {
+      "code": "017091",
+      "name": "景顺长城纳斯达克科技ETF联接(QDII)A人民币",
+      "abbr": "JSCCNSDKKJETFLJQDIIARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JINGSHUNCHANGCHENGNASIDAKEKEJIETFLIANJIEQDIIARENMINBI"
+    },
+    {
+      "code": "017092",
+      "name": "景顺长城纳斯达克科技ETF联接(QDII)A美元现汇",
+      "abbr": "JSCCNSDKKJETFLJQDIIAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "JINGSHUNCHANGCHENGNASIDAKEKEJIETFLIANJIEQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "017093",
+      "name": "景顺长城纳斯达克科技ETF联接(QDII)C人民币",
+      "abbr": "JSCCNSDKKJETFLJQDIICRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JINGSHUNCHANGCHENGNASIDAKEKEJIETFLIANJIEQDIICRENMINBI"
+    },
+    {
+      "code": "017641",
+      "name": "摩根标普500指数(QDII)人民币A",
+      "abbr": "MGBP500ZSQDIIRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENBIAOPU500ZHISHUQDIIRENMINBIA"
+    },
+    {
+      "code": "017642",
+      "name": "摩根标普500指数(QDII)美钞",
+      "abbr": "MGBP500ZSQDIIMC",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENBIAOPU500ZHISHUQDIIMEICHAO"
+    },
+    {
+      "code": "017643",
+      "name": "摩根标普500指数(QDII)美汇",
+      "abbr": "MGBP500ZSQDIIMH",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENBIAOPU500ZHISHUQDIIMEIHUI"
+    },
+    {
+      "code": "017894",
+      "name": "汇添富纳斯达克生物科技ETF发起式联接(QDII)人民币A",
+      "abbr": "HTFNSDKSWKJETFFQSLJQDIIRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUNASIDAKESHENGWUKEJIETFFAQISHILIANJIEQDIIRENMINBIA"
+    },
+    {
+      "code": "017895",
+      "name": "汇添富纳斯达克生物科技ETF发起式联接(QDII)人民币C",
+      "abbr": "HTFNSDKSWKJETFFQSLJQDIIRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUNASIDAKESHENGWUKEJIETFFAQISHILIANJIEQDIIRENMINBIC"
+    },
+    {
+      "code": "017951",
+      "name": "汇添富纳斯达克生物科技ETF发起式联接(QDII)美元现汇",
+      "abbr": "HTFNSDKSWKJETFFQSLJQDIIMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUNASIDAKESHENGWUKEJIETFFAQISHILIANJIEQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "017952",
+      "name": "汇添富纳斯达克生物科技ETF发起式联接(QDII)美元现钞",
+      "abbr": "HTFNSDKSWKJETFFQSLJQDIIMYXC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUNASIDAKESHENGWUKEJIETFFAQISHILIANJIEQDIIMEIYUANXIANCHAO"
+    },
+    {
+      "code": "018043",
+      "name": "天弘纳斯达克100指数发起(QDII)A",
+      "abbr": "THNSDK100ZSFQQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "TIANHONGNASIDAKE100ZHISHUFAQIQDIIA"
+    },
+    {
+      "code": "018044",
+      "name": "天弘纳斯达克100指数发起(QDII)C",
+      "abbr": "THNSDK100ZSFQQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "TIANHONGNASIDAKE100ZHISHUFAQIQDIIC"
+    },
+    {
+      "code": "018064",
+      "name": "华夏标普500ETF发起式联接(QDII)A(人民币)",
+      "abbr": "HXBP500ETFFQSLJQDIIARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIABIAOPU500ETFFAQISHILIANJIEQDIIARENMINBI"
+    },
+    {
+      "code": "018065",
+      "name": "华夏标普500ETF发起式联接(QDII)C",
+      "abbr": "HXBP500ETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIABIAOPU500ETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "018066",
+      "name": "华夏标普500ETF发起式联接(QDII)A(美元)",
+      "abbr": "HXBP500ETFFQSLJQDIIAMY",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIABIAOPU500ETFFAQISHILIANJIEQDIIAMEIYUAN"
+    },
+    {
+      "code": "018078",
+      "name": "南方恒生生物科技ETF发起联接(QDII)A",
+      "abbr": "NFHSSWKJETFFQLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGHENGSHENGSHENGWUKEJIETFFAQILIANJIEQDIIA"
+    },
+    {
+      "code": "018079",
+      "name": "南方恒生生物科技ETF发起联接(QDII)C",
+      "abbr": "NFHSSWKJETFFQLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGHENGSHENGSHENGWUKEJIETFFAQILIANJIEQDIIC"
+    },
+    {
+      "code": "018200",
+      "name": "嘉实恒生消费ETF发起联接(QDII)A",
+      "abbr": "JSHSXFETFFQLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "JIASHIHENGSHENGXIAOFEIETFFAQILIANJIEQDIIA"
+    },
+    {
+      "code": "018201",
+      "name": "嘉实恒生消费ETF发起联接(QDII)C",
+      "abbr": "JSHSXFETFFQLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "JIASHIHENGSHENGXIAOFEIETFFAQILIANJIEQDIIC"
+    },
+    {
+      "code": "018336",
+      "name": "华夏恒生中国企业ETF发起式联接(QDII)A",
+      "abbr": "HXHSZGQYETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGZHONGGUOQIYEETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "018337",
+      "name": "华夏恒生中国企业ETF发起式联接(QDII)C",
+      "abbr": "HXHSZGQYETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGZHONGGUOQIYEETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "018432",
+      "name": "嘉实恒生医疗保健ETF发起联接(QDII)A",
+      "abbr": "JSHSYLBJETFFQLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "JIASHIHENGSHENGYILIAOBAOJIANETFFAQILIANJIEQDIIA"
+    },
+    {
+      "code": "018433",
+      "name": "嘉实恒生医疗保健ETF发起联接(QDII)C",
+      "abbr": "JSHSYLBJETFFQLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "JIASHIHENGSHENGYILIAOBAOJIANETFFAQILIANJIEQDIIC"
+    },
+    {
+      "code": "018475",
+      "name": "万家恒生互联网科技业ETF发起式联接(QDII)A",
+      "abbr": "WJHSHLWKJYETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "WANJIAHENGSHENGHULIANWANGKEJIYEETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "018476",
+      "name": "万家恒生互联网科技业ETF发起式联接(QDII)C",
+      "abbr": "WJHSHLWKJYETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "WANJIAHENGSHENGHULIANWANGKEJIYEETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "018523",
+      "name": "华泰紫金恒生互联网科技业指数型发起基金(QDII)A",
+      "abbr": "HTZJHSHLWKJYZSXFQJJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIZIJINHENGSHENGHULIANWANGKEJIYEZHISHUXINGFAQIJIJINQDIIA"
+    },
+    {
+      "code": "018524",
+      "name": "华泰紫金恒生互联网科技业指数型发起基金(QDII)C",
+      "abbr": "HTZJHSHLWKJYZSXFQJJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIZIJINHENGSHENGHULIANWANGKEJIYEZHISHUXINGFAQIJIJINQDIIC"
+    },
+    {
+      "code": "018577",
+      "name": "摩根恒生科技ETF发起式联接(QDII)A",
+      "abbr": "MGHSKJETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENHENGSHENGKEJIETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "018578",
+      "name": "摩根恒生科技ETF发起式联接(QDII)C",
+      "abbr": "MGHSKJETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENHENGSHENGKEJIETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "018738",
+      "name": "博时标普500ETF联接E(人民币)",
+      "abbr": "BSBP500ETFLJERMB",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIBIAOPU500ETFLIANJIEERENMINBI"
+    },
+    {
+      "code": "018851",
+      "name": "博时标普石油天然气勘探及生产精选行业指数发起(QDII)A人民币",
+      "abbr": "BSBPSYTRQKTJSCJXHYZSFQQDIIARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIBIAOPUSHIYOUTIANRANQIKANTANJISHENGCHANJINGXUANHANGYEZHISHUFAQIQDIIARENMINBI"
+    },
+    {
+      "code": "018852",
+      "name": "博时标普石油天然气勘探及生产精选行业指数发起(QDII)A美元现汇",
+      "abbr": "BSBPSYTRQKTJSCJXHYZSFQQDIIAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIBIAOPUSHIYOUTIANRANQIKANTANJISHENGCHANJINGXUANHANGYEZHISHUFAQIQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "018853",
+      "name": "博时标普石油天然气勘探及生产精选行业指数发起(QDII)C人民币",
+      "abbr": "BSBPSYTRQKTJSCJXHYZSFQQDIICRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIBIAOPUSHIYOUTIANRANQIKANTANJISHENGCHANJINGXUANHANGYEZHISHUFAQIQDIICRENMINBI"
+    },
+    {
+      "code": "018854",
+      "name": "博时标普石油天然气勘探及生产精选行业指数发起(QDII)C美元现汇",
+      "abbr": "BSBPSYTRQKTJSCJXHYZSFQQDIICMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIBIAOPUSHIYOUTIANRANQIKANTANJISHENGCHANJINGXUANHANGYEZHISHUFAQIQDIICMEIYUANXIANHUI"
+    },
+    {
+      "code": "018966",
+      "name": "汇添富纳斯达克100ETF发起式联接(QDII)人民币A",
+      "abbr": "HTFNSDK100ETFFQSLJQDIIRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUNASIDAKE100ETFFAQISHILIANJIEQDIIRENMINBIA"
+    },
+    {
+      "code": "018967",
+      "name": "汇添富纳斯达克100ETF发起式联接(QDII)人民币C",
+      "abbr": "HTFNSDK100ETFFQSLJQDIIRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUNASIDAKE100ETFFAQISHILIANJIEQDIIRENMINBIC"
+    },
+    {
+      "code": "018968",
+      "name": "汇添富纳斯达克100ETF发起式联接(QDII)美元现汇",
+      "abbr": "HTFNSDK100ETFFQSLJQDIIMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUNASIDAKE100ETFFAQISHILIANJIEQDIIMEIYUANXIANHUI"
+    },
+    {
+      "code": "018969",
+      "name": "汇添富纳斯达克100ETF发起式联接(QDII)美元现钞",
+      "abbr": "HTFNSDK100ETFFQSLJQDIIMYXC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUNASIDAKE100ETFFAQISHILIANJIEQDIIMEIYUANXIANCHAO"
+    },
+    {
+      "code": "019102",
+      "name": "景顺长城恒生消费ETF联接(QDII)A",
+      "abbr": "JSCCHSXFETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "JINGSHUNCHANGCHENGHENGSHENGXIAOFEIETFLIANJIEQDIIA"
+    },
+    {
+      "code": "019103",
+      "name": "景顺长城恒生消费ETF联接(QDII)C",
+      "abbr": "JSCCHSXFETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "JINGSHUNCHANGCHENGHENGSHENGXIAOFEIETFLIANJIEQDIIC"
+    },
+    {
+      "code": "019118",
+      "name": "景顺长城纳斯达克科技ETF联接(QDII)E人民币",
+      "abbr": "JSCCNSDKKJETFLJQDIIERMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JINGSHUNCHANGCHENGNASIDAKEKEJIETFLIANJIEQDIIERENMINBI"
+    },
+    {
+      "code": "019172",
+      "name": "摩根纳斯达克100指数(QDII)人民币A",
+      "abbr": "MGNSDK100ZSQDIIRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENNASIDAKE100ZHISHUQDIIRENMINBIA"
+    },
+    {
+      "code": "019173",
+      "name": "摩根纳斯达克100指数(QDII)人民币C",
+      "abbr": "MGNSDK100ZSQDIIRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENNASIDAKE100ZHISHUQDIIRENMINBIC"
+    },
+    {
+      "code": "019174",
+      "name": "摩根纳斯达克100指数(QDII)美元现汇A",
+      "abbr": "MGNSDK100ZSQDIIMYXHA",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENNASIDAKE100ZHISHUQDIIMEIYUANXIANHUIA"
+    },
+    {
+      "code": "019175",
+      "name": "摩根纳斯达克100指数(QDII)美元现汇C",
+      "abbr": "MGNSDK100ZSQDIIMYXHC",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENNASIDAKE100ZHISHUQDIIMEIYUANXIANHUIC"
+    },
+    {
+      "code": "019305",
+      "name": "摩根标普500指数(QDII)人民币C",
+      "abbr": "MGBP500ZSQDIIRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENBIAOPU500ZHISHUQDIIRENMINBIC"
+    },
+    {
+      "code": "019441",
+      "name": "万家纳斯达克100指数发起式(QDII)A",
+      "abbr": "WJNSDK100ZSFQSQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "WANJIANASIDAKE100ZHISHUFAQISHIQDIIA"
+    },
+    {
+      "code": "019442",
+      "name": "万家纳斯达克100指数发起式(QDII)C",
+      "abbr": "WJNSDK100ZSFQSQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "WANJIANASIDAKE100ZHISHUFAQISHIQDIIC"
+    },
+    {
+      "code": "019454",
+      "name": "华泰柏瑞中韩半导体ETF发起式联接(QDII)A",
+      "abbr": "HTBRZHBDTETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUIZHONGHANBANDAOTIETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "019455",
+      "name": "华泰柏瑞中韩半导体ETF发起式联接(QDII)C",
+      "abbr": "HTBRZHBDTETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUIZHONGHANBANDAOTIETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "019495",
+      "name": "摩根富时发达市场REITs指数(QDII)人民币C",
+      "abbr": "MGFSFDSCREITSZSQDIIRMBC",
+      "type": "指数型-海外股票",
+      "pinyin": "MOGENFUSHIFADASHICHANGREITSZHISHUQDIIRENMINBIC"
+    },
+    {
+      "code": "019524",
+      "name": "华泰柏瑞纳斯达克100ETF发起式联接(QDII)A",
+      "abbr": "HTBRNSDK100ETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUINASIDAKE100ETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "019525",
+      "name": "华泰柏瑞纳斯达克100ETF发起式联接(QDII)C",
+      "abbr": "HTBRNSDK100ETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUINASIDAKE100ETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "019547",
+      "name": "招商纳斯达克100ETF发起式联接(QDII)A",
+      "abbr": "ZSNSDK100ETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHAOSHANGNASIDAKE100ETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "019548",
+      "name": "招商纳斯达克100ETF发起式联接(QDII)C",
+      "abbr": "ZSNSDK100ETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHAOSHANGNASIDAKE100ETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "019670",
+      "name": "广发港股创新药ETF联接(QDII)A",
+      "abbr": "GFGGCXYETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAGANGGUCHUANGXINYAOETFLIANJIEQDIIA"
+    },
+    {
+      "code": "019671",
+      "name": "广发港股创新药ETF联接(QDII)C",
+      "abbr": "GFGGCXYETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAGANGGUCHUANGXINYAOETFLIANJIEQDIIC"
+    },
+    {
+      "code": "019710",
+      "name": "广发道琼斯石油指数(QDII-LOF)人民币E",
+      "abbr": "GFDQSSYZSQDIILOFRMBE",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFADAOQIONGSISHIYOUZHISHUQDIILOFRENMINBIE"
+    },
+    {
+      "code": "019711",
+      "name": "广发道琼斯石油指数(QDII-LOF)美元现汇E",
+      "abbr": "GFDQSSYZSQDIILOFMYXHE",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFADAOQIONGSISHIYOUZHISHUQDIILOFMEIYUANXIANHUIE"
+    },
+    {
+      "code": "019736",
+      "name": "宝盈纳斯达克100指数发起(QDII)A人民币",
+      "abbr": "BYNSDK100ZSFQQDIIARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "BAOYINGNASIDAKE100ZHISHUFAQIQDIIARENMINBI"
+    },
+    {
+      "code": "019737",
+      "name": "宝盈纳斯达克100指数发起(QDII)C人民币",
+      "abbr": "BYNSDK100ZSFQQDIICRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "BAOYINGNASIDAKE100ZHISHUFAQIQDIICRENMINBI"
+    },
+    {
+      "code": "019738",
+      "name": "宝盈纳斯达克100指数发起(QDII)A美元现汇",
+      "abbr": "BYNSDK100ZSFQQDIIAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "BAOYINGNASIDAKE100ZHISHUFAQIQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "019739",
+      "name": "宝盈纳斯达克100指数发起(QDII)C美元现汇",
+      "abbr": "BYNSDK100ZSFQQDIICMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "BAOYINGNASIDAKE100ZHISHUFAQIQDIICMEIYUANXIANHUI"
+    },
+    {
+      "code": "019936",
+      "name": "华安恒生互联网科技业ETF发起式联接(QDII)A",
+      "abbr": "HAHSHLWKJYETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANHENGSHENGHULIANWANGKEJIYEETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "019937",
+      "name": "华安恒生互联网科技业ETF发起式联接(QDII)C",
+      "abbr": "HAHSHLWKJYETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANHENGSHENGHULIANWANGKEJIYEETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "020515",
+      "name": "华泰柏瑞东南亚科技ETF发起式联接(QDII)A",
+      "abbr": "HTBRDNYKJETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUIDONGNANYAKEJIETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "020516",
+      "name": "华泰柏瑞东南亚科技ETF发起式联接(QDII)C",
+      "abbr": "HTBRDNYKJETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUIDONGNANYAKEJIETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "020621",
+      "name": "华夏中证香港内地国有企业ETF发起式联接(QDII)A",
+      "abbr": "HXZZXGNDGYQYETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAZHONGZHENGXIANGGANGNEIDIGUOYOUQIYEETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "020622",
+      "name": "华夏中证香港内地国有企业ETF发起式联接(QDII)C",
+      "abbr": "HXZZXGNDGYQYETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAZHONGZHENGXIANGGANGNEIDIGUOYOUQIYEETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "020634",
+      "name": "汇添富恒生生物科技ETF发起式联接(QDII)A",
+      "abbr": "HTFHSSWKJETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUHENGSHENGSHENGWUKEJIETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "020635",
+      "name": "汇添富恒生生物科技ETF发起式联接(QDII)C",
+      "abbr": "HTFHSSWKJETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUHENGSHENGSHENGWUKEJIETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "020712",
+      "name": "华安三菱日联日经225ETF发起式联接(QDII)A",
+      "abbr": "HASLRLRJ225ETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANSANLINGRILIANRIJING225ETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "020713",
+      "name": "华安三菱日联日经225ETF发起式联接(QDII)C",
+      "abbr": "HASLRLRJ225ETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANSANLINGRILIANRIJING225ETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "020743",
+      "name": "广发恒生消费ETF发起式联接(QDII)A",
+      "abbr": "GFHSXFETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAHENGSHENGXIAOFEIETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "020744",
+      "name": "广发恒生消费ETF发起式联接(QDII)C",
+      "abbr": "GFHSXFETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAHENGSHENGXIAOFEIETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "020988",
+      "name": "南方恒生科技ETF发起联接(QDII)A",
+      "abbr": "NFHSKJETFFQLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGHENGSHENGKEJIETFFAQILIANJIEQDIIA"
+    },
+    {
+      "code": "020989",
+      "name": "南方恒生科技ETF发起联接(QDII)C",
+      "abbr": "NFHSKJETFFQLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGHENGSHENGKEJIETFFAQILIANJIEQDIIC"
+    },
+    {
+      "code": "021000",
+      "name": "南方纳斯达克100指数发起(QDII)I",
+      "abbr": "NFNSDK100ZSFQQDIII",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGNASIDAKE100ZHISHUFAQIQDIII"
+    },
+    {
+      "code": "021044",
+      "name": "国泰香港国企红利ETF联接(QDII)A",
+      "abbr": "GTXGGQHLETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUOTAIXIANGGANGGUOQIHONGLIETFLIANJIEQDIIA"
+    },
+    {
+      "code": "021045",
+      "name": "国泰香港国企红利ETF联接(QDII)C",
+      "abbr": "GTXGGQHLETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUOTAIXIANGGANGGUOQIHONGLIETFLIANJIEQDIIC"
+    },
+    {
+      "code": "021053",
+      "name": "南方恒生生物科技ETF发起联接(QDII)I",
+      "abbr": "NFHSSWKJETFFQLJQDIII",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGHENGSHENGSHENGWUKEJIETFFAQILIANJIEQDIII"
+    },
+    {
+      "code": "021189",
+      "name": "南方亚太精选ETF联接(QDII)A",
+      "abbr": "NFYTJXETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGYATAIJINGXUANETFLIANJIEQDIIA"
+    },
+    {
+      "code": "021190",
+      "name": "南方亚太精选ETF联接(QDII)C",
+      "abbr": "NFYTJXETFLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGYATAIJINGXUANETFLIANJIEQDIIC"
+    },
+    {
+      "code": "021539",
+      "name": "华安法国CAC40ETF发起式联接(QDII)A",
+      "abbr": "HAFGCAC40ETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANFAGUOCAC40ETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "021540",
+      "name": "华安法国CAC40ETF发起式联接(QDII)C",
+      "abbr": "HAFGCAC40ETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANFAGUOCAC40ETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "021583",
+      "name": "中欧中证港股通央企红利指数发起(QDII)A",
+      "abbr": "ZOZZGGTYQHLZSFQQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGOUZHONGZHENGGANGGUTONGYANGQIHONGLIZHISHUFAQIQDIIA"
+    },
+    {
+      "code": "021584",
+      "name": "中欧中证港股通央企红利指数发起(QDII)C",
+      "abbr": "ZOZZGGTYQHLZSFQQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGOUZHONGZHENGGANGGUTONGYANGQIHONGLIZHISHUFAQIQDIIC"
+    },
+    {
+      "code": "021633",
+      "name": "招商中证香港科技ETF发起式联接(QDII)A",
+      "abbr": "ZSZZXGKJETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHAOSHANGZHONGZHENGXIANGGANGKEJIETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "021634",
+      "name": "招商中证香港科技ETF发起式联接(QDII)C",
+      "abbr": "ZSZZXGKJETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHAOSHANGZHONGZHENGXIANGGANGKEJIETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "021658",
+      "name": "华安恒生生物科技指数发起式(QDII)A",
+      "abbr": "HAHSSWKJZSFQSQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANHENGSHENGSHENGWUKEJIZHISHUFAQISHIQDIIA"
+    },
+    {
+      "code": "021659",
+      "name": "华安恒生生物科技指数发起式(QDII)C",
+      "abbr": "HAHSSWKJZSFQSQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANHENGSHENGSHENGWUKEJIZHISHUFAQISHIQDIIC"
+    },
+    {
+      "code": "021773",
+      "name": "汇添富纳斯达克100ETF发起式联接(QDII)人民币E",
+      "abbr": "HTFNSDK100ETFFQSLJQDIIRMBE",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUNASIDAKE100ETFFAQISHILIANJIEQDIIRENMINBIE"
+    },
+    {
+      "code": "021778",
+      "name": "广发纳指100ETF联接(QDII)人民币F",
+      "abbr": "GFNZ100ETFLJQDIIRMBF",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFANAZHI100ETFLIANJIEQDIIRENMINBIF"
+    },
+    {
+      "code": "021838",
+      "name": "嘉实纳斯达克100ETF发起联接(QDII)I人民币",
+      "abbr": "JSNSDK100ETFFQLJQDIIIRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JIASHINASIDAKE100ETFFAQILIANJIEQDIIIRENMINBI"
+    },
+    {
+      "code": "022005",
+      "name": "广发恒生科技ETF联接(QDII)F",
+      "abbr": "GFHSKJETFLJQDIIF",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFAHENGSHENGKEJIETFLIANJIEQDIIF"
+    },
+    {
+      "code": "022121",
+      "name": "国泰海通中证香港科技指数发起(QDII)A",
+      "abbr": "GTHTZZXGKJZSFQQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUOTAIHAITONGZHONGZHENGXIANGGANGKEJIZHISHUFAQIQDIIA"
+    },
+    {
+      "code": "022122",
+      "name": "国泰海通中证香港科技指数发起(QDII)C",
+      "abbr": "GTHTZZXGKJZSFQQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUOTAIHAITONGZHONGZHENGXIANGGANGKEJIZHISHUFAQIQDIIC"
+    },
+    {
+      "code": "022325",
+      "name": "长城中证港股通高股息指数发起(QDII)A",
+      "abbr": "CCZZGGTGGXZSFQQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "CHANGCHENGZHONGZHENGGANGGUTONGGAOGUXIZHISHUFAQIQDIIA"
+    },
+    {
+      "code": "022326",
+      "name": "长城中证港股通高股息指数发起(QDII)C",
+      "abbr": "CCZZGGTGGXZSFQQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "CHANGCHENGZHONGZHENGGANGGUTONGGAOGUXIZHISHUFAQIQDIIC"
+    },
+    {
+      "code": "022525",
+      "name": "天弘纳斯达克100指数发起(QDII)D",
+      "abbr": "THNSDK100ZSFQQDIID",
+      "type": "指数型-海外股票",
+      "pinyin": "TIANHONGNASIDAKE100ZHISHUFAQIQDIID"
+    },
+    {
+      "code": "022647",
+      "name": "华安恒生科技ETF发起式联接(QDII)I",
+      "abbr": "HAHSKJETFFQSLJQDIII",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANHENGSHENGKEJIETFFAQISHILIANJIEQDIII"
+    },
+    {
+      "code": "022664",
+      "name": "华泰柏瑞纳斯达克100ETF发起式联接(QDII)I",
+      "abbr": "HTBRNSDK100ETFFQSLJQDIII",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUINASIDAKE100ETFFAQISHILIANJIEQDIII"
+    },
+    {
+      "code": "022680",
+      "name": "华泰柏瑞恒生科技ETF联接(QDII)I",
+      "abbr": "HTBRHSKJETFLJQDIII",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUIHENGSHENGKEJIETFLIANJIEQDIII"
+    },
+    {
+      "code": "022681",
+      "name": "华泰柏瑞中韩半导体ETF发起式联接(QDII)I",
+      "abbr": "HTBRZHBDTETFFQSLJQDIII",
+      "type": "指数型-海外股票",
+      "pinyin": "HUATAIBAIRUIZHONGHANBANDAOTIETFFAQISHILIANJIEQDIII"
+    },
+    {
+      "code": "023034",
+      "name": "中欧恒生科技指数发起(QDII)A",
+      "abbr": "ZOHSKJZSFQQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGOUHENGSHENGKEJIZHISHUFAQIQDIIA"
+    },
+    {
+      "code": "023035",
+      "name": "中欧恒生科技指数发起(QDII)C",
+      "abbr": "ZOHSKJZSFQQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGOUHENGSHENGKEJIZHISHUFAQIQDIIC"
+    },
+    {
+      "code": "023073",
+      "name": "国泰海通中证港股通高股息投资指数发起(QDII)A",
+      "abbr": "GTHTZZGGTGGXTZZSFQQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUOTAIHAITONGZHONGZHENGGANGGUTONGGAOGUXITOUZIZHISHUFAQIQDIIA"
+    },
+    {
+      "code": "023074",
+      "name": "国泰海通中证港股通高股息投资指数发起(QDII)C",
+      "abbr": "GTHTZZGGTGGXTZZSFQQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "GUOTAIHAITONGZHONGZHENGGANGGUTONGGAOGUXITOUZIZHISHUFAQIQDIIC"
+    },
+    {
+      "code": "023242",
+      "name": "中欧恒生消费指数发起(QDII)A",
+      "abbr": "ZOHSXFZSFQQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGOUHENGSHENGXIAOFEIZHISHUFAQIQDIIA"
+    },
+    {
+      "code": "023243",
+      "name": "中欧恒生消费指数发起(QDII)C",
+      "abbr": "ZOHSXFZSFQQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGOUHENGSHENGXIAOFEIZHISHUFAQIQDIIC"
+    },
+    {
+      "code": "023373",
+      "name": "建信富时100指数(QDII)D人民币",
+      "abbr": "JXFS100ZSQDIIDRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINFUSHI100ZHISHUQDIIDRENMINBI"
+    },
+    {
+      "code": "023422",
+      "name": "建信纳斯达克100指数(QDII)D人民币",
+      "abbr": "JXNSDK100ZSQDIIDRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINNASIDAKE100ZHISHUQDIIDRENMINBI"
+    },
+    {
+      "code": "023763",
+      "name": "华夏恒生科技ETF发起式联接(QDII)D",
+      "abbr": "HXHSKJETFFQSLJQDIID",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGKEJIETFFAQISHILIANJIEQDIID"
+    },
+    {
+      "code": "023764",
+      "name": "华夏恒生互联网科技业ETF发起式联接(QDII)D",
+      "abbr": "HXHSHLWKJYETFFQSLJQDIID",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAXIAHENGSHENGHULIANWANGKEJIYEETFFAQISHILIANJIEQDIID"
+    },
+    {
+      "code": "024055",
+      "name": "大成恒生医疗保健ETF发起式联接(QDII)A",
+      "abbr": "DCHSYLBJETFFQSLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGHENGSHENGYILIAOBAOJIANETFFAQISHILIANJIEQDIIA"
+    },
+    {
+      "code": "024056",
+      "name": "大成恒生医疗保健ETF发起式联接(QDII)C",
+      "abbr": "DCHSYLBJETFFQSLJQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGHENGSHENGYILIAOBAOJIANETFFAQISHILIANJIEQDIIC"
+    },
+    {
+      "code": "024148",
+      "name": "长城恒生科技指数(QDII)A",
+      "abbr": "CCHSKJZSQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "CHANGCHENGHENGSHENGKEJIZHISHUQDIIA"
+    },
+    {
+      "code": "024149",
+      "name": "长城恒生科技指数(QDII)C",
+      "abbr": "CCHSKJZSQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "CHANGCHENGHENGSHENGKEJIZHISHUQDIIC"
+    },
+    {
+      "code": "024166",
+      "name": "西部利得恒生科技指数(QDII)A",
+      "abbr": "XBLDHSKJZSQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "XIBULIDEHENGSHENGKEJIZHISHUQDIIA"
+    },
+    {
+      "code": "024167",
+      "name": "西部利得恒生科技指数(QDII)C",
+      "abbr": "XBLDHSKJZSQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "XIBULIDEHENGSHENGKEJIZHISHUQDIIC"
+    },
+    {
+      "code": "024237",
+      "name": "博时纳斯达克100ETF发起式联接(QDII)I人民币",
+      "abbr": "BSNSDK100ETFFQSLJQDIIIRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHINASIDAKE100ETFFAQISHILIANJIEQDIIIRENMINBI"
+    },
+    {
+      "code": "024393",
+      "name": "永赢恒生消费指数发起(QDII)A",
+      "abbr": "YYHSXFZSFQQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "YONGYINGHENGSHENGXIAOFEIZHISHUFAQIQDIIA"
+    },
+    {
+      "code": "024394",
+      "name": "永赢恒生消费指数发起(QDII)C",
+      "abbr": "YYHSXFZSFQQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "YONGYINGHENGSHENGXIAOFEIZHISHUFAQIQDIIC"
+    },
+    {
+      "code": "025330",
+      "name": "银华恒生国企指数(QDII-LOF)C",
+      "abbr": "YHHSGQZSQDIILOFC",
+      "type": "指数型-海外股票",
+      "pinyin": "YINHUAHENGSHENGGUOQIZHISHUQDIILOFC"
+    },
+    {
+      "code": "026206",
+      "name": "宝盈恒生科技指数(QDII)A",
+      "abbr": "BYHSKJZSQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "BAOYINGHENGSHENGKEJIZHISHUQDIIA"
+    },
+    {
+      "code": "026207",
+      "name": "宝盈恒生科技指数(QDII)C",
+      "abbr": "BYHSKJZSQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "BAOYINGHENGSHENGKEJIZHISHUQDIIC"
+    },
+    {
+      "code": "026534",
+      "name": "兴业恒生科技指数(QDII)A",
+      "abbr": "XYHSKJZSQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "XINGYEHENGSHENGKEJIZHISHUQDIIA"
+    },
+    {
+      "code": "026535",
+      "name": "兴业恒生科技指数(QDII)C",
+      "abbr": "XYHSKJZSQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "XINGYEHENGSHENGKEJIZHISHUQDIIC"
+    },
+    {
+      "code": "027133",
+      "name": "华安恒生生物科技指数发起式A",
+      "abbr": "HAHSSWKJZSFQSA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANHENGSHENGSHENGWUKEJIZHISHUFAQISHIA"
+    },
+    {
+      "code": "027134",
+      "name": "华安恒生生物科技指数发起式C",
+      "abbr": "HAHSSWKJZSFQSC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANHENGSHENGSHENGWUKEJIZHISHUFAQISHIC"
+    },
+    {
+      "code": "027164",
+      "name": "富国恒生科技指数(QDII)A",
+      "abbr": "FGHSKJZSQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "FUGUOHENGSHENGKEJIZHISHUQDIIA"
+    },
+    {
+      "code": "027165",
+      "name": "富国恒生科技指数(QDII)C",
+      "abbr": "FGHSKJZSQDIIC",
+      "type": "指数型-海外股票",
+      "pinyin": "FUGUOHENGSHENGKEJIZHISHUQDIIC"
+    },
+    {
+      "code": "040046",
+      "name": "华安纳斯达克100ETF联接(QDII)A",
+      "abbr": "HANSDK100ETFLJQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANNASIDAKE100ETFLIANJIEQDIIA"
+    },
+    {
+      "code": "040047",
+      "name": "华安纳斯达克100ETF联接(QDII)A美元现钞",
+      "abbr": "HANSDK100ETFLJQDIIAMYXC",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANNASIDAKE100ETFLIANJIEQDIIAMEIYUANXIANCHAO"
+    },
+    {
+      "code": "040048",
+      "name": "华安纳斯达克100ETF联接(QDII)A美元现汇",
+      "abbr": "HANSDK100ETFLJQDIIAMYXH",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANNASIDAKE100ETFLIANJIEQDIIAMEIYUANXIANHUI"
+    },
+    {
+      "code": "050025",
+      "name": "博时标普500ETF联接A",
+      "abbr": "BSBP500ETFLJA",
+      "type": "指数型-海外股票",
+      "pinyin": "BOSHIBIAOPU500ETFLIANJIEA"
+    },
+    {
+      "code": "096001",
+      "name": "大成标普500等权重指数(QDII)A人民币",
+      "abbr": "DCBP500DQZZSQDIIARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGBIAOPU500DENGQUANZHONGZHISHUQDIIARENMINBI"
+    },
+    {
+      "code": "110031",
+      "name": "易方达恒生国企ETF联接A",
+      "abbr": "YFDHSGQETFLJA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAHENGSHENGGUOQIETFLIANJIEA"
+    },
+    {
+      "code": "110032",
+      "name": "易方达恒生国企ETF联接现汇A",
+      "abbr": "YFDHSGQETFLJXHA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAHENGSHENGGUOQIETFLIANJIEXIANHUIA"
+    },
+    {
+      "code": "110033",
+      "name": "易方达恒生国企ETF联接现钞A",
+      "abbr": "YFDHSGQETFLJXCA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAHENGSHENGGUOQIETFLIANJIEXIANCHAOA"
+    },
+    {
+      "code": "118002",
+      "name": "易方达标普消费品指数A",
+      "abbr": "YFDBPXFPZSA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUXIAOFEIPINZHISHUA"
+    },
+    {
+      "code": "159100",
+      "name": "巴西ETF华夏",
+      "abbr": "BXETFHX",
+      "type": "指数型-海外股票",
+      "pinyin": "BAXIETFHUAXIA"
+    },
+    {
+      "code": "159202",
+      "name": "恒生互联网ETF万家",
+      "abbr": "HSHLWETFWJ",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGHULIANWANGETFWANJIA"
+    },
+    {
+      "code": "159303",
+      "name": "恒生医疗ETF大成",
+      "abbr": "HSYLETFDC",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGYILIAOETFDACHENG"
+    },
+    {
+      "code": "159329",
+      "name": "沙特ETF南方",
+      "abbr": "STETFNF",
+      "type": "指数型-海外股票",
+      "pinyin": "SHATEETFNANFANG"
+    },
+    {
+      "code": "159501",
+      "name": "纳指ETF嘉实",
+      "abbr": "NZETFJS",
+      "type": "指数型-海外股票",
+      "pinyin": "NAZHIETFJIASHI"
+    },
+    {
+      "code": "159502",
+      "name": "标普生物科技ETF嘉实",
+      "abbr": "BPSWKJETFJS",
+      "type": "指数型-海外股票",
+      "pinyin": "BIAOPUSHENGWUKEJIETFJIASHI"
+    },
+    {
+      "code": "159509",
+      "name": "纳指科技ETF景顺",
+      "abbr": "NZKJETFJS",
+      "type": "指数型-海外股票",
+      "pinyin": "NAZHIKEJIETFJINGSHUN"
+    },
+    {
+      "code": "159513",
+      "name": "纳斯达克100ETF大成",
+      "abbr": "NSDK100ETFDC",
+      "type": "指数型-海外股票",
+      "pinyin": "NASIDAKE100ETFDACHENG"
+    },
+    {
+      "code": "159518",
+      "name": "标普油气ETF嘉实",
+      "abbr": "BPYQETFJS",
+      "type": "指数型-海外股票",
+      "pinyin": "BIAOPUYOUQIETFJIASHI"
+    },
+    {
+      "code": "159519",
+      "name": "港股国企ETF国泰",
+      "abbr": "GGGQETFGT",
+      "type": "指数型-海外股票",
+      "pinyin": "GANGGUGUOQIETFGUOTAI"
+    },
+    {
+      "code": "159529",
+      "name": "标普消费ETF景顺",
+      "abbr": "BPXFETFJS",
+      "type": "指数型-海外股票",
+      "pinyin": "BIAOPUXIAOFEIETFJINGSHUN"
+    },
+    {
+      "code": "159557",
+      "name": "恒生医疗ETF嘉实",
+      "abbr": "HSYLETFJS",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGYILIAOETFJIASHI"
+    },
+    {
+      "code": "159561",
+      "name": "德国ETF嘉实",
+      "abbr": "DGETFJS",
+      "type": "指数型-海外股票",
+      "pinyin": "DEGUOETFJIASHI"
+    },
+    {
+      "code": "159577",
+      "name": "美国50ETF汇添富",
+      "abbr": "MG50ETFHTF",
+      "type": "指数型-海外股票",
+      "pinyin": "MEIGUO50ETFHUITIANFU"
+    },
+    {
+      "code": "159605",
+      "name": "中概互联ETF广发",
+      "abbr": "ZGHLETFGF",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGGAIHULIANETFGUANGFA"
+    },
+    {
+      "code": "159607",
+      "name": "中概互联网ETF嘉实",
+      "abbr": "ZGHLWETFJS",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGGAIHULIANWANGETFJIASHI"
+    },
+    {
+      "code": "159612",
+      "name": "标普500ETF国泰",
+      "abbr": "BP500ETFGT",
+      "type": "指数型-海外股票",
+      "pinyin": "BIAOPU500ETFGUOTAI"
+    },
+    {
+      "code": "159615",
+      "name": "恒生生物科技ETF南方",
+      "abbr": "HSSWKJETFNF",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGSHENGWUKEJIETFNANFANG"
+    },
+    {
+      "code": "159632",
+      "name": "纳斯达克ETF华安",
+      "abbr": "NSDKETFHA",
+      "type": "指数型-海外股票",
+      "pinyin": "NASIDAKEETFHUAAN"
+    },
+    {
+      "code": "159655",
+      "name": "标普500ETF华夏",
+      "abbr": "BP500ETFHX",
+      "type": "指数型-海外股票",
+      "pinyin": "BIAOPU500ETFHUAXIA"
+    },
+    {
+      "code": "159659",
+      "name": "纳斯达克100ETF招商",
+      "abbr": "NSDK100ETFZS",
+      "type": "指数型-海外股票",
+      "pinyin": "NASIDAKE100ETFZHAOSHANG"
+    },
+    {
+      "code": "159660",
+      "name": "纳指ETF汇添富",
+      "abbr": "NZETFHTF",
+      "type": "指数型-海外股票",
+      "pinyin": "NAZHIETFHUITIANFU"
+    },
+    {
+      "code": "159687",
+      "name": "亚太精选ETF南方",
+      "abbr": "YTJXETFNF",
+      "type": "指数型-海外股票",
+      "pinyin": "YATAIJINGXUANETFNANFANG"
+    },
+    {
+      "code": "159688",
+      "name": "恒生互联网ETF华安",
+      "abbr": "HSHLWETFHA",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGHULIANWANGETFHUAAN"
+    },
+    {
+      "code": "159696",
+      "name": "纳指ETF易方达",
+      "abbr": "NZETFYFD",
+      "type": "指数型-海外股票",
+      "pinyin": "NAZHIETFYIFANGDA"
+    },
+    {
+      "code": "159699",
+      "name": "恒生消费ETF广发",
+      "abbr": "HSXFETFGF",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGXIAOFEIETFGUANGFA"
+    },
+    {
+      "code": "159740",
+      "name": "恒生科技ETF大成",
+      "abbr": "HSKJETFDC",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFDACHENG"
+    },
+    {
+      "code": "159741",
+      "name": "恒生科技ETF嘉实",
+      "abbr": "HSKJETFJS",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFJIASHI"
+    },
+    {
+      "code": "159742",
+      "name": "恒生科技ETF博时",
+      "abbr": "HSKJETFBS",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFBOSHI"
+    },
+    {
+      "code": "159747",
+      "name": "香港科技ETF南方",
+      "abbr": "XGKJETFNF",
+      "type": "指数型-海外股票",
+      "pinyin": "XIANGGANGKEJIETFNANFANG"
+    },
+    {
+      "code": "159750",
+      "name": "港股科技50ETF招商",
+      "abbr": "GGKJ50ETFZS",
+      "type": "指数型-海外股票",
+      "pinyin": "GANGGUKEJI50ETFZHAOSHANG"
+    },
+    {
+      "code": "159822",
+      "name": "新经济ETF银华",
+      "abbr": "XJJETFYH",
+      "type": "指数型-海外股票",
+      "pinyin": "XINJINGJIETFYINHUA"
+    },
+    {
+      "code": "159850",
+      "name": "恒生国企ETF华夏",
+      "abbr": "HSGQETFHX",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGGUOQIETFHUAXIA"
+    },
+    {
+      "code": "159866",
+      "name": "日经ETF工银",
+      "abbr": "RJETFGY",
+      "type": "指数型-海外股票",
+      "pinyin": "RIJINGETFGONGYIN"
+    },
+    {
+      "code": "159892",
+      "name": "恒生医药ETF华夏",
+      "abbr": "HSYYETFHX",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGYIYAOETFHUAXIA"
+    },
+    {
+      "code": "159920",
+      "name": "恒生ETF华夏",
+      "abbr": "HSETFHX",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGETFHUAXIA"
+    },
+    {
+      "code": "159941",
+      "name": "纳指ETF广发",
+      "abbr": "NZETFGF",
+      "type": "指数型-海外股票",
+      "pinyin": "NAZHIETFGUANGFA"
+    },
+    {
+      "code": "160140",
+      "name": "南方道琼斯美国精选A",
+      "abbr": "NFDQSMGJXA",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGDAOQIONGSIMEIGUOJINGXUANA"
+    },
+    {
+      "code": "160141",
+      "name": "南方道琼斯美国精选C",
+      "abbr": "NFDQSMGJXC",
+      "type": "指数型-海外股票",
+      "pinyin": "NANFANGDAOQIONGSIMEIGUOJINGXUANC"
+    },
+    {
+      "code": "160213",
+      "name": "国泰纳斯达克100指数",
+      "abbr": "GTNSDK100ZS",
+      "type": "指数型-海外股票",
+      "pinyin": "GUOTAINASIDAKE100ZHISHU"
+    },
+    {
+      "code": "160416",
+      "name": "华安标普全球石油指数(LOF)A",
+      "abbr": "HABPQQSYZSLOFA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUAANBIAOPUQUANQIUSHIYOUZHISHULOFA"
+    },
+    {
+      "code": "160717",
+      "name": "嘉实H股指数(QDII-LOF)",
+      "abbr": "JSHGZSQDIILOF",
+      "type": "指数型-海外股票",
+      "pinyin": "JIASHIHGUZHISHUQDIILOF"
+    },
+    {
+      "code": "160924",
+      "name": "大成恒生指数(QDII-LOF)A",
+      "abbr": "DCHSZSQDIILOFA",
+      "type": "指数型-海外股票",
+      "pinyin": "DACHENGHENGSHENGZHISHUQDIILOFA"
+    },
+    {
+      "code": "161124",
+      "name": "易方达香港小型股指数A",
+      "abbr": "YFDXGXXGZSA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDAXIANGGANGXIAOXINGGUZHISHUA"
+    },
+    {
+      "code": "161125",
+      "name": "易方达标普500指数人民币A",
+      "abbr": "YFDBP500ZSRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPU500ZHISHURENMINBIA"
+    },
+    {
+      "code": "161126",
+      "name": "易方达标普医疗保健人民币A",
+      "abbr": "YFDBPYLBJRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUYILIAOBAOJIANRENMINBIA"
+    },
+    {
+      "code": "161127",
+      "name": "易方达标普生物科技人民币A",
+      "abbr": "YFDBPSWKJRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUSHENGWUKEJIRENMINBIA"
+    },
+    {
+      "code": "161128",
+      "name": "易方达标普信息科技指数(QDII-LOF)A(人民币)",
+      "abbr": "YFDBPXXKJZSQDIILOFARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDABIAOPUXINXIKEJIZHISHUQDIILOFARENMINBI"
+    },
+    {
+      "code": "161130",
+      "name": "易方达纳斯达克100ETF联接(QDII-LOF)A(人民币)",
+      "abbr": "YFDNSDK100ETFLJQDIILOFARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "YIFANGDANASIDAKE100ETFLIANJIEQDIILOFARENMINBI"
+    },
+    {
+      "code": "161831",
+      "name": "银华恒生国企指数(QDII-LOF)A",
+      "abbr": "YHHSGQZSQDIILOFA",
+      "type": "指数型-海外股票",
+      "pinyin": "YINHUAHENGSHENGGUOQIZHISHUQDIILOFA"
+    },
+    {
+      "code": "162411",
+      "name": "华宝标普油气上游股票人民币A",
+      "abbr": "HBBPYQSYGPRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUABAOBIAOPUYOUQISHANGYOUGUPIAORENMINBIA"
+    },
+    {
+      "code": "162415",
+      "name": "华宝标普美国消费人民币A",
+      "abbr": "HBBPMGXFRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUABAOBIAOPUMEIGUOXIAOFEIRENMINBIA"
+    },
+    {
+      "code": "162719",
+      "name": "广发道琼斯石油指数人民币A",
+      "abbr": "GFDQSSYZSRMBA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFADAOQIONGSISHIYOUZHISHURENMINBIA"
+    },
+    {
+      "code": "164705",
+      "name": "汇添富恒生指数(QDII-LOF)A",
+      "abbr": "HTFHSZSQDIILOFA",
+      "type": "指数型-海外股票",
+      "pinyin": "HUITIANFUHENGSHENGZHISHUQDIILOFA"
+    },
+    {
+      "code": "164906",
+      "name": "交银中证海外中国互联网指数(LOF)A",
+      "abbr": "JYZZHWZGHLWZSLOFA",
+      "type": "指数型-海外股票",
+      "pinyin": "JIAOYINZHONGZHENGHAIWAIZHONGGUOHULIANWANGZHISHULOFA"
+    },
+    {
+      "code": "270042",
+      "name": "广发纳斯达克100ETF联接人民币(QDII)A",
+      "abbr": "GFNSDK100ETFLJRMBQDIIA",
+      "type": "指数型-海外股票",
+      "pinyin": "GUANGFANASIDAKE100ETFLIANJIERENMINBIQDIIA"
+    },
+    {
+      "code": "510900",
+      "name": "恒生中国企业ETF易方达",
+      "abbr": "HSZGQYETFYFD",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGZHONGGUOQIYEETFYIFANGDA"
+    },
+    {
+      "code": "513000",
+      "name": "日经225ETF易方达",
+      "abbr": "RJ225ETFYFD",
+      "type": "指数型-海外股票",
+      "pinyin": "RIJING225ETFYIFANGDA"
+    },
+    {
+      "code": "513010",
+      "name": "恒生科技ETF易方达",
+      "abbr": "HSKJETFYFD",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFYIFANGDA"
+    },
+    {
+      "code": "513030",
+      "name": "德国ETF华安",
+      "abbr": "DGETFHA",
+      "type": "指数型-海外股票",
+      "pinyin": "DEGUOETFHUAAN"
+    },
+    {
+      "code": "513050",
+      "name": "中概互联网ETF易方达",
+      "abbr": "ZGHLWETFYFD",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGGAIHULIANWANGETFYIFANGDA"
+    },
+    {
+      "code": "513060",
+      "name": "恒生医疗ETF博时",
+      "abbr": "HSYLETFBS",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGYILIAOETFBOSHI"
+    },
+    {
+      "code": "513080",
+      "name": "法国ETF华安",
+      "abbr": "FGETFHA",
+      "type": "指数型-海外股票",
+      "pinyin": "FAGUOETFHUAAN"
+    },
+    {
+      "code": "513100",
+      "name": "纳指ETF国泰",
+      "abbr": "NZETFGT",
+      "type": "指数型-海外股票",
+      "pinyin": "NAZHIETFGUOTAI"
+    },
+    {
+      "code": "513110",
+      "name": "纳指ETF华泰柏瑞",
+      "abbr": "NZETFHTBR",
+      "type": "指数型-海外股票",
+      "pinyin": "NAZHIETFHUATAIBAIRUI"
+    },
+    {
+      "code": "513120",
+      "name": "港股创新药ETF广发",
+      "abbr": "GGCXYETFGF",
+      "type": "指数型-海外股票",
+      "pinyin": "GANGGUCHUANGXINYAOETFGUANGFA"
+    },
+    {
+      "code": "513130",
+      "name": "恒生科技ETF华泰柏瑞",
+      "abbr": "HSKJETFHTBR",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFHUATAIBAIRUI"
+    },
+    {
+      "code": "513140",
+      "name": "港股通金融ETF华泰柏瑞",
+      "abbr": "GGTJRETFHTBR",
+      "type": "指数型-海外股票",
+      "pinyin": "GANGGUTONGJINRONGETFHUATAIBAIRUI"
+    },
+    {
+      "code": "513170",
+      "name": "恒生央企ETF鹏华",
+      "abbr": "HSYQETFPH",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGYANGQIETFPENGHUA"
+    },
+    {
+      "code": "513180",
+      "name": "恒生科技ETF华夏",
+      "abbr": "HSKJETFHX",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFHUAXIA"
+    },
+    {
+      "code": "513210",
+      "name": "恒生ETF易方达",
+      "abbr": "HSETFYFD",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGETFYIFANGDA"
+    },
+    {
+      "code": "513220",
+      "name": "中概互联ETF招商",
+      "abbr": "ZGHLETFZS",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGGAIHULIANETFZHAOSHANG"
+    },
+    {
+      "code": "513260",
+      "name": "恒生科技ETF汇添富",
+      "abbr": "HSKJETFHTF",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFHUITIANFU"
+    },
+    {
+      "code": "513280",
+      "name": "恒生生物科技ETF汇添富",
+      "abbr": "HSSWKJETFHTF",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGSHENGWUKEJIETFHUITIANFU"
+    },
+    {
+      "code": "513290",
+      "name": "纳指生物科技ETF汇添富",
+      "abbr": "NZSWKJETFHTF",
+      "type": "指数型-海外股票",
+      "pinyin": "NAZHISHENGWUKEJIETFHUITIANFU"
+    },
+    {
+      "code": "513300",
+      "name": "纳斯达克ETF华夏",
+      "abbr": "NSDKETFHX",
+      "type": "指数型-海外股票",
+      "pinyin": "NASIDAKEETFHUAXIA"
+    },
+    {
+      "code": "513310",
+      "name": "中韩半导体ETF华泰柏瑞",
+      "abbr": "ZHBDTETFHTBR",
+      "type": "指数型-海外股票",
+      "pinyin": "ZHONGHANBANDAOTIETFHUATAIBAIRUI"
+    },
+    {
+      "code": "513330",
+      "name": "恒生互联网ETF华夏",
+      "abbr": "HSHLWETFHX",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGHULIANWANGETFHUAXIA"
+    },
+    {
+      "code": "513350",
+      "name": "标普油气ETF富国",
+      "abbr": "BPYQETFFG",
+      "type": "指数型-海外股票",
+      "pinyin": "BIAOPUYOUQIETFFUGUO"
+    },
+    {
+      "code": "513360",
+      "name": "教育ETF博时",
+      "abbr": "JYETFBS",
+      "type": "指数型-海外股票",
+      "pinyin": "JIAOYUETFBOSHI"
+    },
+    {
+      "code": "513380",
+      "name": "恒生科技ETF广发",
+      "abbr": "HSKJETFGF",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFGUANGFA"
+    },
+    {
+      "code": "513390",
+      "name": "纳指100ETF博时",
+      "abbr": "NZ100ETFBS",
+      "type": "指数型-海外股票",
+      "pinyin": "NAZHI100ETFBOSHI"
+    },
+    {
+      "code": "513400",
+      "name": "道琼斯ETF鹏华",
+      "abbr": "DQSETFPH",
+      "type": "指数型-海外股票",
+      "pinyin": "DAOQIONGSIETFPENGHUA"
+    },
+    {
+      "code": "513500",
+      "name": "标普500ETF博时",
+      "abbr": "BP500ETFBS",
+      "type": "指数型-海外股票",
+      "pinyin": "BIAOPU500ETFBOSHI"
+    },
+    {
+      "code": "513520",
+      "name": "日经ETF华夏",
+      "abbr": "RJETFHX",
+      "type": "指数型-海外股票",
+      "pinyin": "RIJINGETFHUAXIA"
+    },
+    {
+      "code": "513530",
+      "name": "港股通红利ETF华泰柏瑞",
+      "abbr": "GGTHLETFHTBR",
+      "type": "指数型-海外股票",
+      "pinyin": "GANGGUTONGHONGLIETFHUATAIBAIRUI"
+    },
+    {
+      "code": "513580",
+      "name": "恒生科技ETF华安",
+      "abbr": "HSKJETFHA",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFHUAAN"
+    },
+    {
+      "code": "513650",
+      "name": "标普500ETF南方",
+      "abbr": "BP500ETFNF",
+      "type": "指数型-海外股票",
+      "pinyin": "BIAOPU500ETFNANFANG"
+    },
+    {
+      "code": "513730",
+      "name": "东南亚科技ETF华泰柏瑞",
+      "abbr": "DNYKJETFHTBR",
+      "type": "指数型-海外股票",
+      "pinyin": "DONGNANYAKEJIETFHUATAIBAIRUI"
+    },
+    {
+      "code": "513800",
+      "name": "日本东证指数ETF南方",
+      "abbr": "RBDZZSETFNF",
+      "type": "指数型-海外股票",
+      "pinyin": "RIBENDONGZHENGZHISHUETFNANFANG"
+    },
+    {
+      "code": "513810",
+      "name": "港股国企ETF华夏",
+      "abbr": "GGGQETFHX",
+      "type": "指数型-海外股票",
+      "pinyin": "GANGGUGUOQIETFHUAXIA"
+    },
+    {
+      "code": "513850",
+      "name": "美国50ETF易方达",
+      "abbr": "MG50ETFYFD",
+      "type": "指数型-海外股票",
+      "pinyin": "MEIGUO50ETFYIFANGDA"
+    },
+    {
+      "code": "513870",
+      "name": "纳指ETF富国",
+      "abbr": "NZETFFG",
+      "type": "指数型-海外股票",
+      "pinyin": "NAZHIETFFUGUO"
+    },
+    {
+      "code": "513880",
+      "name": "日经225ETF华安",
+      "abbr": "RJ225ETFHA",
+      "type": "指数型-海外股票",
+      "pinyin": "RIJING225ETFHUAAN"
+    },
+    {
+      "code": "513890",
+      "name": "恒生科技ETF摩根",
+      "abbr": "HSKJETFMG",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFMOGEN"
+    },
+    {
+      "code": "513950",
+      "name": "恒生红利ETF富国",
+      "abbr": "HSHLETFFG",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGHONGLIETFFUGUO"
+    },
+    {
+      "code": "513970",
+      "name": "恒生消费ETF景顺",
+      "abbr": "HSXFETFJS",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGXIAOFEIETFJINGSHUN"
+    },
+    {
+      "code": "519981",
+      "name": "长信标普100等权重指数人民币",
+      "abbr": "CXBP100DQZZSRMB",
+      "type": "指数型-海外股票",
+      "pinyin": "CHANGXINBIAOPU100DENGQUANZHONGZHISHURENMINBI"
+    },
+    {
+      "code": "520500",
+      "name": "恒生创新药ETF华泰柏瑞",
+      "abbr": "HSCXYETFHTBR",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGCHUANGXINYAOETFHUATAIBAIRUI"
+    },
+    {
+      "code": "520520",
+      "name": "恒生消费ETF华泰柏瑞",
+      "abbr": "HSXFETFHTBR",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGXIAOFEIETFHUATAIBAIRUI"
+    },
+    {
+      "code": "520570",
+      "name": "恒生科技ETF南方",
+      "abbr": "HSKJETFNF",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFNANFANG"
+    },
+    {
+      "code": "520580",
+      "name": "新兴亚洲ETF招商",
+      "abbr": "XXYZETFZS",
+      "type": "指数型-海外股票",
+      "pinyin": "XINXINGYAZHOUETFZHAOSHANG"
+    },
+    {
+      "code": "520590",
+      "name": "恒生科技ETF鹏华",
+      "abbr": "HSKJETFPH",
+      "type": "指数型-海外股票",
+      "pinyin": "HENGSHENGKEJIETFPENGHUA"
+    },
+    {
+      "code": "520830",
+      "name": "沙特ETF华泰柏瑞",
+      "abbr": "STETFHTBR",
+      "type": "指数型-海外股票",
+      "pinyin": "SHATEETFHUATAIBAIRUI"
+    },
+    {
+      "code": "520870",
+      "name": "巴西ETF易方达",
+      "abbr": "BXETFYFD",
+      "type": "指数型-海外股票",
+      "pinyin": "BAXIETFYIFANGDA"
+    },
+    {
+      "code": "520920",
+      "name": "天弘恒生科技ETF",
+      "abbr": "THHSKJETF",
+      "type": "指数型-海外股票",
+      "pinyin": "TIANHONGHENGSHENGKEJIETF"
+    },
+    {
+      "code": "539001",
+      "name": "建信纳斯达克100指数(QDII)A人民币",
+      "abbr": "JXNSDK100ZSQDIIARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINNASIDAKE100ZHISHUQDIIARENMINBI"
+    },
+    {
+      "code": "539003",
+      "name": "建信富时100指数(QDII)A人民币",
+      "abbr": "JXFS100ZSQDIIARMB",
+      "type": "指数型-海外股票",
+      "pinyin": "JIANXINFUSHI100ZHISHUQDIIARENMINBI"
+    }
+  ]
+}
