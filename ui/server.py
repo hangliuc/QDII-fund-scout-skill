@@ -381,7 +381,34 @@ class _Handler(BaseHTTPRequestHandler):
 
 
 def main() -> None:
-    server = HTTPServer(("0.0.0.0", PORT), _Handler)
+    import socket
+
+    class ReuseHTTPServer(HTTPServer):
+        allow_reuse_address = True
+        allow_reuse_port = True
+
+    try:
+        server = ReuseHTTPServer(("0.0.0.0", PORT), _Handler)
+    except OSError as e:
+        if "Address already in use" in str(e) or e.errno == 48:
+            import subprocess
+            try:
+                result = subprocess.run(["lsof", "-ti", f":{PORT}"], capture_output=True, text=True, timeout=3)
+                pid = result.stdout.strip().split("\n")[0] if result.stdout.strip() else ""
+                if pid:
+                    subprocess.run(["kill", pid], timeout=3)
+                    import time; time.sleep(0.5)
+                    server = ReuseHTTPServer(("0.0.0.0", PORT), _Handler)
+                else:
+                    raise
+            except Exception:
+                print(f"\n  端口 {PORT} 被占用，请先关闭占用进程：")
+                print(f"  lsof -ti :{PORT} | xargs kill")
+                print(f"  或换个端口：FUND_UI_PORT=8766 bash run.sh\n")
+                return
+        else:
+            raise
+
     print(f"\n  QDII-fund-scout 本地配置页面")
     print(f"  打开浏览器访问：")
     print(f"  → http://localhost:{PORT}")
