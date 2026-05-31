@@ -11,78 +11,29 @@ description: "从天天基金、证监会基金披露网站等公开权威渠道
 
 ## 输出要求（Agent 必读）
 
-每次数据获取完成后，必须将结果以**表格形式输出到控制台（stdout）**，让用户直接看到结构化的数据。
+每次数据获取完成后，必须将结果以**表格形式输出到控制台（stdout）**。
 
-### 输出格式
-
-使用 `rich` 库的 `Table` 组件打印表格。如果 `rich` 未安装，使用纯 ASCII 表格。
-
-### 批量对比输出
-
-必须包含以下列，按此顺序：
+### 批量对比输出列
 
 | 代码 | 名称 | 近1年 | 近1年回撤 | 规模(亿) | 总费率 | 申购状态 | 市场投资TOP3 |
 |------|------|-------|----------|---------|-------|---------|-------------|
 
-示例代码（Python）：
+- 优先使用 `rich.table.Table` 打印；无 rich 时用等宽 ASCII 表格
+- 名称截断至 18 字符
+- 收益率为正加 `+` 前缀，收益率/回撤保留 2 位小数
+- `market_top3` 无数据时显示 `-`
 
-```python
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from core.fetcher import FundFetcher
+### 单只基金详情
 
-fetcher = FundFetcher(rate_limit=0.3)
-result = fetcher.compare(codes=codes, cross_validate=True, include_csrc=True)
-
-# ── 打印表格到控制台 ──
-try:
-    from rich.table import Table
-    from rich.console import Console
-    console = Console()
-    table = Table(show_header=True, header_style="bold")
-    for col in ["代码", "名称", "近1年", "近1年回撤", "规模(亿)", "总费率", "申购状态", "市场投资TOP3"]:
-        table.add_column(col)
-    for f in result.funds:
-        table.add_row(
-            f.code,
-            (f.short_name or f.name or "-")[:18],
-            f"+{f.return_1y:.2f}%" if f.return_1y and f.return_1y > 0 else (f"{f.return_1y:.2f}%" if f.return_1y else "-"),
-            f"{(f.drawdown_1y*100):.2f}%" if f.drawdown_1y else "-",
-            str(f.scale or "-"),
-            f"{f.total_fee:.2f}%" if f.total_fee else "-",
-            f._purchase_info or f.purchase_status or "-",
-            f.market_top3 or "-"
-        )
-    console.print(table)
-except ImportError:
-    print(f"{'代码':<8} {'名称':<20} {'近1年':<10} {'回撤':<8} {'规模':<8} {'费率':<6} {'申购状态':<16} {'市场投资TOP3'}")
-    print("-" * 100)
-    for f in result.funds:
-        r = f"+{f.return_1y:.2f}%" if f.return_1y and f.return_1y > 0 else (f"{f.return_1y:.2f}%" if f.return_1y else "-")
-        d = f"{(f.drawdown_1y*100):.2f}%" if f.drawdown_1y else "-"
-        print(f"{f.code:<8} {(f.short_name or f.name or '-')[:20]:<20} {r:<10} {d:<8} {str(f.scale or '-'):<8} {f'{f.total_fee:.2f}%' if f.total_fee else '-':<6} {(f._purchase_info or f.purchase_status or '-'):<16} {f.market_top3 or '-'}")
-    print()
-
-# 同时将自然语言摘要返回给用户
-summary = f"共查询 {result.count} 只基金"
-if result._warnings:
-    summary += f"，{len(result._warnings)} 条提示"
-print(summary)
-```
-
-### 单只基金详情输出
-
-使用以下格式打印表格（1行）：
-
-```python
-# 使用 rich table 或 ASCII 单行
-print(f"{'代码':<8} {'名称':<24} {'净值':<10} {'近1年':<10} {'近1年回撤':<10} {'规模(亿)':<8} {'总费率':<6} {'申购状态':<18} {'市场投资TOP3'}")
-print("-" * 110)
-print(f"{fund.code:<8} {(fund.short_name or fund.name or '-')[:24]:<24} {str(fund.nav or '-'):<10} ...")
-```
+格式同上，仅 1 行数据。
 
 ### 推送场景
 
-推送到飞书/微信时，除了执行推送，仍需在控制台打印表格。推送失败不影响控制台输出。
+推送前仍需在控制台打印表格。推送失败不影响控制台输出。
+
+### 输出后
+
+在表格下方输出一行自然语言摘要，如 `"共查询 5 只基金，1 条提示"`。
 
 ## Quick Start · 5 分钟上手
 
